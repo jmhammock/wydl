@@ -1,0 +1,20 @@
+{
+  "name": "wydlm",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wyoming Class C driver license practice test (Elm)",
+  "scripts": {
+    "build": "elm make src/Main.elm --optimize --output=public/elm.js",
+    "test": "elm-test",
+    "format": "elm-format src tests --yes",
+    "validate": "elm-format src tests --validate"
+  },
+  "devDependencies": {
+    "elm": "0.19.2-0",
+    "elm-format": "0.8.8",
+    "elm-test": "0.19.2-1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,15 @@
+# Elm build output
+elm-stuff/
+
+# Installed tooling (managed via package.json)
+node_modules/
+
+# Compiled app. Regenerate with `npm run build`.
+public/elm.js
+
+# No PDFs, ever (source material is large and never served)
+*.pdf
+
+# OS clutter
+.DS_Store
+Thumbs.db

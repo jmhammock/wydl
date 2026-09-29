@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wyoming Driver Test — Class C</title>
+<meta name="description" content="Practice questions for the Wyoming Class C driver license written test, taken from the 2021 Rules of the Road manual.">
+<meta name="theme-color" content="#1d3557">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Driver Test">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <p class="site-title">Wyoming Driver Test</p>
+</header>
+
+<main id="app">
+  <div id="root"></div>
+</main>
+
+<noscript>
+  <p class="hint">This practice test needs JavaScript to run.</p>
+</noscript>
+
+<script src="elm.js"></script>
+<script>
+  Elm.Main.init({ node: document.getElementById('root') });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1880 @@
+{
+  "title": "Wyoming Driver License Practice Test — Class C",
+  "subtitle": "Rules of the Road, 2021",
+  "source": "Wyoming Rules of the Road Driver License Manual, 2021 (Wyoming Department of Transportation, Driver Services Program)",
+  "notes": "Questions and answer wording are drawn closely from the source manual. `correct` is a zero-based index into the `answers` array.",
+  "questions": [
+    {
+      "id": 1,
+      "category": "Licensing & permits",
+      "question": "According to the manual, an applicant must be at least 17 to be issued a Wyoming driver's license with full driving privileges. Which of the following also qualifies an applicant for full driving privileges?",
+      "answers": [
+        "Being 15 and having passed the vision screening",
+        "Being 16 and having held an instruction permit for one year",
+        "Being 16-1/2 and having held a restricted license for one year",
+        "Being 16-1/2 and having completed an approved driver education course and held an intermediate license for six months"
+      ],
+      "correct": 3,
+      "explanation": "For full driving privileges, an applicant must be at least 17, or be 16-1/2 and have completed an approved driver education course and held an intermediate license for six months."
+    },
+    {
+      "id": 2,
+      "category": "Licensing & permits",
+      "question": "At what age may an instruction permit be obtained in Wyoming?",
+      "answers": [
+        "14",
+        "16",
+        "15",
+        "16-1/2"
+      ],
+      "correct": 2,
+      "explanation": "At 16 an applicant may obtain limited driving privileges by acquiring an intermediate license. An instruction permit may be obtained at 15."
+    },
+    {
+      "id": 3,
+      "category": "Licensing & permits",
+      "question": "The Class C license authorizes operation of a single vehicle or combination of vehicles, except motorcycles, with a GVWR of:",
+      "answers": [
+        "less than 26,001 pounds",
+        "less than 10,000 pounds",
+        "less than 16,000 pounds",
+        "26,001 pounds or more"
+      ],
+      "correct": 0,
+      "explanation": "The Class C license authorizes operation of a single vehicle or combination of vehicles, except motorcycles, with a GVWR less than 26,001 pounds, or any such vehicle towing another which does not have a GVWR in excess of 10,000 pounds."
+    },
+    {
+      "id": 4,
+      "category": "Licensing & permits",
+      "question": "Under the Class C license, you may tow another vehicle that does not have a GVWR in excess of:",
+      "answers": [
+        "26,001 pounds",
+        "16,000 pounds",
+        "5,000 pounds",
+        "10,000 pounds"
+      ],
+      "correct": 3,
+      "explanation": "A Class C license allows operation of a vehicle with a GVWR less than 26,001 pounds, or any such vehicle towing another which does not have a GVWR in excess of 10,000 pounds."
+    },
+    {
+      "id": 5,
+      "category": "Licensing & permits",
+      "question": "Licensees over 21 may renew their Wyoming driver license within what period preceding expiration?",
+      "answers": [
+        "30 days",
+        "120 days",
+        "60 days",
+        "90 days"
+      ],
+      "correct": 1,
+      "explanation": "Licensees over 21 may renew within the 120-day period preceding expiration. Licensees under 21 may renew within 90 days of expiration."
+    },
+    {
+      "id": 6,
+      "category": "Licensing & permits",
+      "question": "What is the fee for an original Wyoming non-commercial driver license, before the additional technology fee?",
+      "answers": [
+        "$30",
+        "$50",
+        "$20",
+        "$40"
+      ],
+      "correct": 3,
+      "explanation": "Non-commercial fees: Original Wyoming License $40, Restricted License $20, Renewal $30, Renewal by Mail $30, Instruction Permit $40, Intermediate License $30. An additional technology fee of $5 applies to all classes."
+    },
+    {
+      "id": 7,
+      "category": "Licensing & permits",
+      "question": "A person licensed by another state which is a Driver License Compact member may drive in Wyoming on that out-of-state license, but must surrender it within what period of residency in Wyoming?",
+      "answers": [
+        "90 days",
+        "Six months",
+        "One year",
+        "Two years"
+      ],
+      "correct": 2,
+      "explanation": "Any person licensed by another Compact member state does not need a Wyoming license unless they choose one; however, their out-of-state license must be surrendered within one year of residency in Wyoming."
+    },
+    {
+      "id": 8,
+      "category": "Licensing & permits",
+      "question": "When Wyoming licensees change their addresses, they must notify the department in writing within:",
+      "answers": [
+        "20 days",
+        "90 days",
+        "30 days",
+        "10 days"
+      ],
+      "correct": 3,
+      "explanation": "When licensees change their addresses, they must notify the department in writing within 10 days of the change."
+    },
+    {
+      "id": 9,
+      "category": "Tests & vision",
+      "question": "To meet Wyoming vision standards for operating a motor vehicle, a person must have:",
+      "answers": [
+        "20/40 acuity in one eye, with or without glasses",
+        "20/40 acuity with both eyes, and a combined horizontal field of vision of at least 120 degrees",
+        "20/30 acuity with both eyes, and a combined horizontal field of vision of at least 100 degrees",
+        "20/60 acuity with both eyes, and a combined horizontal field of vision of at least 180 degrees"
+      ],
+      "correct": 1,
+      "explanation": "A person must have 20/40 acuity with both eyes, either with or without glasses, and a combined horizontal field vision of at least 120 degrees to meet Wyoming vision standards."
+    },
+    {
+      "id": 10,
+      "category": "Tests & vision",
+      "question": "Applicants for a Wyoming driver license are allowed to take the written test how many times in one day?",
+      "answers": [
+        "Twice",
+        "Unlimited",
+        "Once",
+        "Three times"
+      ],
+      "correct": 0,
+      "explanation": "Applicants for a driver's license are allowed to take the written test twice in one day."
+    },
+    {
+      "id": 11,
+      "category": "Tests & vision",
+      "question": "After failing the skills test, applicants who miss 13 or more questions must wait how long before being retested?",
+      "answers": [
+        "24 hours",
+        "Three days",
+        "One week",
+        "48 hours"
+      ],
+      "correct": 1,
+      "explanation": "Applicants who fail the skills test wait 24 hours before testing again. Missing 13 or more questions is the harsher result, and those applicants must wait three days to be retested."
+    },
+    {
+      "id": 12,
+      "category": "Tests & vision",
+      "question": "The skills test may be waived by presenting a certification card. What must that card state the student has completed?",
+      "answers": [
+        "10 hours of classroom instruction and 2 hours of behind-the-wheel driving",
+        "36 hours of classroom instruction and 8 hours of behind-the-wheel driving",
+        "30 hours of classroom instruction and 6 hours of behind-the-wheel driving",
+        "20 hours of classroom instruction and 4 hours of behind-the-wheel driving"
+      ],
+      "correct": 2,
+      "explanation": "The certification card must state that the student has completed 30 hours of classroom instruction and six hours of behind-the-wheel driving. The card will be honored for no longer than two years."
+    },
+    {
+      "id": 13,
+      "category": "Tests & vision",
+      "question": "If your visual acuity is worse than 20/40 but at least 20/100, you will be required to:",
+      "answers": [
+        "Obtain a vision statement from an eye specialist and may not drive",
+        "Wear corrective lenses and retake the vision screening only",
+        "Take a driving skills test",
+        "Apply for a restricted license"
+      ],
+      "correct": 2,
+      "explanation": "Those who fail the vision screening must obtain a vision statement from an eye specialist. If visual acuity is worse than 20/40 but at least 20/100, you will be required to take a driving skills test."
+    },
+    {
+      "id": 14,
+      "category": "Alcohol, drugs & DUI",
+      "question": "An Administrative Per Se Suspension results when you are arrested for DWUI and the results of your chemical test show an alcohol concentration of:",
+      "answers": [
+        "0.02 percent or greater",
+        "0.15 percent or greater",
+        "0.08 percent or greater",
+        "0.04 percent or greater"
+      ],
+      "correct": 2,
+      "explanation": "An Administrative Per Se Suspension results when you have been arrested for DWUI and the results of your chemical test show an alcohol concentration of 0.08 percent or greater."
+    },
+    {
+      "id": 15,
+      "category": "Alcohol, drugs & DUI",
+      "question": "What is the length of the Administrative Per Se suspension?",
+      "answers": [
+        "90 days",
+        "One year",
+        "30 days",
+        "60 days"
+      ],
+      "correct": 0,
+      "explanation": "Length of suspension: 90 days. If you are convicted of the DWUI in court, the time served for the Administrative Per Se suspension will be credited toward the DWUI suspension."
+    },
+    {
+      "id": 16,
+      "category": "Alcohol, drugs & DUI",
+      "question": "What effect does dismissal of a DWUI in court have on the Administrative Per Se suspension?",
+      "answers": [
+        "Dismissal in court will not affect the Administrative Per Se suspension",
+        "The suspension is reduced by half",
+        "The suspension is removed from your driving record",
+        "The suspension is held in abeyance until the case is closed"
+      ],
+      "correct": 0,
+      "explanation": "The Administrative Per Se suspension is imposed by the Department based on the chemical test result at the time of arrest, so it stands on its own. If you are instead convicted of the DWUI in court, the time you served on the Per Se suspension is credited toward the DWUI suspension."
+    },
+    {
+      "id": 17,
+      "category": "Alcohol, drugs & DUI",
+      "question": "For a first DWUI offense within the previous 10 years, the length of suspension is:",
+      "answers": [
+        "Six months",
+        "90 days",
+        "One year",
+        "Three years"
+      ],
+      "correct": 1,
+      "explanation": "1st offense (within previous 10 years) — Length of suspension: 90 days. If you served or are serving a suspension for Administrative Per Se, the suspension period will be the same."
+    },
+    {
+      "id": 18,
+      "category": "Alcohol, drugs & DUI",
+      "question": "A second DWUI offense within the previous 10 years results in a suspension of:",
+      "answers": [
+        "Six months",
+        "One year",
+        "Two years",
+        "90 days"
+      ],
+      "correct": 1,
+      "explanation": "2nd offense (within previous 10 years) — Length of suspension: One year. If you served or are serving a suspension for Administrative Per Se, an additional nine-month suspension will be added to your record."
+    },
+    {
+      "id": 19,
+      "category": "Alcohol, drugs & DUI",
+      "question": "A third or subsequent DWUI within 10 years results in a:",
+      "answers": [
+        "Lifetime revocation",
+        "Three-year revocation",
+        "One-year suspension",
+        "Two-year suspension"
+      ],
+      "correct": 1,
+      "explanation": "3rd or subsequent offense (within 10 years) — Length of revocation: Three years."
+    },
+    {
+      "id": 20,
+      "category": "Alcohol, drugs & DUI",
+      "question": "If you are younger than 21 and are in actual physical control of a vehicle with an alcohol concentration of 0.02 percent or more, you will be suspended for DWUI. For a first offense, the length of suspension is:",
+      "answers": [
+        "90 days",
+        "Six months",
+        "30 days",
+        "60 days"
+      ],
+      "correct": 0,
+      "explanation": "Youthful Driver Suspension — First offense: Length of suspension 90 days. Second or subsequent offense (within two years): Six months."
+    },
+    {
+      "id": 21,
+      "category": "Alcohol, drugs & DUI",
+      "question": "The manual states that three factors influence a person's Blood Alcohol Concentration (BAC). Which of the following is NOT one of them?",
+      "answers": [
+        "The person's body weight",
+        "The temperature of the beverage",
+        "The period of time over which the alcohol was consumed",
+        "The amount of alcohol consumed"
+      ],
+      "correct": 1,
+      "explanation": "Three factors influence a person's BAC: the amount of alcohol consumed; the period of time over which the alcohol was consumed; and the person's body weight."
+    },
+    {
+      "id": 22,
+      "category": "Alcohol, drugs & DUI",
+      "question": "Approximately what percentage of the alcohol in your body is eliminated by the liver, and at what rate?",
+      "answers": [
+        "About 90 percent, at a constant rate of about one drink per hour",
+        "About 50 percent, at a rate of one drink every 30 minutes",
+        "About 100 percent, at a constant rate of one drink per hour",
+        "About 90 percent, at a rate of one drink every two hours"
+      ],
+      "correct": 0,
+      "explanation": "Approximately 90 percent of the alcohol in your body is eliminated by the liver. It is eliminated at a constant rate, about the same for all persons, about one drink per hour. It CANNOT be eliminated any faster."
+    },
+    {
+      "id": 23,
+      "category": "Alcohol, drugs & DUI",
+      "question": "Which of the following will reduce the level of alcohol in your body?",
+      "answers": [
+        "Only time",
+        "Taking a shower",
+        "Drinking coffee",
+        "Exercising vigorously"
+      ],
+      "correct": 0,
+      "explanation": "Showering, drinking coffee or exercising in an effort to sober up are useless. Only time can do the job. Time is the only significant factor in reducing BAC levels."
+    },
+    {
+      "id": 24,
+      "category": "Alcohol, drugs & DUI",
+      "question": "Each of the following quantities has about one-half ounce of alcohol. Which is NOT one of them?",
+      "answers": [
+        "Three to five ounces of wine",
+        "One and one-half ounces of 86 proof hard liquor",
+        "One 12-ounce glass of wine",
+        "12 ounces of beer"
+      ],
+      "correct": 2,
+      "explanation": "Therefore, 12 ounces of beer, three to five ounces of wine, and one and one-half ounces of 86 proof hard liquor each have about one-half ounce of alcohol."
+    },
+    {
+      "id": 25,
+      "category": "Alcohol, drugs & DUI",
+      "question": "According to the manual, a BAC of 0.08 percent is considered to be:",
+      "answers": [
+        "Low, and most persons are not significantly affected at this level",
+        "Low, but only for inexperienced drivers",
+        "High, and people at this level are impaired mentally and physically whether or not they show it",
+        "Dangerous only for drivers under 21"
+      ],
+      "correct": 2,
+      "explanation": "A BAC of 0.02 percent is considered low and most persons are not significantly affected. A BAC of 0.08 percent is considered to be high, and people at this level are impaired mentally and physically whether or not they show it."
+    },
+    {
+      "id": 26,
+      "category": "Alcohol, drugs & DUI",
+      "question": "A drinking driver traveling at 55 mph will drive an additional distance of at least how far before he can apply the brakes?",
+      "answers": [
+        "32 feet",
+        "22 feet",
+        "12 feet",
+        "55 feet"
+      ],
+      "correct": 0,
+      "explanation": "Because of this reduced ability to execute, a drinking driver, traveling at 55 mph, will drive an additional 32 feet or more before he can apply the brakes."
+    },
+    {
+      "id": 27,
+      "category": "Alcohol, drugs & DUI",
+      "question": "If convicted of a first DWUI with a BAC of .15 percent or greater, how long must you hold an ignition interlock restricted driver license before you are eligible for any other type of driver license?",
+      "answers": [
+        "Two years",
+        "Six months",
+        "Three months",
+        "One year"
+      ],
+      "correct": 1,
+      "explanation": "If your BAC at the time of arrest was .15% or greater, you will be required to hold an ignition interlock restricted driver license for a period of 6 months before you are eligible for any other type of driver license."
+    },
+    {
+      "id": 28,
+      "category": "Alcohol, drugs & DUI",
+      "question": "If convicted of a 4th or subsequent DWUI when alcohol is involved, the ignition interlock requirement is:",
+      "answers": [
+        "Ten years, after which the requirement is removed",
+        "Five years",
+        "Lifetime, though you may petition for removal five years after the conviction date",
+        "Two years, after which the requirement is removed"
+      ],
+      "correct": 2,
+      "explanation": "Lifetime ignition interlock requirement if convicted of a 4th or subsequent DWUI when alcohol is involved; however, may petition for removal of requirement five years after conviction date."
+    },
+    {
+      "id": 29,
+      "category": "Alcohol, drugs & DUI",
+      "question": "Driving while under the influence of alcohol is the major cause of what?",
+      "answers": [
+        "All crashes in which someone is injured",
+        "Most crashes involving motorcycles",
+        "One quarter of all crashes",
+        "Almost half of the crashes in which someone is killed"
+      ],
+      "correct": 3,
+      "explanation": "Alcohol is involved in almost half of all fatal crashes, and nationwide nearly 25,000 people die each year because of drivers who have been drinking. Even a BAC as low as 0.02 percent measurably raises a driver's chance of being in a crash."
+    },
+    {
+      "id": 30,
+      "category": "Alcohol, drugs & DUI",
+      "question": "The impairment of alcohol is described in the manual as seriously reducing the ability to IDENTIFY, PREDICT, DECIDE and what else?",
+      "answers": [
+        "COMMUNICATE",
+        "EXECUTE",
+        "REACT",
+        "ADJUST"
+      ],
+      "correct": 1,
+      "explanation": "Alcohol seriously impairs the ability to drive safely because the ability to IDENTIFY, PREDICT, DECIDE and EXECUTE is seriously reduced."
+    },
+    {
+      "id": 31,
+      "category": "Speed & road conditions",
+      "question": "According to the legal speed limits in the manual (all unless otherwise posted), what is the speed limit in a school zone?",
+      "answers": [
+        "25 mph",
+        "15 mph",
+        "20 mph",
+        "30 mph"
+      ],
+      "correct": 2,
+      "explanation": "School Zones: 20 mph. The absolute speed limit in a school zone is 20 mph."
+    },
+    {
+      "id": 32,
+      "category": "Speed & road conditions",
+      "question": "What is the legal speed limit on secondary highways in Wyoming, unless otherwise posted?",
+      "answers": [
+        "65 mph",
+        "70 mph",
+        "75 mph",
+        "55 mph"
+      ],
+      "correct": 1,
+      "explanation": "Legal speed limits (All unless otherwise posted): Interstate Highways 80 mph, 75 mph; Secondary Highways 70 mph; Residential Areas 30 mph; Business Areas 30 mph; School Zones 20 mph."
+    },
+    {
+      "id": 33,
+      "category": "Speed & road conditions",
+      "question": "The legal speed limit in both residential areas and business areas is:",
+      "answers": [
+        "25 mph",
+        "20 mph",
+        "30 mph",
+        "15 mph"
+      ],
+      "correct": 2,
+      "explanation": "Residential Areas: 30 mph. Business Areas: 30 mph."
+    },
+    {
+      "id": 34,
+      "category": "Speed & road conditions",
+      "question": "What are the legal speed limits on Interstate Highways in Wyoming, unless otherwise posted?",
+      "answers": [
+        "75 mph, 80 mph",
+        "80 mph, 85 mph",
+        "70 mph, 75 mph",
+        "65 mph, 70 mph"
+      ],
+      "correct": 0,
+      "explanation": "Wyoming posts two speed limits on Interstate highways: 80 mph and 75 mph. The manual also lists 70 mph for secondary highways, 30 mph in residential and business areas, and 20 mph in school zones."
+    },
+    {
+      "id": 35,
+      "category": "Speed & road conditions",
+      "question": "Trees, bushes or buildings at intersections can block the view of vehicles coming from the side. You should approach a blind intersection at no more than:",
+      "answers": [
+        "15 mph",
+        "10 mph",
+        "5 mph",
+        "25 mph"
+      ],
+      "correct": 0,
+      "explanation": "Trees, bushes or buildings at intersections can block the view of vehicles coming from the side. Therefore approach a blind intersection at no more than 15 mph."
+    },
+    {
+      "id": 36,
+      "category": "Speed & road conditions",
+      "question": "When driving on a curve, you should:",
+      "answers": [
+        "Adjust speed after you are well into the curve",
+        "Maintain your speed through the curve",
+        "Adjust speed BEFORE entering the curve",
+        "Sound your horn before entering the curve"
+      ],
+      "correct": 2,
+      "explanation": "Adjust speed BEFORE entering a curve. Going too fast can break the grip that tires have on the road."
+    },
+    {
+      "id": 37,
+      "category": "Speed & road conditions",
+      "question": "According to the manual's table for slippery roads, when driving on packed snow you should reduce your speed by at least:",
+      "answers": [
+        "Half",
+        "5 to 10 mph",
+        "A crawl",
+        "One quarter"
+      ],
+      "correct": 0,
+      "explanation": "Slippery roads reduce the tires' grip, so drive slower than you would on a dry road. Wet road: reduce speed by at least 5-10 mph. Packed snow: reduce speed by at least half. Ice: reduce speed to a crawl."
+    },
+    {
+      "id": 38,
+      "category": "Speed & road conditions",
+      "question": "According to the manual, when driving on ice you should:",
+      "answers": [
+        "Maintain your normal speed",
+        "Reduce speed by at least 5-10 mph",
+        "Reduce speed to a crawl",
+        "Reduce speed by at least half"
+      ],
+      "correct": 2,
+      "explanation": "Ice — Reduce speed to a crawl. You may have to slow even more if vehicles are ahead."
+    },
+    {
+      "id": 39,
+      "category": "Speed & road conditions",
+      "question": "Your lights will only let you see clearly about 250 feet. If you then drive faster than 55 mph on a dark road, you are really:",
+      "answers": [
+        "Seeing other vehicles well enough to react to them, since their lights are visible from 250 feet",
+        "Driving with adequate visibility",
+        "Driving blind, because you won't be able to stop within the 250 feet ahead of you that is lit well enough to see",
+        "Driving within the speed limit"
+      ],
+      "correct": 2,
+      "explanation": "Never drive so fast that you cannot stop within the distance you can see ahead with your headlights. Your lights will only let you see clearly about 250 feet, so above 55 mph on a dark road you are driving blind."
+    },
+    {
+      "id": 40,
+      "category": "Speed & road conditions",
+      "question": "According to the manual, going slower than traffic or stopping suddenly is:",
+      "answers": [
+        "Safe, because you are not speeding",
+        "As dangerous as speeding",
+        "Dangerous only when passing another vehicle",
+        "Only dangerous at night"
+      ],
+      "correct": 1,
+      "explanation": "Going slower than traffic or stopping suddenly is as dangerous as speeding. The risk of rear-end collisions is added to the risk of vehicles passing you."
+    },
+    {
+      "id": 41,
+      "category": "Right of way",
+      "question": "At an intersection with no signs or signals, you must yield the right of way to:",
+      "answers": [
+        "Any driver coming from your right",
+        "The vehicle going straight ahead",
+        "The vehicle that reached the intersection first",
+        "The vehicle on your left"
+      ],
+      "correct": 0,
+      "explanation": "Where no signs or signals are in place, you must watch for any driver coming from your right and yield the right of way regardless of who first reaches and enters the intersection."
+    },
+    {
+      "id": 42,
+      "category": "Right of way",
+      "question": "According to the manual, right-of-way laws:",
+      "answers": [
+        "Give you the right to go first if you arrive first",
+        "Only indicate who must yield the right of way",
+        "Apply only to four-way stop intersections",
+        "Apply only when signs are posted"
+      ],
+      "correct": 1,
+      "explanation": "Laws do not give anyone the right of way. They only indicate who must yield the right of way."
+    },
+    {
+      "id": 43,
+      "category": "Right of way",
+      "question": "At a four-way stop intersection, the driver who stops first should be permitted to go first. If in doubt, you should:",
+      "answers": [
+        "Proceed first if you are going straight",
+        "Sound your horn and proceed",
+        "Insist on your right of way",
+        "Yield to the driver on your right"
+      ],
+      "correct": 3,
+      "explanation": "IF IN DOUBT, YIELD TO THE DRIVER ON YOUR RIGHT. Never insist on the right of way at the risk of a crash."
+    },
+    {
+      "id": 44,
+      "category": "Right of way",
+      "question": "Traffic in a roundabout moves:",
+      "answers": [
+        "Counterclockwise, at highway speeds",
+        "Counterclockwise, at slow speeds",
+        "Clockwise, at slow speeds",
+        "Clockwise, unless otherwise posted"
+      ],
+      "correct": 1,
+      "explanation": "Traffic moves at slow speeds in a counterclockwise direction, and is constantly moving except when yielding to traffic in the roundabout and pedestrians in the crosswalks."
+    },
+    {
+      "id": 45,
+      "category": "Right of way",
+      "question": "When entering a roundabout, you should:",
+      "answers": [
+        "Look to the left, wait for a gap in traffic, and merge into the roundabout",
+        "Look to the right, wait for a gap, and merge",
+        "Stop in the center of the roundabout until traffic clears",
+        "Enter without yielding if no vehicles are visible"
+      ],
+      "correct": 0,
+      "explanation": "Look to the left, wait for a gap in traffic and merge into the roundabout. Once in the roundabout, keep moving, don't stop."
+    },
+    {
+      "id": 46,
+      "category": "Right of way",
+      "question": "When leaving a roundabout, you should:",
+      "answers": [
+        "Use your turn signal to indicate you are leaving the roundabout, and yield to pedestrians as you leave",
+        "Yield to traffic already in the roundabout before signaling",
+        "Proceed to your exit and merge back into traffic without signaling",
+        "Stop and signal after leaving the roundabout"
+      ],
+      "correct": 0,
+      "explanation": "Once in the roundabout, keep moving and do not stop. Proceed to your exit, use your turn signal to indicate you are leaving, and yield to pedestrians as you leave."
+    },
+    {
+      "id": 47,
+      "category": "Right of way",
+      "question": "If you enter an intersection while violating the speed law, you:",
+      "answers": [
+        "Retain any right of way you might have had",
+        "Have equal right of way with everyone else",
+        "Must yield only to vehicles on your right",
+        "Forfeit any right of way you might have had"
+      ],
+      "correct": 3,
+      "explanation": "At a four-way stop, common courtesy gives the right to go first to the driver who stops first, and if you are in doubt you should yield to the driver on your right. Entering an intersection while violating the speed law gives up that advantage: you forfeit any right of way you might have had and must be prepared to yield."
+    },
+    {
+      "id": 48,
+      "category": "Right of way",
+      "question": "When you hear the siren or see the flashing lights of an emergency vehicle approaching you from behind, you should:",
+      "answers": [
+        "Pull as close as possible to the right-hand curb or edge of the roadway and stop",
+        "Stop in the intersection to clear the way",
+        "Continue through until the emergency vehicle passes you",
+        "Speed up so the emergency vehicle can pass on the left"
+      ],
+      "correct": 0,
+      "explanation": "Pull as close as possible to the right-hand curb or edge of the roadway and stop. Do not stop in an intersection. Remain stopped until the emergency vehicle has passed."
+    },
+    {
+      "id": 49,
+      "category": "Right of way",
+      "question": "When pulling over for an emergency vehicle, the manual says to keep your foot on the brake so that:",
+      "answers": [
+        "Your engine keeps running",
+        "The vehicle behind you stops",
+        "The emergency driver knows you are stopped",
+        "Your battery stays charged"
+      ],
+      "correct": 2,
+      "explanation": "Keep your foot on the brake so the emergency driver knows you are stopped."
+    },
+    {
+      "id": 50,
+      "category": "Right of way",
+      "question": "On roads with only one lane in each direction, you must reduce your speed to at least how much below the speed limit when approaching a parked emergency vehicle?",
+      "answers": [
+        "15 mph",
+        "10 mph",
+        "5 mph",
+        "20 mph"
+      ],
+      "correct": 3,
+      "explanation": "On roads with only one lane in each direction, you must reduce your speed to at least 20 mph below the speed limit when approaching a parked emergency vehicle. On a road with two or more lanes, the rule is to merge into the lane farthest from the emergency vehicle instead."
+    },
+    {
+      "id": 51,
+      "category": "Right of way",
+      "question": "When driving on a highway with two or more lanes traveling in the same direction, upon approaching an authorized emergency vehicle or other vehicle parked with lights flashing or visual signals, you must:",
+      "answers": [
+        "Stop in the lane behind the vehicle",
+        "Continue at your current speed and lane",
+        "Pull onto the shoulder and stop",
+        "Merge your vehicle into the lane farthest from the emergency vehicle"
+      ],
+      "correct": 3,
+      "explanation": "When driving on a highway with two or more lanes, you must merge your vehicle into the lane farthest from the emergency vehicle."
+    },
+    {
+      "id": 52,
+      "category": "Right of way",
+      "question": "Statutes require a driver to yield to a pedestrian:",
+      "answers": [
+        "Only when the pedestrian is standing on the sidewalk",
+        "When a pedestrian is in a marked crosswalk on your side of the roadway, when making a lawful turn on a red light after coming to a complete stop, and when a blind pedestrian carries a white cane or is accompanied by a guide dog",
+        "Only in school zones",
+        "Only at night"
+      ],
+      "correct": 1,
+      "explanation": "Statutes require a driver to give the right of way or yield to a pedestrian in a marked crosswalk on your side of the roadway whether or not there are traffic signals, when making a lawful turn on red after a complete stop, and when a blind pedestrian carries a clearly visible white cane or is accompanied by a guide dog."
+    },
+    {
+      "id": 53,
+      "category": "Required stops",
+      "question": "On a two or four lane undivided highway, when a school bus stops with flashing red lights, you must:",
+      "answers": [
+        "Pass only if you are more than 10 mph faster than the bus",
+        "Stop, regardless of which direction you are traveling",
+        "Stop only if you are traveling in the same direction as the bus",
+        "Slow down and proceed with extreme caution"
+      ],
+      "correct": 1,
+      "explanation": "On a two or four lane undivided highway, vehicles going each direction must stop when a school bus stops."
+    },
+    {
+      "id": 54,
+      "category": "Required stops",
+      "question": "You may pass a school bus with activated flashing red lights only if:",
+      "answers": [
+        "There is a physical barrier or separate roadways between your vehicle and the school bus",
+        "The bus has been stopped for less than 10 seconds",
+        "The bus is stopped on the shoulder",
+        "You are on a highway with four or more lanes"
+      ],
+      "correct": 0,
+      "explanation": "You may pass a school bus with activated flashing red lights only if there is a physical barrier or separate roadways between your vehicle and the school bus. You MUST use extreme caution, however, watching for pedestrians."
+    },
+    {
+      "id": 55,
+      "category": "Required stops",
+      "question": "On a divided roadway, when a school bus stops with flashing red lights, which vehicles must stop?",
+      "answers": [
+        "No vehicles must stop",
+        "Only vehicles approaching from behind the bus",
+        "Only vehicles on the same side of the separation as the bus",
+        "All vehicles in both directions"
+      ],
+      "correct": 2,
+      "explanation": "However, on a divided roadway, only vehicles on the same side of the separation as the bus must stop."
+    },
+    {
+      "id": 56,
+      "category": "Required stops",
+      "question": "You MUST stop your vehicle for:",
+      "answers": [
+        "Pedestrians in a crosswalk only when the light is red",
+        "Pedestrians jogging on the shoulder",
+        "Any pedestrian standing at the edge of the road",
+        "Blind persons attempting to cross a street who are carrying a white cane or guided by a guide dog"
+      ],
+      "correct": 3,
+      "explanation": "Blind pedestrians get a required stop of their own: you must stop for anyone attempting to cross a street who is carrying a white cane or is guided by a guide dog. You must also stop before the crosswalk at a stop sign, a red light or flashing red lights, and for a police officer, whose directions outweigh traffic lights or signs."
+    },
+    {
+      "id": 57,
+      "category": "Required stops",
+      "question": "Which of the following is NOT listed in the manual as a situation in which you MUST always stop your vehicle?",
+      "answers": [
+        "When signaled by a flag person at or near railroad crossings or construction sites",
+        "When meeting or overtaking a stopped school bus with flashing red lights",
+        "When a pedestrian is walking along the side of the road",
+        "When entering a street from a driveway, alley, building or parking lot"
+      ],
+      "correct": 2,
+      "explanation": "The manual's list of required stops covers school buses, crosswalks, entering a street from a driveway, police directions, railroad crossings, flag persons, blind pedestrians and crashes. A pedestrian walking along the roadside is not on that list."
+    },
+    {
+      "id": 58,
+      "category": "Required stops",
+      "question": "A police officer's directions:",
+      "answers": [
+        "Are overridden by posted speed limits",
+        "Apply only if the officer is a highway patrol officer",
+        "Outweigh traffic lights or signs",
+        "Apply only at four-way stops"
+      ],
+      "correct": 2,
+      "explanation": "When directed to do so by a police officer. A police officer's directions outweigh traffic lights or signs."
+    },
+    {
+      "id": 59,
+      "category": "Lanes, turning & passing",
+      "question": "All drivers must signal at least how far from an intersection?",
+      "answers": [
+        "200 feet",
+        "50 feet",
+        "150 feet",
+        "100 feet"
+      ],
+      "correct": 3,
+      "explanation": "All drivers must signal when turning or changing lanes, and at least 100 feet from an intersection. Signaling at least 4 to 5 seconds BEFORE you wish to turn is better at higher speeds."
+    },
+    {
+      "id": 60,
+      "category": "Lanes, turning & passing",
+      "question": "The hand and arm signal for a right turn is:",
+      "answers": [
+        "Extended down from the elbow",
+        "Extended straight out to the right",
+        "Extended straight up from the elbow",
+        "Extended straight out to the left"
+      ],
+      "correct": 2,
+      "explanation": "For a right turn, the hand and arm are extended straight up from the elbow. For a left turn, the driver's hand and arm are extended straight out to the left. To slow down or stop, the hand and arm are extended down from the elbow."
+    },
+    {
+      "id": 61,
+      "category": "Lanes, turning & passing",
+      "question": "You:",
+      "answers": [
+        "May change lanes before entering an intersection",
+        "May change lanes while in an intersection if you signal",
+        "Do not change lanes before or while in an intersection",
+        "May change lanes in an intersection only if no one is on your right"
+      ],
+      "correct": 2,
+      "explanation": "A lane change takes time and space that nobody inside an intersection expects you to use, so finish your lane changes first: check your rear view and side mirrors, check over your shoulder for blind spots, check for other drivers moving into the same lane, then signal. Do not change lanes before or while in an intersection."
+    },
+    {
+      "id": 62,
+      "category": "Lanes, turning & passing",
+      "question": "Before changing lanes, you should:",
+      "answers": [
+        "Check your mirrors only",
+        "Check your blind spots and change lanes",
+        "Check in your rear view and side mirrors, check over your left or right shoulder for blind spots, check for other drivers moving into the same lane, then signal and change lanes",
+        "Signal and change lanes"
+      ],
+      "correct": 2,
+      "explanation": "Before changing lanes: check in your rear view and side mirrors; check over your left or right shoulder and make sure no one is in your blind spots; check for other drivers who may also be moving into the same lane; and signal and change lanes."
+    },
+    {
+      "id": 63,
+      "category": "Lanes, turning & passing",
+      "question": "Before you back up your vehicle, the manual says to:",
+      "answers": [
+        "Sound your horn and back up slowly",
+        "Rely on your rearview mirror",
+        "Rely on your side mirrors",
+        "Check behind your vehicle by walking behind it, and turn your head and body so that you can see where you are backing"
+      ],
+      "correct": 3,
+      "explanation": "Check behind your vehicle by walking behind it before you back up. When you back up, do not depend upon your mirrors. Turn your head and body so that you can see where you are backing."
+    },
+    {
+      "id": 64,
+      "category": "Lanes, turning & passing",
+      "question": "While passing another vehicle that is traveling at less than the legal maximum speed, a driver may exceed the speed limit by up to:",
+      "answers": [
+        "5 mph",
+        "20 mph",
+        "10 mph",
+        "15 mph"
+      ],
+      "correct": 2,
+      "explanation": "MOVE BACK into the right lane when you see the front of the vehicle in your rear view mirror. A driver may exceed the speed limit by up to 10 miles an hour while passing another vehicle that is traveling at less than the legal maximum speed."
+    },
+    {
+      "id": 65,
+      "category": "Lanes, turning & passing",
+      "question": "When passing, the manual says to START:",
+      "answers": [
+        "At least one second behind the vehicle ahead",
+        "At least three seconds behind the vehicle ahead",
+        "Alongside the vehicle ahead",
+        "At least two seconds behind the vehicle ahead"
+      ],
+      "correct": 3,
+      "explanation": "DECIDE if it is necessary to pass, then: START at least two seconds behind the vehicle ahead. MAKE SURE you have time and space to pass safely."
+    },
+    {
+      "id": 66,
+      "category": "Lanes, turning & passing",
+      "question": "When passing a bicyclist, you should reduce your speed and, when space allows, maintain at least how much separation between your vehicle and the bicyclist?",
+      "answers": [
+        "1 foot",
+        "6 feet",
+        "3 feet",
+        "2 feet"
+      ],
+      "correct": 2,
+      "explanation": "When passing a bicyclist, reduce your speed to reduce the danger of a crash. When space allows, maintain at least 3 feet of separation between your vehicle and the bicyclist."
+    },
+    {
+      "id": 67,
+      "category": "Lanes, turning & passing",
+      "question": "Motorcycles are entitled to the same full lane width as all other vehicles. You should:",
+      "answers": [
+        "Move into the same lane alongside a motorcycle, even if the lane is wide and the cyclist is far to one side",
+        "Follow motorcycles at one second",
+        "Never move into the same lane alongside a motorcycle",
+        "Pass motorcycles only in the right lane"
+      ],
+      "correct": 2,
+      "explanation": "Never move into the same lane alongside a motorcycle, even if the lane is wide and the cyclist is riding far to one side. It is not only illegal, but it boxes both of you in and does not permit you a way out."
+    },
+    {
+      "id": 68,
+      "category": "Lanes, turning & passing",
+      "question": "On a two-lane road, you are required to:",
+      "answers": [
+        "Drive in the center of the roadway",
+        "Keep to the shoulder where possible",
+        "Drive on the right side and yield the left half of the roadway to oncoming traffic",
+        "Drive in the left lane and yield the right half to oncoming traffic"
+      ],
+      "correct": 2,
+      "explanation": "On a two-lane road (one lane going in each direction) you are required to drive on the right side and to yield the left half of the roadway to oncoming traffic."
+    },
+    {
+      "id": 69,
+      "category": "Lanes, turning & passing",
+      "question": "When there are three or more lanes going in one direction, which lane is usually the smoothest flow of traffic?",
+      "answers": [
+        "The middle lane or lanes",
+        "The inside lane",
+        "The right lane",
+        "The left lane"
+      ],
+      "correct": 0,
+      "explanation": "When there are three or more lanes going in one direction, the middle lane or lanes are usually the smoothest. The left lane is for drivers who want to go faster, pass or turn left. Slower drivers and those turning right use the right lane."
+    },
+    {
+      "id": 70,
+      "category": "Signs & pavement markings",
+      "question": "Which sign shape is reserved for stop signs?",
+      "answers": [
+        "Octagon (eight sides)",
+        "Diamond",
+        "Pennant",
+        "Pentagon"
+      ],
+      "correct": 0,
+      "explanation": "Octagon (eight sides): This shape is reserved for stop signs. You must come to a complete stop."
+    },
+    {
+      "id": 71,
+      "category": "Signs & pavement markings",
+      "question": "Which sign shape warns of a school zone ahead or marks a school crossing?",
+      "answers": [
+        "Triangle pointing down",
+        "Pentagon",
+        "Rectangle",
+        "Round"
+      ],
+      "correct": 1,
+      "explanation": "Pentagon: This sign warns of a school zone ahead or marks a school crossing. The absolute speed limit in a school zone is 20 mph."
+    },
+    {
+      "id": 72,
+      "category": "Signs & pavement markings",
+      "question": "Pennant-shaped signs are located:",
+      "answers": [
+        "At the beginning of a no-passing zone",
+        "At the end of a no-passing zone",
+        "At railroad crossings",
+        "At the end of a school zone"
+      ],
+      "correct": 0,
+      "explanation": "A pennant marks the point where a no-passing zone begins; the zone itself is marked by solid yellow lines, and crossing them to pass or change lanes is not permitted unless you are making a left turn into or from an alley, private road or driveway. The end of the zone is not marked with a pennant."
+    },
+    {
+      "id": 73,
+      "category": "Signs & pavement markings",
+      "question": "A round sign warns of:",
+      "answers": [
+        "A no-passing zone ahead",
+        "A railroad crossing ahead",
+        "A change in speed limit",
+        "A school zone ahead"
+      ],
+      "correct": 1,
+      "explanation": "A round sign warns of a railroad crossing ahead. Instead, a stop line or an X with the letters RR may be painted on the pavement before a crossing."
+    },
+    {
+      "id": 74,
+      "category": "Signs & pavement markings",
+      "question": "Construction and maintenance warning signs are:",
+      "answers": [
+        "Green with white letters",
+        "Orange with black lettering",
+        "Yellow with black letters",
+        "White with red letters"
+      ],
+      "correct": 1,
+      "explanation": "Construction signs have black lettering on an orange background. While most warning signs are yellow, construction and maintenance warning signs are orange."
+    },
+    {
+      "id": 75,
+      "category": "Signs & pavement markings",
+      "question": "Which statement about pavement markings is correct?",
+      "answers": [
+        "Both white and yellow lines prohibit passing",
+        "Solid yellow lines may be crossed to pass if the way is clear",
+        "White lines separate traffic flowing in opposite directions, and yellow lines separate traffic going in the same direction",
+        "White lines separate traffic going in the same direction, and yellow lines separate traffic flowing in opposite directions"
+      ],
+      "correct": 3,
+      "explanation": "White lines separate traffic going the same direction. Yellow lines separate traffic flowing in opposite directions. Broken lines indicate passing or lane changing is permitted if the way is clear, while a solid yellow line means no passing or lane changing."
+    },
+    {
+      "id": 76,
+      "category": "Signs & pavement markings",
+      "question": "A broken line indicates that:",
+      "answers": [
+        "No passing is permitted in either direction",
+        "Passing or lane changing is hazardous",
+        "The speed limit is 15 mph",
+        "Passing or lane changing is permitted if the way is clear"
+      ],
+      "correct": 3,
+      "explanation": "A broken (dashed) line permits passing or lane changing when the way is clear. A solid white line, by contrast, means passing or lane changing is hazardous, and a solid yellow line means no passing or lane changing at all except when turning left into or from an alley, private road or driveway."
+    },
+    {
+      "id": 77,
+      "category": "Signs & pavement markings",
+      "question": "A solid yellow line indicates no passing or lane changing. Which of the following is an exception to that rule?",
+      "answers": [
+        "Changing lanes to pass a stopped school bus",
+        "Making a left turn into or from an alley, private road or driveway",
+        "Passing a slow-moving vehicle",
+        "Passing a vehicle that is turning left"
+      ],
+      "correct": 1,
+      "explanation": "Solid yellow lines indicate no passing or lane changing — unless making a left turn into or from an alley, private road or driveway."
+    },
+    {
+      "id": 78,
+      "category": "Signs & pavement markings",
+      "question": "When the word ONLY is used on an overhead lane sign, you:",
+      "answers": [
+        "Must go in the direction the arrow points; there is no other option",
+        "May go in any direction available in that lane",
+        "Must stop before proceeding",
+        "May turn right if it is safe to do so"
+      ],
+      "correct": 0,
+      "explanation": "Overhead lane signs tell you what direction you must go. When the word ONLY is used, you must go in the direction the arrow points; there is no other option."
+    },
+    {
+      "id": 79,
+      "category": "Signs & pavement markings",
+      "question": "At a red light, you may turn right:",
+      "answers": [
+        "Never",
+        "Any time, without stopping",
+        "Only after stopping and yielding to persons and other vehicles, unless a sign prohibits the turn",
+        "Only if you are the first vehicle in line"
+      ],
+      "correct": 2,
+      "explanation": "You can turn right at a RED light unless there is a sign that prohibits the turn. You may turn RIGHT only after STOPPING AND YIELDING to persons and other vehicles."
+    },
+    {
+      "id": 80,
+      "category": "Signs & pavement markings",
+      "question": "A flashing red traffic light has the same meaning as:",
+      "answers": [
+        "A YIELD sign",
+        "A stop sign",
+        "A caution light",
+        "A warning sign"
+      ],
+      "correct": 1,
+      "explanation": "Flashing red light: You must come to a complete stop before entering the intersection. This light has the same meaning as a STOP sign."
+    },
+    {
+      "id": 81,
+      "category": "Signs & pavement markings",
+      "question": "Which statement about traffic signals is correct?",
+      "answers": [
+        "A green arrow means you may turn without stopping if the way is clear, but you must yield to persons and other traffic within the intersection",
+        "A red arrow permits turning when the light is red",
+        "An amber light means you may enter the intersection without slowing down",
+        "A green light allows you to enter the intersection without yielding to anyone"
+      ],
+      "correct": 0,
+      "explanation": "A GREEN arrow means that you may turn in the direction shown by the arrow without stopping if the way is clear. You MUST yield the right of way to persons and other traffic within the intersection. An amber light means you must stop before entering the intersection if at all possible."
+    },
+    {
+      "id": 82,
+      "category": "Signs & pavement markings",
+      "question": "Crossbuck signs at a railroad crossing are:",
+      "answers": [
+        "Detour signs",
+        "Stop signs",
+        "Advisory signs only",
+        "Yield signs"
+      ],
+      "correct": 3,
+      "explanation": "Crossbuck signs are yield signs. You are legally required to yield the right of way to trains."
+    },
+    {
+      "id": 83,
+      "category": "Signs & pavement markings",
+      "question": "Advance warning signs at a railroad crossing advise you to:",
+      "answers": [
+        "Stop and wait for the gates to rise before crossing",
+        "Slow down, look and listen for the train, and be prepared to stop if a train is approaching",
+        "Cross only if no train is visible",
+        "Stop and shift into low gear"
+      ],
+      "correct": 1,
+      "explanation": "Advance warning signs come before the crossing itself, so they advise rather than command: slow down, look and listen for the train, and be prepared to stop. Once at the crossing you must obey the crossbuck, the flashing red lights and any gates."
+    },
+    {
+      "id": 84,
+      "category": "Signs & pavement markings",
+      "question": "When the flashing red light signals at a railroad crossing are flashing, you must:",
+      "answers": [
+        "STOP, and if there is more than one track, make sure all tracks are clear before crossing",
+        "Proceed if you can see that no train is approaching",
+        "Proceed only after the gate begins to rise",
+        "Stop and sound your horn"
+      ],
+      "correct": 0,
+      "explanation": "When the lights are flashing, STOP! A train is approaching. You are legally required to yield the right of way to the train. If there is more than one track, make sure all tracks are clear before crossing."
+    },
+    {
+      "id": 85,
+      "category": "Signs & pavement markings",
+      "question": "When gates are down at a highway-rail intersection, you should:",
+      "answers": [
+        "Stop on the tracks and call 911",
+        "Drive around the gates",
+        "Proceed if no train is in sight",
+        "Stop and wait until the gates go up and the red lights stop flashing before proceeding"
+      ],
+      "correct": 3,
+      "explanation": "When gates are down, realize the road is closed. Stop and wait until the gates go up and the red lights stop flashing before proceeding. NEVER drive around gates."
+    },
+    {
+      "id": 86,
+      "category": "Following distance & space",
+      "question": "The two-second following distance rule means you should:",
+      "answers": [
+        "Stay two seconds behind only in heavy traffic",
+        "Stay two car lengths behind the vehicle ahead",
+        "Stay two seconds behind in rain, four on snow, and six on ice",
+        "Stay at least two seconds behind the vehicle ahead, counting from the moment the rear bumper of the vehicle ahead passes a fixed point"
+      ],
+      "correct": 3,
+      "explanation": "Scan ahead for a fixed point such as a pole, shadow, or pavement marking. When the rear bumper of the vehicle ahead passes the fixed point, start counting the number of seconds it takes you to reach the same point."
+    },
+    {
+      "id": 87,
+      "category": "Following distance & space",
+      "question": "According to the manual, you must allow at least two seconds of following distance for each ____ of vehicle length.",
+      "answers": [
+        "100 feet",
+        "20 feet",
+        "10 feet",
+        "40 feet"
+      ],
+      "correct": 1,
+      "explanation": "YOU MUST ALLOW AT LEAST TWO SECONDS FOLLOWING DISTANCE FOR EACH 20 FEET OF VEHICLE LENGTH."
+    },
+    {
+      "id": 88,
+      "category": "Following distance & space",
+      "question": "Bus drivers should stay at least how many seconds back, and tractor-trailer drivers at least how many seconds back?",
+      "answers": [
+        "Six seconds and eight seconds",
+        "Three seconds and four seconds",
+        "Four seconds and six seconds",
+        "Two seconds and three seconds"
+      ],
+      "correct": 2,
+      "explanation": "If you are driving a car, stay at least two seconds back from the vehicle ahead. Bus drivers should stay at least four seconds back and tractor-trailer drivers at least six seconds back."
+    },
+    {
+      "id": 89,
+      "category": "Following distance & space",
+      "question": "You should triple the number of seconds of following distance when:",
+      "answers": [
+        "You are carrying a heavier than normal load",
+        "It is at night",
+        "The roads are wet",
+        "The roads are covered with snow and slush"
+      ],
+      "correct": 3,
+      "explanation": "Double the number of seconds when the roads are wet, when you are carrying a heavier than normal load, or at night (cars, four seconds). Triple the number of seconds when the roads are covered with snow and slush (cars, six seconds). Quadruple when ice covers the road (cars, eight seconds)."
+    },
+    {
+      "id": 90,
+      "category": "Following distance & space",
+      "question": "Defensive drivers scan at least how far ahead?",
+      "answers": [
+        "10 to 15 seconds",
+        "20 to 30 seconds",
+        "One minute",
+        "5 to 10 seconds"
+      ],
+      "correct": 0,
+      "explanation": "Defensive drivers scan at least 10 to 15 seconds ahead. If you're watching far enough ahead, you will count past one thousand and ten before passing a fixed object."
+    },
+    {
+      "id": 91,
+      "category": "Following distance & space",
+      "question": "If you cannot see clearly at night, the manual says it makes sense to increase your following distance to at least:",
+      "answers": [
+        "One second",
+        "Three or four seconds",
+        "Six seconds",
+        "Two seconds"
+      ],
+      "correct": 1,
+      "explanation": "At night your headlights show you only a limited distance ahead. The manual warns that driving faster than 55 mph at night means you cannot stop within the distance you can see, so when visibility is poor, increase your following distance to at least three or four seconds."
+    },
+    {
+      "id": 92,
+      "category": "Sharing the road",
+      "question": "A No-Zone is:",
+      "answers": [
+        "A paved area where parking is prohibited",
+        "An area on either side or directly behind a heavy vehicle in which another vehicle is not visible to the driver",
+        "The blind spot of a motorcycle",
+        "The area near the right and left rear corners of your vehicle that cannot be seen through rearview mirrors"
+      ],
+      "correct": 1,
+      "explanation": "No-Zone covers both the large blind spots along either side of a heavy vehicle and the area directly behind it. Avoid tailgating and do not loiter alongside a truck: if the truck driver cannot see you, the driver cannot take evasive action if something appears in the road ahead."
+    },
+    {
+      "id": 93,
+      "category": "Sharing the road",
+      "question": "Some double trailer rigs can be as much as how long?",
+      "answers": [
+        "75 feet",
+        "150 feet",
+        "100 feet",
+        "50 feet"
+      ],
+      "correct": 2,
+      "explanation": "Take into account the vehicle's total length, particularly rigs with double trailers. Some can be as much as 100 feet long."
+    },
+    {
+      "id": 94,
+      "category": "Sharing the road",
+      "question": "When you see the slow-moving vehicle symbol on the back of a vehicle ahead, it means the vehicle:",
+      "answers": [
+        "Cannot travel faster than 25 miles per hour",
+        "Cannot travel faster than 35 miles per hour",
+        "Is a school bus",
+        "Is stopped in the roadway"
+      ],
+      "correct": 0,
+      "explanation": "When you see this symbol on the back of a vehicle ahead, it is a warning to slow down. It means the vehicle cannot travel faster than 25 miles per hour."
+    },
+    {
+      "id": 95,
+      "category": "Sharing the road",
+      "question": "If your vehicle is disabled and you must walk where there are no sidewalks, you should walk:",
+      "answers": [
+        "In the center of the roadway",
+        "Along the median",
+        "On the right side of the road, facing away from traffic",
+        "On the left side of the road, facing traffic"
+      ],
+      "correct": 3,
+      "explanation": "If your vehicle is disabled and you must walk where there are no sidewalks, walk on the left side of the road facing traffic. At night, wear light-colored clothing."
+    },
+    {
+      "id": 96,
+      "category": "Sharing the road",
+      "question": "Under Wyoming's Move Over Law, on a highway with two or more lanes traveling in the same direction, when a stopped emergency vehicle or authorized maintenance vehicle has its lights or emergency signals activated, you should, as soon as it is safe:",
+      "answers": [
+        "Sound your horn and pass immediately",
+        "Pull onto the shoulder and stop",
+        "Do nothing if you are on a two-lane road",
+        "Merge into the lane farthest from the vehicle, or at least one lane of traffic apart from it"
+      ],
+      "correct": 3,
+      "explanation": "When driving on an interstate highway or other highway with two or more lanes traveling in the same direction, the driver shall merge into the lane farthest from the vehicle or at least one lane of traffic apart from the vehicle."
+    },
+    {
+      "id": 97,
+      "category": "Sharing the road",
+      "question": "If a collision with an animal on or near the roadway seems inevitable, you should:",
+      "answers": [
+        "Swerve suddenly to avoid the animal",
+        "Flash your headlights to make the animal move",
+        "Brake as quickly as you safely can, but keep your vehicle under control and on the road",
+        "Sound your horn and steer off the road"
+      ],
+      "correct": 2,
+      "explanation": "If a collision seems inevitable, don't swerve suddenly to avoid the animal. Your risk of personal injury may be greater if you do. Brake as quickly as you safely can, but keep your vehicle under control and on the road."
+    },
+    {
+      "id": 98,
+      "category": "Weather & special conditions",
+      "question": "Headlights must be used:",
+      "answers": [
+        "Only on rural highways",
+        "From one-half hour after sunset until one-half hour before sunrise, and at any other time when persons and vehicles on the road are not clearly discernible at a distance of 1,000 feet ahead",
+        "From sunset until sunrise only",
+        "Any time it is dark enough to need them"
+      ],
+      "correct": 1,
+      "explanation": "Headlights must be used from one-half hour after sunset until one-half hour before sunrise and at any other time when, due to insufficient light or unfavorable weather, persons and vehicles on the road are not clearly discernible at a distance of 1,000 feet ahead."
+    },
+    {
+      "id": 99,
+      "category": "Weather & special conditions",
+      "question": "You should dim your high beams at least how far before meeting an oncoming vehicle?",
+      "answers": [
+        "300 feet",
+        "100 feet",
+        "200 feet",
+        "500 feet"
+      ],
+      "correct": 3,
+      "explanation": "Use low beams when following other vehicles, when meeting oncoming vehicles, and when driving in town. You should dim at least 500 feet (about four to five seconds) before meeting an oncoming vehicle."
+    },
+    {
+      "id": 100,
+      "category": "Weather & special conditions",
+      "question": "If you are within 300 feet of the rear of a vehicle you are approaching, you should:",
+      "answers": [
+        "Dim your lights to their lowest beam",
+        "Turn on your parking lights",
+        "Sound your horn",
+        "Use your high beams"
+      ],
+      "correct": 0,
+      "explanation": "High beams in your mirror glare the driver ahead and make it harder for them to see. Dim to your lowest beam when following a vehicle, and any time you are within 300 feet of the vehicle you are approaching."
+    },
+    {
+      "id": 101,
+      "category": "Weather & special conditions",
+      "question": "You should never use parking lights while driving because:",
+      "answers": [
+        "They burn out quickly",
+        "They drain the battery",
+        "They are only permitted on farm vehicles",
+        "They cannot be seen until after your vehicle is clearly visible, and it is not legal to drive with only parking lights when headlights are required"
+      ],
+      "correct": 3,
+      "explanation": "Parking lights are too dim to light the road or to make you visible in time: another driver sees them only after your vehicle is already clearly visible. Wyoming law also forbids driving with parking lights alone whenever headlights are required."
+    },
+    {
+      "id": 102,
+      "category": "Weather & special conditions",
+      "question": "When driving in fog, you should consider pulling off at the nearest safe spot and stopping when you cannot see:",
+      "answers": [
+        "30 seconds ahead",
+        "50 yards ahead",
+        "10 seconds ahead",
+        "5 seconds ahead"
+      ],
+      "correct": 2,
+      "explanation": "When you cannot see at least 10 seconds ahead, consider pulling off at the nearest safe spot and stopping. In very heavy rain, snow or thick fog you may not be able to see more than 100 feet ahead, and at that point you cannot drive safely at any speed."
+    },
+    {
+      "id": 103,
+      "category": "Weather & special conditions",
+      "question": "The manual says to be careful during the first half hour after rain begins because:",
+      "answers": [
+        "Windshield wipers do not work well when they are cold",
+        "Dust and oil mix with the water and make the roadway slippery",
+        "Your tires are cold",
+        "Drivers are more likely to be speeding"
+      ],
+      "correct": 1,
+      "explanation": "Be careful during the first half hour after the rain begins. Dust and oil mix with the water and make the roadway slippery."
+    },
+    {
+      "id": 104,
+      "category": "Weather & special conditions",
+      "question": "If you are stranded in a blizzard in your car, you should:",
+      "answers": [
+        "Turn off your emergency flashers to save the battery",
+        "Stay with the car so you can be found more easily, keep a window open for fresh air, and be aware of carbon monoxide",
+        "Run the engine and heater continuously",
+        "Leave the car and walk to find help"
+      ],
+      "correct": 1,
+      "explanation": "Do not panic. Stay with the car so you can be found more easily. Keep a window open for a bit of fresh air. Be aware of carbon monoxide — run the engine and heater sparingly, and only with a window open."
+    },
+    {
+      "id": 105,
+      "category": "Weather & special conditions",
+      "question": "When driving on snow or ice, the manual says you must:",
+      "answers": [
+        "Use cruise control to maintain a steady speed",
+        "Change speed or direction suddenly to get around obstacles",
+        "Brake hard and firmly to stop quickly",
+        "Never lock your brakes, and do not use cruise control"
+      ],
+      "correct": 3,
+      "explanation": "Never lock your brakes. You have no steering control unless the wheels are turning. DO NOT use cruise control."
+    },
+    {
+      "id": 106,
+      "category": "Crashes & emergencies",
+      "question": "The law requires you to contact the police if there is an injury, a death, or property damage amounting to:",
+      "answers": [
+        "$1,000 or more",
+        "$500 or more",
+        "$5,000 or more",
+        "$100 or more"
+      ],
+      "correct": 0,
+      "explanation": "Contact the police if there is an injury, death or property damage amounting to $1,000 or more. The law requires you to give the police information on the crash at the time of the crash."
+    },
+    {
+      "id": 107,
+      "category": "Crashes & emergencies",
+      "question": "If you damage an unattended vehicle or other property and cannot locate the owner, you must leave a note containing which of the following?",
+      "answers": [
+        "The name and address of the owner of the property",
+        "Your name, address and telephone number",
+        "A money deposit to cover the damage",
+        "The names of any witnesses to the crash"
+      ],
+      "correct": 1,
+      "explanation": "Leave on a piece of paper where the owner can find it: your name, address and telephone number; driver license number; license plate number; date and time of the crash; and damage to the vehicle. Then contact the nearest law enforcement agency."
+    },
+    {
+      "id": 108,
+      "category": "Crashes & emergencies",
+      "question": "If you're involved in a crash, you must:",
+      "answers": [
+        "Move any injured person to the shoulder immediately",
+        "Stop at or near the crash scene and stay there until the police have arrived and questioned everyone involved",
+        "Exchange information by mail within 30 days",
+        "Move away from the scene and call your insurance company from home"
+      ],
+      "correct": 1,
+      "explanation": "If you are involved in a crash you must: stop your vehicle at or near the crash scene, and stay there until the police have arrived and questioned everyone involved."
+    },
+    {
+      "id": 109,
+      "category": "Crashes & emergencies",
+      "question": "When a crash seems imminent, what does the manual tell you to do, in order?",
+      "answers": [
+        "Sound your horn, slow down, then turn away",
+        "Turn away, speed up, then slow as fast as possible",
+        "Slow as fast as possible, turn away, and when appropriate, speed up",
+        "Speed up, slow down, then sound your horn"
+      ],
+      "correct": 2,
+      "explanation": "Remember these three things in order: first, slow as fast as possible; second, turn away; third, when appropriate, speed up. Turning away and running off the road if necessary avoids a head-on crash, and speeding up is the alternative to avoid a side or rear impact."
+    },
+    {
+      "id": 110,
+      "category": "Crashes & emergencies",
+      "question": "The manual's \"If you begin to skid\" guidance for a slippery road tells you to:",
+      "answers": [
+        "Brake hard to stop the skid as quickly as possible",
+        "Gently turn into the skid and ease your foot off the gas until you regain control",
+        "Accelerate to get out of the skid",
+        "Brake hard and steer opposite the skid"
+      ],
+      "correct": 1,
+      "explanation": "The manual's slippery-road box says to keep your speed down, and if you begin to skid, to gently turn into the skid and ease your foot off the gas until you regain control. Note that the manual's separate \"Skids\" section advises keeping calm, not applying the brakes, and not oversteering."
+    },
+    {
+      "id": 111,
+      "category": "Crashes & emergencies",
+      "question": "When using anti-lock brakes (ABS), you should:",
+      "answers": [
+        "Apply hard, steady brake pressure",
+        "Pump the brakes once every second",
+        "Brake with one foot while steering with the other",
+        "Apply and release the brake pedal repeatedly"
+      ],
+      "correct": 0,
+      "explanation": "Anti-lock brakes adjust automatically, so apply hard, steady brake pressure. Locked wheels and skids typically result when drivers jam on conventional brakes — pumping those brakes once every second is a good rule of thumb. But don't pump ABS brakes."
+    },
+    {
+      "id": 112,
+      "category": "Crashes & emergencies",
+      "question": "If your brakes fail, you should:",
+      "answers": [
+        "Turn off the ignition and wait for help",
+        "Pump the brake pedal rapidly, use the parking brake while holding the brake release so you can ease up if the rear wheels lock, and shift to a lower gear",
+        "Try to drive the car to a garage",
+        "Sound your horn and hold the brakes"
+      ],
+      "correct": 1,
+      "explanation": "If your brakes fail: pump the brake pedal rapidly; use the parking brake, but hold the brake release so you can ease up on the brake if the rear wheels lock; shift to a lower gear; and do not try to drive the car to a garage."
+    },
+    {
+      "id": 113,
+      "category": "Crashes & emergencies",
+      "question": "If you have a tire blowout, you should:",
+      "answers": [
+        "Hold the steering wheel tightly, keep the car going straight, ease your foot off the gas pedal, and do not hit the brakes",
+        "Hit the brakes immediately and steer to the shoulder",
+        "Stop the car in the travel lane",
+        "Pull the parking brake and stop at once"
+      ],
+      "correct": 0,
+      "explanation": "Hold the steering wheel tightly, and keep the car going straight down the road. Ease your foot off the gas pedal but do not hit the brakes."
+    },
+    {
+      "id": 114,
+      "category": "Crashes & emergencies",
+      "question": "If an oncoming or stopped vehicle suddenly appears in your lane of travel and there is immediate danger of a collision, you should:",
+      "answers": [
+        "Flash your headlights and pass on the left",
+        "Sound your horn and continue straight",
+        "Steer off the road to the right",
+        "Brake as hard as possible and stay in your lane"
+      ],
+      "correct": 2,
+      "explanation": "If an oncoming or stopped vehicle should suddenly appear in your lane of travel and there is immediate danger of a collision, STEER OFF THE ROAD TO THE RIGHT."
+    },
+    {
+      "id": 115,
+      "category": "Crashes & emergencies",
+      "question": "If you are driving and see a disabled vehicle parked on the shoulder, you should:",
+      "answers": [
+        "Stop on the shoulder behind it to help",
+        "Pass on the shoulder",
+        "Move to the left lane if possible",
+        "Sound your horn and slow down sharply"
+      ],
+      "correct": 2,
+      "explanation": "If you are driving and see a disabled vehicle parked on the shoulder, move to the left lane if possible. The driver might not have seen you, and may open the door or pull onto the road."
+    },
+    {
+      "id": 116,
+      "category": "Safety belts & child restraints",
+      "question": "Under Wyoming law, a safety belt must be worn by:",
+      "answers": [
+        "The driver only",
+        "Only the driver and front seat passengers on Interstate highways",
+        "All occupants of the vehicle, including the driver",
+        "Passengers over 12 years of age"
+      ],
+      "correct": 2,
+      "explanation": "Under Wyoming law, a safety belt (seat belt) must be worn by all occupants of the vehicle, including the driver."
+    },
+    {
+      "id": 117,
+      "category": "Safety belts & child restraints",
+      "question": "Regarding the safety belt law, it is:",
+      "answers": [
+        "The passenger's responsibility to wear a safety belt",
+        "Enforced only by the Department of Transportation",
+        "The driver's responsibility to see that the law is obeyed",
+        "The responsibility of the vehicle manufacturer"
+      ],
+      "correct": 2,
+      "explanation": "It's the driver's responsibility to see that the law is obeyed. Children must be properly restrained in appropriate child-restraint systems."
+    },
+    {
+      "id": 118,
+      "category": "Safety belts & child restraints",
+      "question": "The lap belt should be:",
+      "answers": [
+        "Worn only on the left side",
+        "Worn low across the soft part of the abdomen",
+        "Drawn snugly across the hip bones, and never worn across the stomach or soft part of the abdomen",
+        "Worn above the hip bones"
+      ],
+      "correct": 2,
+      "explanation": "The lap belt should be drawn snugly across the hip bones. It should never be worn across the stomach or soft part of the abdomen. The shoulder strap should not be worn alone."
+    },
+    {
+      "id": 119,
+      "category": "Safety belts & child restraints",
+      "question": "According to the Wyoming Child Restraint Guide, the requirements apply to a child who has not reached his or her:",
+      "answers": [
+        "Ninth birthday",
+        "Sixth birthday",
+        "Eighth birthday",
+        "Twelfth birthday"
+      ],
+      "correct": 0,
+      "explanation": "Child who has not reached his/her ninth birthday. The requirements apply to all drivers, in privately owned, leased or rented non-commercial passenger vehicles, and to residents and non-residents."
+    },
+    {
+      "id": 120,
+      "category": "Safety belts & child restraints",
+      "question": "A child must be secured in a vehicle seat other than the front seat, except:",
+      "answers": [
+        "When the child weighs more than 40 pounds",
+        "In vehicles with one row of seats, or if all safety belts are in use by other child passengers",
+        "When the vehicle is a pickup truck",
+        "When the child is taller than five feet"
+      ],
+      "correct": 1,
+      "explanation": "Child must be secured in vehicle seat other than front seat except in vehicles with one row of seats, or if all safety belts are in use by other child passengers."
+    },
+    {
+      "id": 121,
+      "category": "Safety belts & child restraints",
+      "question": "A child in a rear-facing infant seat shall not be placed:",
+      "answers": [
+        "In the back seat of a sedan",
+        "In a vehicle with one row of seats",
+        "Beside a window",
+        "In front of an active airbag"
+      ],
+      "correct": 3,
+      "explanation": "A rear-facing infant seat placed in front of an active airbag can be deadly, because the bag deploys into the back of the seat. This is why small children are secured in a vehicle seat other than the front seat."
+    },
+    {
+      "id": 122,
+      "category": "Safety belts & child restraints",
+      "question": "A child restraint must conform to which Federal Motor Vehicle Safety Standard?",
+      "answers": [
+        "FMVSS 213",
+        "FMVSS 302",
+        "FMVSS 221",
+        "FMVSS 208"
+      ],
+      "correct": 0,
+      "explanation": "The restraint itself has to meet the standard: it must conform to Federal Motor Vehicle Safety Standard 213 for child restraint systems. Using a seat that does not meet the standard does not satisfy the law."
+    },
+    {
+      "id": 123,
+      "category": "Safety belts & child restraints",
+      "question": "What are the maximum fines for non-use or misuse of a child restraint?",
+      "answers": [
+        "$100 for a first offense, and $250 for second and subsequent offenses",
+        "$110 for a first offense, and $110 for second and subsequent offenses",
+        "$60 for a first offense, and $60 for second and subsequent offenses",
+        "$60 for a first offense, and $110 for second and subsequent offenses"
+      ],
+      "correct": 3,
+      "explanation": "Maximum $60 fine for first offense. Fine shall be waived by the court upon receipt of proof of purchase, lease, or other acquisition, of an approved restraint after the offense occurred. Maximum $110 fine for second and subsequent offenses."
+    },
+    {
+      "id": 124,
+      "category": "Safety belts & child restraints",
+      "question": "Non-use or misuse of a child restraint is:",
+      "answers": [
+        "Never a reason to stop a vehicle",
+        "Reasonable suspicion for stopping a vehicle to investigate a suspected violation",
+        "A primary offense only if a child is injured",
+        "Enforced only by local police"
+      ],
+      "correct": 1,
+      "explanation": "Primary Offense: Non-use or misuse are reasonable suspicion for stopping a vehicle to investigate a suspected violation."
+    },
+    {
+      "id": 125,
+      "category": "Safety belts & child restraints",
+      "question": "Which of the following is an exemption from the child restraint requirements?",
+      "answers": [
+        "A child who weighs more than 40 pounds",
+        "A car with a single row of seats",
+        "A child who is eight years old",
+        "A physician's signed statement, carried in the car, certifying that the child should not be secured in a child restraint system"
+      ],
+      "correct": 3,
+      "explanation": "Exemptions include a physician's signed statement, carried in the car, certifying that the child should not be secured in a child restraint system."
+    },
+    {
+      "id": 126,
+      "category": "Safety belts & child restraints",
+      "question": "A child within the age requirement is exempt from a child restraint system if:",
+      "answers": [
+        "The child is sitting in the back seat",
+        "The child is taller than four feet nine inches",
+        "The lap and shoulder belt fit properly across the collarbone, chest and hips of the child and does not pose danger to the neck, face or abdominal area in a crash or sudden stop",
+        "The child weighs more than 40 pounds"
+      ],
+      "correct": 2,
+      "explanation": "Exemption: Child within age requirement if the lap and shoulder belt fit properly across the collarbone, chest and hips of child and does not pose danger to neck, face or abdominal area in a crash or sudden stop."
+    },
+    {
+      "id": 127,
+      "category": "Safety belts & child restraints",
+      "question": "Which of the following persons is required to wear a safety belt?",
+      "answers": [
+        "A passenger sitting in the back seat of a car in which the front seat occupants are wearing belts",
+        "A driver in a vehicle not required to be equipped with safety belts under federal law",
+        "A person with a written statement from a physician that it is not advisable to wear a safety belt for physical or medical reasons",
+        "A U.S. postal service worker performing duties as a postal carrier"
+      ],
+      "correct": 0,
+      "explanation": "The others are all on the list of persons not required to wear a safety belt: those with a physician's written statement, those in a vehicle not required to be equipped with safety belts under federal law, and a U.S. postal service worker performing duties as a postal carrier."
+    },
+    {
+      "id": 128,
+      "category": "Safety belts & child restraints",
+      "question": "According to the booster seat hints, a belt-positioning booster which provides protection for a child over 40 pounds is used with:",
+      "answers": [
+        "A lap and shoulder belt, keeping the back and buttocks against the seat back, the shoulder belt on the shoulder resting snugly over the chest, the lap belt low across the hip or upper thigh, the knees completely bent over the edge of the vehicle seat, and the feet flat on the floor",
+        "No seat belt at all",
+        "A lap belt worn across the abdomen",
+        "A lap belt only"
+      ],
+      "correct": 0,
+      "explanation": "To fit a seat belt a child must: keep back and buttocks against the vehicle seat back; keep the shoulder belt on the shoulder resting snugly over the chest and the lap belt low across the hip/upper thigh; keep knees completely bent over the edge of the vehicle seat; and keep feet flat on the floor."
+    },
+    {
+      "id": 129,
+      "category": "Equipment & Interstate",
+      "question": "A police officer has the right to stop you and inspect the equipment on your vehicle. If any equipment is defective, you will be:",
+      "answers": [
+        "Directed to have it repaired immediately",
+        "Allowed to continue without repair",
+        "Required to sell the vehicle",
+        "Given a citation of 30 days"
+      ],
+      "correct": 0,
+      "explanation": "If any equipment is defective, you will be directed to have it repaired immediately. If your vehicle is found to be unsafe you could be fined."
+    },
+    {
+      "id": 130,
+      "category": "Equipment & Interstate",
+      "question": "In the penny test for tire tread wear, you:",
+      "answers": [
+        "Hold the penny upside down by its tail and press the tail into the groove",
+        "Hold Abraham Lincoln's body between your thumb and forefinger and place Lincoln's head into a groove at the lowest point of the tread",
+        "Scratch the tread with the edge of the penny",
+        "Press the edge of the penny into the sidewall"
+      ],
+      "correct": 1,
+      "explanation": "Take a penny and hold Abraham Lincoln's body between your thumb and forefinger. Select a point on your tire where the tread appears to be lowest and place Lincoln's head into one of the grooves."
+    },
+    {
+      "id": 131,
+      "category": "Equipment & Interstate",
+      "question": "If you find yourself going the wrong way on an Interstate exit ramp, you should:",
+      "answers": [
+        "Continue until you reach the next exit",
+        "Speed up to get off the ramp",
+        "Pull onto the shoulder, stop, and only turn around when there is no oncoming traffic",
+        "Turn around immediately"
+      ],
+      "correct": 2,
+      "explanation": "If you find yourself going the wrong way on a ramp, pull onto the shoulder and stop. Only turn around when there is no oncoming traffic, and never cross the median of an Interstate highway."
+    },
+    {
+      "id": 132,
+      "category": "Equipment & Interstate",
+      "question": "If you miss your exit on the Interstate, you should:",
+      "answers": [
+        "Cross the median to reach the exit",
+        "Stop and make a U-turn",
+        "Back up on the Interstate to return to the exit",
+        "Go on to the next exit"
+      ],
+      "correct": 3,
+      "explanation": "If you MISS your exit, go on to the next exit. Backing up on the Interstate is dangerous. DO NOT cross the median of an Interstate highway."
+    },
+    {
+      "id": 133,
+      "category": "Equipment & Interstate",
+      "question": "When approaching the Interstate on an entrance ramp, you should:",
+      "answers": [
+        "Enter the Interstate at highway speed immediately",
+        "Check over your shoulder for a gap in traffic, adjust your speed to meet that gap and signal, then merge at about the same speed as other traffic",
+        "Merge into the Interstate without checking the shoulder for a gap in traffic",
+        "Sound your horn and merge"
+      ],
+      "correct": 1,
+      "explanation": "As you approach the Interstate: CHECK over your shoulder for a gap in the traffic; ADJUST your speed to meet that gap and signal; DO NOT STOP unless there is no gap in traffic; and as you MERGE, make sure you are driving about the same speed as other traffic."
+    },
+    {
+      "id": 134,
+      "category": "Equipment & Interstate",
+      "question": "You:",
+      "answers": [
+        "May cross the median of an Interstate highway when you miss your exit",
+        "May cross the median at night only",
+        "Do not cross the median of an Interstate highway",
+        "May park on the median in an emergency"
+      ],
+      "correct": 2,
+      "explanation": "DO NOT cross the median of an Interstate highway. Backing up on the Interstate is dangerous."
+    },
+    {
+      "id": 135,
+      "category": "Equipment & Interstate",
+      "question": "When you wish to leave the Interstate, the manual instructs you to:",
+      "answers": [
+        "Slow on the Interstate, then merge into the deceleration lane",
+        "Signal at the last possible moment and brake hard on the Interstate",
+        "Stop on the shoulder and wait for a gap",
+        "Never slow on the Interstate, and slow after turning into the deceleration lane"
+      ],
+      "correct": 3,
+      "explanation": "PLAN ahead. Signal and move into the proper lane a mile or more before the exit. NEVER slow on the Interstate. SLOW after turning into the deceleration lane. Once off the Interstate, be aware of two-way traffic and check your speed."
+    },
+    {
+      "id": 136,
+      "category": "Equipment & Interstate",
+      "question": "In the event of a breakdown or other emergency on the Interstate, you should:",
+      "answers": [
+        "Drive the vehicle as far onto the right shoulder as possible, making certain that all four wheels are well off the road, and turn on your four-way emergency warning lights",
+        "Stand behind the vehicle with flares and wave passing traffic around you",
+        "Stop in the travel lane so the driver behind you can call for help",
+        "Get out on the traffic side of the vehicle to flag down help"
+      ],
+      "correct": 0,
+      "explanation": "Drive the vehicle as far onto the right shoulder as possible. Make certain that all four wheels are well off the road. Turn on your four-way emergency warning lights. Do not open the doors or get out on the traffic side of your vehicle."
+    },
+    {
+      "id": 137,
+      "category": "Equipment & Interstate",
+      "question": "It is not legal to park:",
+      "answers": [
+        "Within 15 feet of a fire hydrant",
+        "In a parking space designated for the disabled, if you do not display a disabled parking placard or bear disabled license plates",
+        "In front of a public or private driveway",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "It is not legal to park within 15 feet of a fire hydrant, in front of a public or private driveway, or in a parking space designated for the disabled unless your vehicle displays a disabled parking placard or bears disabled license plates."
+    },
+    {
+      "id": 138,
+      "category": "Equipment & Interstate",
+      "question": "If you park facing uphill where there is a curb, you should:",
+      "answers": [
+        "Set the parking brake only, and leave the wheels as they are",
+        "Set the parking brake and turn the wheels away from the curb",
+        "Leave the engine running and turn the wheels to the right",
+        "Set the parking brake and turn the wheels towards the curb"
+      ],
+      "correct": 1,
+      "explanation": "If you park facing uphill where there is a curb, you should set the parking brake and turn the wheels away from the curb. In any other situation, turn the wheels towards the curb or edge of the road."
+    },
+    {
+      "id": 139,
+      "category": "Equipment & Interstate",
+      "question": "To leave a parking space, you should:",
+      "answers": [
+        "Signal only if you are turning",
+        "Enter traffic without yielding",
+        "Signal before you start to move, yield the right of way to oncoming vehicles and motorcycles, and enter traffic without darting into it",
+        "Pull out as quickly as possible"
+      ],
+      "correct": 2,
+      "explanation": "CHECK to see if anyone is coming. SIGNAL before you start to move. YIELD the right of way to oncoming vehicles and motorcycles. ENTER traffic. Do not dart out into traffic."
+    },
+    {
+      "id": 140,
+      "category": "Equipment & Interstate",
+      "question": "When driving past parked cars, which of the following is a clue that a car is about to pull out in front of you?",
+      "answers": [
+        "The car is parked within 30 feet of you",
+        "The driver's side window is open",
+        "Exhaust coming from the tail pipe, brake lights on, a turn signal flashing, white back-up lights on, or front wheels turning out",
+        "The engine is cold"
+      ],
+      "correct": 2,
+      "explanation": "Check for clues such as: exhaust coming from the tail pipe; brake lights on, a turn signal flashing, or white back-up lights on; front wheels turning out; or a person sitting behind the wheel."
+    },
+    {
+      "id": 141,
+      "category": "Equipment & Interstate",
+      "question": "When passing a heavy vehicle, you should be sure you can see what in your rearview mirror before pulling back into your lane?",
+      "answers": [
+        "Both headlights and the entire cab of the truck",
+        "Nothing — pull back in immediately",
+        "The headlights only",
+        "The trailer only"
+      ],
+      "correct": 0,
+      "explanation": "Because it takes longer to pass a large vehicle, you should maintain a consistent speed when passing and be sure you can see both headlights and the entire cab of the truck in your rearview mirror before pulling back into your lane."
+    },
+    {
+      "id": 142,
+      "category": "Equipment & Interstate",
+      "question": "Wyoming law prohibits reading or sending a text message from a cell phone or other device while operating a vehicle. The manual recommends that operators:",
+      "answers": [
+        "Text only while stopped at a red light",
+        "Pull well off the highway and STOP before making a cellular call or texting",
+        "Text at any time as long as they are not speeding",
+        "Text only if they are using hands-free service"
+      ],
+      "correct": 1,
+      "explanation": "WYDOT recommends vehicle operators pull well off the highway and STOP before making a cellular call or texting. Always remember, your first responsibility when you are driving is to pay attention to the road."
+    },
+    {
+      "id": 143,
+      "category": "Equipment & Interstate",
+      "question": "If you are stopped by the police while driving, the manual instructs you to:",
+      "answers": [
+        "Turn on your emergency flashers and wait in the vehicle",
+        "Get out of the vehicle immediately to show your license",
+        "Keep driving until the officer follows you",
+        "Put your vehicle in park, roll down your window, end phone calls, turn down your radio, keep your hands on the steering wheel, and do not exit unless asked"
+      ],
+      "correct": 3,
+      "explanation": "Put your vehicle in park. Roll down your window, end phone calls, and turn down your radio. Do not exit your vehicle unless asked to do so. Keep your hands on the steering wheel so the officer can see them."
+    },
+    {
+      "id": 144,
+      "category": "Equipment & Interstate",
+      "question": "You have the right to politely deny a request by a police officer to search your car. However, if probable cause is present, the officer:",
+      "answers": [
+        "May only search the passenger compartment",
+        "Must obtain a warrant no matter what",
+        "Must leave your vehicle",
+        "Has the right to search your vehicle without your consent"
+      ],
+      "correct": 3,
+      "explanation": "You always have the right to politely deny a request to search your car. Probable cause is the exception: with probable cause that a crime has been committed, the officer has the right to search your vehicle without your consent."
+    }
+  ]
+}
