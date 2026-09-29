@@ -1,7 +1,7 @@
 {
-  "name": "Wyoming Driver Test — Class C",
+  "name": "Driver License Practice Test",
   "short_name": "Driver Test",
-  "description": "Practice questions for the Wyoming Class C driver license written test, from the 2021 Rules of the Road manual.",
+  "description": "Practice questions for state driver license written tests, drawn from official driver manuals.",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",

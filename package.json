@@ -2,9 +2,11 @@
   "name": "wydlm",
   "version": "1.0.0",
   "private": true,
-  "description": "Wyoming Class C driver license practice test (Elm)",
+  "description": "State driver license practice tests (Elm)",
   "scripts": {
+    "prebuild": "node scripts/gen-banks.js",
     "build": "elm make src/Main.elm --optimize --output=public/elm.js",
+    "pretest": "node scripts/gen-banks.js",
     "test": "elm-test",
     "format": "elm-format src tests --yes",
     "validate": "elm-format src tests --validate"

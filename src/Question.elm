@@ -1,9 +1,10 @@
-module Question exposing (Question, document, shuffle)
+module Question exposing (Bank, Question, bank, document, shuffle)
 
-{-| A single practice-test question, exactly as it appears in questions.json.
+{-| A single practice-test question, and the bank file it arrives in.
 
-This module only knows _what_ a question is. It has no opinion on how questions
-are displayed, scored, or ordered by the app.
+A bank is one JSON document under `banks/`: an id, a short name, a display
+title, and the `questions` array. This module only knows *what* those are. It
+has no opinion on how questions are displayed, scored, or ordered by the app.
 
 -}
 
@@ -36,12 +37,33 @@ decoder =
         (Decode.field "explanation" Decode.string)
 
 
-{-| questions.json is a document with a title and a `questions` array. This
-pulls the array out of it, so the file's shape is known in exactly one place.
+{-| Pulls just the `questions` array out of a bank file.
 -}
 document : Decode.Decoder (List Question)
 document =
     Decode.field "questions" (Decode.list decoder)
+
+
+{-| A whole bank file: its id, display title, and questions. The file's shape
+is known in exactly one place.
+-}
+type alias Bank =
+    { id : String
+    , name : String
+    , title : String
+    , subtitle : String
+    , questions : List Question
+    }
+
+
+bank : Decode.Decoder Bank
+bank =
+    Decode.map5 Bank
+        (Decode.field "id" Decode.string)
+        (Decode.field "name" Decode.string)
+        (Decode.field "title" Decode.string)
+        (Decode.field "subtitle" Decode.string)
+        (Decode.field "questions" (Decode.list decoder))
 
 
 

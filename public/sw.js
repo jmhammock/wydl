@@ -2,18 +2,21 @@
 //
 // The app shell is served from cache immediately, then refreshed in the
 // background. That way a returning client never waits on the network, but it
-// also picks up a new elm.js or questions.json on the very next visit instead
+// also picks up a new elm.js or bank file on the very next visit instead
 // of staying on a stale build forever. Bumping CACHE is still how you retire
 // old files, but forgetting to bump no longer strands anyone on old content.
 
-const CACHE = 'driver-test-v1';
+const CACHE = 'driver-test-v2';
 
 const SHELL = [
   './',
   'index.html',
   'styles.css',
   'elm.js',
-  'questions.json',
+  // BANKS-START
+  'banks/mt.json',
+  'banks/wy.json',
+// BANKS-END
   'manifest.webmanifest',
   'icons/icon.svg',
   'icons/icon-180.png',

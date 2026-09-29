@@ -1,0 +1,2038 @@
+{
+  "id": "mt",
+  "name": "Montana",
+  "title": "Montana Driver License Practice Test — Class D",
+  "subtitle": "Driver Manual, revised October 2018",
+  "source": "Montana Driver Manual (Montana Motor Vehicle Division, revised October 2018; bank authored from PDF text extracted with pdftotext)",
+  "notes": "Questions and answer wording are drawn closely from the source manual. `correct` is a zero-based index into the `answers` array.",
+  "questions": [
+    {
+      "id": 1,
+      "answers": [
+        "2 weeks",
+        "15 days",
+        "10 days",
+        "1 month"
+      ],
+      "category": "Licensing & permits",
+      "correct": 2,
+      "explanation": "If you move, you must report your change of address within 10 days.",
+      "question": "If you move, you must report your change of address to the Driver Services Bureau within:"
+    },
+    {
+      "id": 2,
+      "answers": [
+        "Their child has passed a driver education course.",
+        "Their child is a careful driver.",
+        "They are affirming their child’s correct date of birth.",
+        "They are accepting financial responsibility for any damage that results from the minor operating a motor vehicle."
+      ],
+      "category": "Licensing & permits",
+      "correct": 3,
+      "explanation": "A parent signing for a driver under 18 accepts financial responsibility for damage from the minor's driving.",
+      "question": "When signing for their child under 18 years of age, parents are indicating that:"
+    },
+    {
+      "id": 3,
+      "answers": [
+        "3 months",
+        "6 months",
+        "9 months",
+        "12 months"
+      ],
+      "category": "Licensing & permits",
+      "correct": 1,
+      "explanation": "A Montana license can be renewed as early as six months before it expires.",
+      "question": "What is the earliest a Montana driver license can be renewed prior to the license expiration date?"
+    },
+    {
+      "id": 4,
+      "answers": [
+        "When traffic is very heavy",
+        "During daylight savings time",
+        "From 1/2 hour before sunset to 1/2 hour after sunrise",
+        "From 1/2 hour after sunset to 1/2 hour before sunrise"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 3,
+      "explanation": "Headlights are required from 1/2 hour after sunset to 1/2 hour before sunrise, and any time you cannot see 500 feet.",
+      "question": "Headlights are required at any time you cannot see persons or vehicles for 500 feet (because of snow, dust, etc.) and:"
+    },
+    {
+      "id": 5,
+      "answers": [
+        "Cause excessive oil use",
+        "Make your vehicle need a tune-up sooner than normal",
+        "Make you drowsy while driving",
+        "Set grass fires on country roads"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 2,
+      "explanation": "Exhaust fumes entering the car can make you drowsy while driving.",
+      "question": "A leaking exhaust system can:"
+    },
+    {
+      "id": 6,
+      "answers": [
+        "500 feet",
+        "250 feet",
+        "300 feet",
+        "Only visible at night"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 2,
+      "explanation": "Turn signals must be visible for 300 feet.",
+      "question": "Turn signals must be visible for:"
+    },
+    {
+      "id": 7,
+      "answers": [
+        "There is a bus stop ahead.",
+        "There is a stop sign ahead.",
+        "There is a caution sign ahead.",
+        "You must stop when other cars stop."
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 1,
+      "explanation": "A Stop Ahead advance sign warns that there is a stop sign ahead, so begin slowing now.",
+      "question": "A “Stop Ahead” advance warning sign means that:"
+    },
+    {
+      "id": 8,
+      "answers": [
+        "You must drive slowly and sound horn.",
+        "You must watch for children in this area.",
+        "You must watch for children during school hours.",
+        "School ahead - slow down and watch for children at all times."
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 3,
+      "explanation": "A School Ahead sign means slow down and watch for children at all times, day and night.",
+      "question": "A “School Ahead” advance warning sign means that:"
+    },
+    {
+      "id": 9,
+      "answers": [
+        "The highway ahead turns only to the right.",
+        "The highway ahead turns sharply to the right.",
+        "The highway ahead turns to the right and then the left.",
+        "The highway ahead turns to the left and then the right."
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 2,
+      "explanation": "A reverse-turn sign with arrows bending right then left warns the road turns right and then left.",
+      "question": "A yellow diamond warning sign shows arrows bending to the right and then to the left. It means that:"
+    },
+    {
+      "id": 10,
+      "answers": [
+        "Trucks are permitted on a narrow bridge.",
+        "The bridge ahead is open to one-way traffic only.",
+        "The bridge ahead is wide enough for one car at a time.",
+        "The bridge ahead may be too narrow to meet or pass a truck, you must be careful."
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 3,
+      "explanation": "A Narrow Bridge sign warns the bridge may be too narrow to meet or pass a truck.",
+      "question": "A “Narrow Bridge” warning sign means that:"
+    },
+    {
+      "id": 11,
+      "answers": [
+        "There is a detour ahead.",
+        "You must stop for flaggers.",
+        "The road ahead is closed to traffic.",
+        "The highway ahead is being repaired, approach with caution."
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 3,
+      "explanation": "A Road Work Ahead sign means the highway is being repaired, so approach with caution.",
+      "question": "A “Road Work Ahead” warning sign means that:"
+    },
+    {
+      "id": 12,
+      "answers": [
+        "There are trucks hauling gravel ahead.",
+        "The highway ahead is under construction.",
+        "The highway ahead is covered with loose gravel.",
+        "The highway ahead has been sanded for icy conditions."
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 2,
+      "explanation": "A Loose Gravel sign warns the highway surface is covered with loose gravel.",
+      "question": "A “Loose Gravel” warning sign means that:"
+    },
+    {
+      "id": 13,
+      "answers": [
+        "Making left turns.",
+        "U-turns when they are permitted.",
+        "Can be used by vehicles traveling in both directions.",
+        "All of the above."
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 3,
+      "explanation": "The shared center lane serves traffic from both directions for left turns and permitted U-turns.",
+      "question": "The shared center lane is reserved for:"
+    },
+    {
+      "id": 14,
+      "answers": [
+        "Stop quickly where he is.",
+        "Stop and wait for a red or green light.",
+        "Stop at the right side of the street or roadway.",
+        "Increase speed and keep out of the way of the emergency vehicle."
+      ],
+      "category": "Right of way",
+      "correct": 2,
+      "explanation": "On hearing a siren, pull to and stop at the right side of the road.",
+      "question": "Upon hearing an emergency vehicle siren, a driver must:"
+    },
+    {
+      "id": 15,
+      "answers": [
+        "Make very sure the pedestrian sees him/her.",
+        "Yield the right-of-way, even if the pedestrian is in the wrong.",
+        "Always yield the right-of-way when the pedestrian is legally entitled to it.",
+        "Slow down and sound the horn when entering a heavily congested area."
+      ],
+      "category": "Right of way",
+      "correct": 1,
+      "explanation": "Drivers must yield to pedestrians even when the pedestrian is in the wrong.",
+      "question": "When dealing with pedestrians, a driver must:"
+    },
+    {
+      "id": 16,
+      "answers": [
+        "Stop before reaching the bus and not proceed until the bus has resumed motion.",
+        "Stop before reaching the bus and not proceed until the red lights have been extinguished.",
+        "Stop before reaching the bus and proceed only when all children have loaded or unloaded.",
+        "Stop and not proceed until the way is clear."
+      ],
+      "category": "Right of way",
+      "correct": 1,
+      "explanation": "You must stop for a school bus with red lights flashing and wait until the red lights are extinguished.",
+      "question": "Upon meeting or overtaking a school bus from either direction that has stopped on the highway with its red lights flashing, a driver must:"
+    },
+    {
+      "id": 17,
+      "answers": [
+        "May not drive between the vehicles forming the procession unless authorized by a police officer.",
+        "May not enter an intersection to cross the path of a funeral procession as it is proceeding through a red traffic control device.",
+        "Must yield the right-of-way to a motor vehicle that is part of the funeral procession.",
+        "All of the above."
+      ],
+      "category": "Right of way",
+      "correct": 3,
+      "explanation": "All of these funeral procession rules apply: don't break through it, don't cross its path on red, and yield to its vehicles.",
+      "question": "When encountering a funeral procession, a driver:"
+    },
+    {
+      "id": 18,
+      "answers": [
+        "Maintain speed and proceed.",
+        "Stop at the intersection, check all directions, and proceed when safe.",
+        "Slow down and yield to all drivers.",
+        "Take his/her foot off the accelerator, cover the brake, look left, right, and left again, and be prepared to yield."
+      ],
+      "category": "Right of way",
+      "correct": 3,
+      "explanation": "At an uncontrolled intersection, cover the brake, look left-right-left, and be prepared to yield.",
+      "question": "When approaching an uncontrolled intersection, a driver should:"
+    },
+    {
+      "id": 19,
+      "answers": [
+        "When overtaking and passing another vehicle.",
+        "When you have 500 feet of clear road ahead and to the rear.",
+        "When the shoulder of the road is rough and the ditch is deep.",
+        "When the road is clear of vehicles coming from the opposite direction."
+      ],
+      "category": "Speed & passing",
+      "correct": 0,
+      "explanation": "You may drive left of the centerline when overtaking and passing another vehicle.",
+      "question": "It is permissible to drive a motor vehicle to the left of the centerline of a highway:"
+    },
+    {
+      "id": 20,
+      "answers": [
+        "Drive with your four-way flashers on.",
+        "Drive with your parking lights on.",
+        "Not turn any vehicle lights on.",
+        "Turn on your vehicle lights."
+      ],
+      "category": "Seeing & communicating",
+      "correct": 3,
+      "explanation": "Turn your lights on at dusk and on overcast days so others can see you.",
+      "question": "At dusk or on overcast days, you should:"
+    },
+    {
+      "id": 21,
+      "answers": [
+        "You are going faster than the bicycle.",
+        "The bicycle always has the right-of-way.",
+        "Oncoming traffic may not see you pull out to pass.",
+        "The cyclist may have to swerve into traffic to avoid an object on the road."
+      ],
+      "category": "Sharing the road",
+      "correct": 3,
+      "explanation": "Give bicycles room because a cyclist may swerve into traffic to avoid an obstacle.",
+      "question": "You should be cautious when passing a bicycle because:"
+    },
+    {
+      "id": 22,
+      "answers": [
+        "2 seconds ahead of your vehicle.",
+        "4 seconds ahead of your vehicle.",
+        "10 seconds ahead of your vehicle.",
+        "15 seconds ahead of your vehicle."
+      ],
+      "category": "Seeing & communicating",
+      "correct": 2,
+      "explanation": "Look at least 10 seconds down the road to avoid last-minute braking or turning.",
+      "question": "In order to avoid last-minute braking, or the need to turn, you should look down the road at least:"
+    },
+    {
+      "id": 23,
+      "answers": [
+        "Traffic is faster at night.",
+        "There is a larger volume of traffic at night.",
+        "A driver cannot see as well at night.",
+        "Accidents occur more frequently at night."
+      ],
+      "category": "Seeing & communicating",
+      "correct": 2,
+      "explanation": "Night driving needs extra caution because you cannot see as well.",
+      "question": "Driving at night requires increased caution because:"
+    },
+    {
+      "id": 24,
+      "answers": [
+        "Your vehicle positions and eye contact.",
+        "The turning of your wheels.",
+        "You slowing up at the corner.",
+        "The actions of the car behind you."
+      ],
+      "category": "Seeing & communicating",
+      "correct": 0,
+      "explanation": "Other drivers read your intentions from your lane position and eye contact as well as your signals.",
+      "question": "Other than by your turn signals, other motorists can sometimes determine your intention to turn by:"
+    },
+    {
+      "id": 25,
+      "answers": [
+        "Pass on the right whenever possible.",
+        "Drive with the flow of traffic, passing only as needed.",
+        "Try to get to the front of any line of slow moving traffic so that you can see better.",
+        "Always flash your lights and sound your horn to alert the other driver."
+      ],
+      "category": "Speed & space management",
+      "correct": 1,
+      "explanation": "Drive with the flow of traffic and pass only as needed.",
+      "question": "A good rule to remember for passing is:"
+    },
+    {
+      "id": 26,
+      "answers": [
+        "Your tires pushing water out of their paths.",
+        "Your tires actually floating on a film of water.",
+        "Your tires causing sheets of water to splash on passing vehicles.",
+        "Your tires throwing water to the rear, causing problems for following vehicles."
+      ],
+      "category": "Speed & space management",
+      "correct": 1,
+      "explanation": "Hydroplaning is when your tires float on a film of water and lose contact with the road.",
+      "question": "“Hydroplaning” is best described as:"
+    },
+    {
+      "id": 27,
+      "answers": [
+        "Get out of the car and go for help.",
+        "Lay down in the car and go to sleep.",
+        "Keep the windows rolled up tight, keeping the engine running at all times.",
+        "Stay in the car, as you are more likely to be found."
+      ],
+      "category": "Speed & space management",
+      "correct": 3,
+      "explanation": "If stranded in a snowstorm, stay in the car where rescuers are more likely to find you.",
+      "question": "If you become stranded in a snow storm, the best thing to do is:"
+    },
+    {
+      "id": 28,
+      "answers": [
+        "Three alcoholic drinks an hour",
+        "One alcoholic drink an hour",
+        "Two alcoholic drinks an hour",
+        "None of the above"
+      ],
+      "category": "Alcohol, drugs & DUI",
+      "correct": 1,
+      "explanation": "The body gets rid of about one alcoholic drink per hour, no faster.",
+      "question": "Your body gets rid of:"
+    },
+    {
+      "id": 29,
+      "answers": [
+        "Stop for a rest every two hours",
+        "Do arm exercises every hour",
+        "Drive with one eye open at a time",
+        "Change feet on the gas pedal"
+      ],
+      "category": "Fatigue, health & vision",
+      "correct": 0,
+      "explanation": "On a long trip, stop for a rest about every two hours to fight fatigue.",
+      "question": "To help relieve fatigue on a trip, it is a good idea to:"
+    },
+    {
+      "id": 30,
+      "answers": [
+        "Coordination",
+        "Vision",
+        "Judgment and skill",
+        "Reflexes"
+      ],
+      "category": "Alcohol, drugs & DUI",
+      "correct": 2,
+      "explanation": "Alcohol is so dangerous because it degrades the judgment and skill driving depends on.",
+      "question": "The main reason why drinking alcohol and then driving is so dangerous is that it affects your:"
+    },
+    {
+      "id": 31,
+      "answers": [
+        "Lessening your concentration on the driving task",
+        "Decreasing your chances of an accident",
+        "Causing you to go to sleep at the wheel",
+        "Making you more aware of others around you"
+      ],
+      "category": "Fatigue, health & vision",
+      "correct": 0,
+      "explanation": "Stress hurts your driving by lessening concentration on the driving task.",
+      "question": "Stress can affect your driving by:"
+    },
+    {
+      "id": 32,
+      "answers": [
+        "Poor or unkempt roads",
+        "Inclement weather/driving conditions",
+        "Drunk drivers",
+        "Excessive speed"
+      ],
+      "category": "Alcohol, drugs & DUI",
+      "correct": 2,
+      "explanation": "Drunk drivers are the number one killer on Montana's roads.",
+      "question": "What is the number one killer on Montana’s roads?"
+    },
+    {
+      "id": 33,
+      "answers": [
+        "Stop quickly",
+        "Pull all the way off and wait until it is safe to get back on the road",
+        "Accelerate and steer back on the road quickly",
+        "Take your foot off the gas and when you are slowed down, ease back on the road when it is safe to do so"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 3,
+      "explanation": "If your wheels drop off the pavement, slow down first, then ease back on when safe.",
+      "question": "What should you do if your vehicle’s right wheels leave the pavement?"
+    },
+    {
+      "id": 34,
+      "answers": [
+        "Reach down and attempt to pull it up",
+        "Shift to park",
+        "Shift to neutral and apply steady pressure on the brake",
+        "Turn the engine off"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 2,
+      "explanation": "With a stuck accelerator, shift to neutral to cut engine power, then brake steadily.",
+      "question": "What should you do if your accelerator sticks while driving?"
+    },
+    {
+      "id": 35,
+      "answers": [
+        "Do not exchange information with other drivers",
+        "Exchange all information with other drivers",
+        "Deny responsibility for the accident",
+        "Let the other driver report the accident"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "After an accident, exchange all information with the other drivers involved.",
+      "question": "When involved in an accident as a driver:"
+    },
+    {
+      "id": 36,
+      "answers": [
+        "Keep your attention on your driving",
+        "Keep moving",
+        "Stop if you are involved or if emergency help has not arrived",
+        "All of the above."
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 3,
+      "explanation": "Keep your attention on driving and keep moving, unless you are involved or no emergency help has arrived.",
+      "question": "When approaching an accident scene, you should:"
+    },
+    {
+      "id": 37,
+      "answers": [
+        "Stop their vehicle at or near the scene",
+        "Do not stand or walk in traffic lanes",
+        "Turn off the ignitions of wrecked vehicles",
+        "All of the above."
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 3,
+      "explanation": "At an accident: stop at or near the scene, stay out of traffic lanes, and switch off wrecked vehicles' ignitions.",
+      "question": "If involved in an accident, a driver should:"
+    },
+    {
+      "id": 38,
+      "answers": [
+        "Any commercial vehicle over 26,000 pounds gross vehicle weight",
+        "Any non-commercial vehicle under 26,000 pounds gross vehicle weight",
+        "Only motorcycles and motor scooters",
+        "Only vehicles under 10,000 pounds gross vehicle weight"
+      ],
+      "category": "Licensing & permits",
+      "correct": 1,
+      "explanation": "A Class D license covers any non-commercial vehicle under 26,000 pounds gross vehicle weight.",
+      "question": "What vehicles may you drive with a Class D basic driver license in Montana?"
+    },
+    {
+      "id": 39,
+      "answers": [
+        "Up to 30 consecutive days",
+        "Up to 90 consecutive days",
+        "Up to 60 consecutive days",
+        "Up to 12 consecutive months"
+      ],
+      "category": "Licensing & permits",
+      "correct": 2,
+      "explanation": "A new resident may use a valid out-of-state license for up to 60 consecutive days before qualifying for a Montana license.",
+      "question": "How long may a new resident use a valid out-of-state basic driver license before surrendering it and qualifying for a Montana license?"
+    },
+    {
+      "id": 40,
+      "answers": [
+        "Only one valid driver license at any time",
+        "Two valid driver licenses if one is out-of-state",
+        "Three valid driver licenses for different classes",
+        "Unlimited licenses if all are valid"
+      ],
+      "category": "Licensing & permits",
+      "correct": 0,
+      "explanation": "You may hold only one valid driver license from any jurisdiction at a time.",
+      "question": "How many valid driver licenses may you hold at one time?"
+    },
+    {
+      "id": 41,
+      "answers": [
+        "At least 14 1/2 years old in all cases",
+        "At least 18 years old in all cases",
+        "At least 14 years old with parental permission",
+        "At least 16 years old without traffic education, or 15 after completing an approved driver education course"
+      ],
+      "category": "Licensing & permits",
+      "correct": 3,
+      "explanation": "A learner license requires age 16 without traffic education, or age 15 with an approved driver education course completed.",
+      "question": "What is the minimum age to be eligible for a learner license in Montana?"
+    },
+    {
+      "id": 42,
+      "answers": [
+        "Any licensed driver of any age in the back seat",
+        "A licensed driver education instructor, parent or legal guardian, or other adult with parent or guardian permission occupying the seat beside the driver",
+        "Only a traffic education instructor during school hours",
+        "No accompanying driver is required after passing the written test"
+      ],
+      "category": "Licensing & permits",
+      "correct": 1,
+      "explanation": "A learner driver must have a qualified licensed adult in the seat beside them.",
+      "question": "Who must accompany a driver operating with a learner license for a Class D vehicle?"
+    },
+    {
+      "id": 43,
+      "answers": [
+        "20 hours including 5 hours at night during three months",
+        "30 hours including 5 hours at night during six months",
+        "At least 50 hours including 10 hours at night during a minimum of six months",
+        "100 hours including 20 hours at night during one year"
+      ],
+      "category": "Licensing & permits",
+      "correct": 2,
+      "explanation": "Teens need at least 50 hours of supervised driving, including 10 at night, over at least six months.",
+      "question": "How much supervised driving practice must a teen driver acquire before advancing to a first-year restricted license?"
+    },
+    {
+      "id": 44,
+      "answers": [
+        "A minimum of six consecutive months",
+        "A minimum of 60 consecutive days",
+        "A minimum of three consecutive months",
+        "A minimum of 12 consecutive months"
+      ],
+      "category": "Licensing & permits",
+      "correct": 0,
+      "explanation": "A teen under 18 must hold the learner license for at least six consecutive months.",
+      "question": "How long must a teenager under 18 hold a learner license before applying for a first-year restricted license?"
+    },
+    {
+      "id": 45,
+      "answers": [
+        "Between 9:00 p.m. and 7:00 a.m.",
+        "Between 10:00 p.m. and 6:00 a.m.",
+        "Between midnight and 6:00 a.m.",
+        "Between 11:00 p.m. and 5:00 a.m."
+      ],
+      "category": "Licensing & permits",
+      "correct": 3,
+      "explanation": "First-year restricted drivers may not drive between 11:00 p.m. and 5:00 a.m., with limited exceptions.",
+      "question": "During what hours may a teenager with a first-year restricted license not drive?"
+    },
+    {
+      "id": 46,
+      "answers": [
+        "No unrelated passengers under 18 at any time",
+        "Only one unrelated passenger under 18 for the first six months, and up to three for the second six months",
+        "Up to three unrelated passengers under 18 for the first six months, then only one",
+        "Up to six unrelated passengers under 18 at any time"
+      ],
+      "category": "Licensing & permits",
+      "correct": 1,
+      "explanation": "The restricted license limits young unrelated passengers: one for the first six months, three for the second six.",
+      "question": "What is the passenger limit for a first-year restricted license when not supervised by a licensed adult driver?"
+    },
+    {
+      "id": 47,
+      "answers": [
+        "Suspension for one year",
+        "Immediate cancellation of the license",
+        "Between 20 to 60 hours of community service",
+        "A $500 fine only"
+      ],
+      "category": "Licensing & permits",
+      "correct": 2,
+      "explanation": "A first violation of a restricted-license restriction brings 20 to 60 hours of community service.",
+      "question": "What is the penalty for a first offense violation of a first-year restricted license restriction?"
+    },
+    {
+      "id": 48,
+      "answers": [
+        "If you have completed and passed a Montana Motorcycle Safety Foundation course in the past year and provide the MSF certificate",
+        "If you have owned a motorcycle for more than six months",
+        "If you pass the vision test with 20/20 vision",
+        "If you hold any out-of-state identification card"
+      ],
+      "category": "Licensing & permits",
+      "correct": 0,
+      "explanation": "A recent Montana Motorcycle Safety Foundation certificate waives the motorcycle road test.",
+      "question": "When may the motorcycle road test be waived in Montana?"
+    },
+    {
+      "id": 49,
+      "answers": [
+        "By completing 50 hours of practice; valid for six months",
+        "By paying a fee only; valid for four years",
+        "By holding a CDL; valid until age 21",
+        "By paying the licensing fee and passing the motorcycle written test; valid for one year"
+      ],
+      "category": "Licensing & permits",
+      "correct": 3,
+      "explanation": "A motorcycle learner license requires the fee plus the written test and is valid for one year.",
+      "question": "How is a motorcycle learner license obtained and how long is it valid?"
+    },
+    {
+      "id": 50,
+      "answers": [
+        "Unlimited attempts over two years and automatic renewal",
+        "Three attempts within one year to pass all required examinations, with receipts that are not renewable",
+        "One attempt within 60 days with free renewal",
+        "Five attempts within three months with mail renewal"
+      ],
+      "category": "Licensing & permits",
+      "correct": 1,
+      "explanation": "A testing receipt allows three attempts within one year and cannot be renewed.",
+      "question": "What does a driver license receipt allow for applicants who are testing?"
+    },
+    {
+      "id": 51,
+      "answers": [
+        "You may renew by mail with no tests for up to one year",
+        "You pay only a small notification fee to reactivate it",
+        "You must reapply as a new driver, prove identity, residency, and authorized presence, and pass all applicable tests",
+        "You automatically receive a replacement for $10 with no tests"
+      ],
+      "category": "Licensing & permits",
+      "correct": 2,
+      "explanation": "More than three months expired means reapplying as a new driver and passing all tests again.",
+      "question": "What happens if your Montana driver license has been expired for more than three months?"
+    },
+    {
+      "id": 52,
+      "answers": [
+        "It can be suspended, revoked, or cancelled because a license is a privilege",
+        "It can only be suspended for parking tickets",
+        "It cannot be affected once issued for eight years",
+        "It is automatically renewed for another eight years"
+      ],
+      "category": "Penalties & records",
+      "correct": 0,
+      "explanation": "Driving is a privilege: the license can be suspended, revoked, or cancelled for breaking the law.",
+      "question": "What can happen to your driver license if you break the law in Montana?"
+    },
+    {
+      "id": 53,
+      "answers": [
+        "Only voter registration and organ donation status",
+        "Only vehicle insurance and tax records",
+        "Only school grades and employment history",
+        "Personal history, licensing information, conviction/accident history, sanctions, and accident history"
+      ],
+      "category": "Penalties & records",
+      "correct": 3,
+      "explanation": "A Montana driving record covers personal history, licensing, convictions/accidents, sanctions, and accident history.",
+      "question": "Which categories of information are featured in a Montana driving record?"
+    },
+    {
+      "id": 54,
+      "answers": [
+        "All applicants over age 75",
+        "Young men who are at least 15 years old and not older than 26",
+        "Only women under age 18",
+        "All children under age 14"
+      ],
+      "category": "Penalties & records",
+      "correct": 1,
+      "explanation": "Young men 15 through 26 must meet Selective Service requirements when applying.",
+      "question": "Who is required to register with the Selective Service when applying for a Montana license or ID card?"
+    },
+    {
+      "id": 55,
+      "answers": [
+        "Only at age 18 with a living will",
+        "Only at age 21 with voter registration",
+        "A minor who is at least 15 years old can request it, and parental authorization is not required",
+        "Only at age 16 with driver education completion"
+      ],
+      "category": "Penalties & records",
+      "correct": 2,
+      "explanation": "A minor at least 15 may add the organ donor designation without parental authorization.",
+      "question": "When can a minor request an organ donor designation on a Montana driver license?"
+    },
+    {
+      "id": 56,
+      "answers": [
+        "Stick the penny into the tread head first; if the tread does not come at least to Lincoln's head, the tire is unsafe and must be replaced",
+        "Stick the penny into the tread sideways; if Lincoln's ears are covered, the tire is unsafe",
+        "Place the penny on the sidewall; if it slides off, the pressure is too low",
+        "Insert the penny into the valve stem; if air escapes, the tread is worn out"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 0,
+      "explanation": "Penny test: tread must reach at least Lincoln's head or the tire is unsafe.",
+      "question": "How should you check tire tread with a penny?"
+    },
+    {
+      "id": 57,
+      "answers": [
+        "When the tires are hot after driving, by kicking each tire",
+        "Only when the vehicle pulls to one side, by looking at the sidewall",
+        "With a gauge when the tires are cold, using the pressure in the vehicle owner's manual",
+        "With a penny in the tread, using the pressure stamped on the tread"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 2,
+      "explanation": "Check pressure with a gauge while tires are cold, per the owner's manual.",
+      "question": "When and how should tire air pressure be checked?"
+    },
+    {
+      "id": 58,
+      "answers": [
+        "The vehicle bounces a lot or keeps bouncing after a bump or after you stop",
+        "The brake pedal goes to the floor and smells funny",
+        "The headlights blind other drivers",
+        "The engine loses power and pollutes the air"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 0,
+      "explanation": "Continued bouncing after a bump or stop means the shocks may need replacing.",
+      "question": "What signs indicate the suspension system may need new shocks?"
+    },
+    {
+      "id": 59,
+      "answers": [
+        "Because objects on the floor could roll under the brake pedal so you could not slow or stop",
+        "Because objects on the floor increase fuel economy and tire wear",
+        "Because objects on the floor prevent whiplash if hit from behind",
+        "Because objects on the floor make the horn inaudible for 200 feet"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 0,
+      "explanation": "Loose objects can roll under the brake pedal and prevent stopping.",
+      "question": "Why must loose objects be kept off the floor near the driver?"
+    },
+    {
+      "id": 60,
+      "answers": [
+        "500 feet on high beam and 300 feet on low beam",
+        "1,000 feet on high beam and 500 feet on low beam",
+        "350 feet on high beam and 100 feet on low beam",
+        "600 feet on high beam and 200 feet on low beam"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 2,
+      "explanation": "Headlights must reveal persons or vehicles at 350 feet on high beam and 100 feet on low beam.",
+      "question": "How far must headlights reveal persons or vehicles on high beam and low beam?"
+    },
+    {
+      "id": 61,
+      "answers": [
+        "When meeting other vehicles at 1,000 feet and when overtaking at 500 feet",
+        "When meeting other vehicles at 500 feet and when overtaking at 100 feet",
+        "When meeting other vehicles at 350 feet and when overtaking at 300 feet",
+        "Only when parked on a roadway at night"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 0,
+      "explanation": "Dim high beams within 1,000 feet of meeting vehicles and within 500 feet when following.",
+      "question": "Within what distances must high beams be dimmed for other vehicles?"
+    },
+    {
+      "id": 62,
+      "answers": [
+        "A white light visible for 50 feet to the rear",
+        "A red or amber light visible for 300 feet in normal sunlight",
+        "An amber light visible for 500 feet in blowing dust",
+        "A red reflector visible between 50 and 300 feet"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 1,
+      "explanation": "Brake lights must show red or amber visible for 300 feet in normal sunlight.",
+      "question": "What does Montana law require for brake lights?"
+    },
+    {
+      "id": 63,
+      "answers": [
+        "Red light illuminating the plate for 300 feet to the rear",
+        "White or amber light to the front visible for 500 feet",
+        "White light illuminating the plate for 50 feet to the rear",
+        "Amber clearance light visible for 600 to 1,000 feet"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 2,
+      "explanation": "The plate lamp must be a white light making the plate readable at 50 feet behind.",
+      "question": "What does Montana law require for the license plate lamp?"
+    },
+    {
+      "id": 64,
+      "answers": [
+        "200-foot visibility to the rear of the vehicle",
+        "500-foot visibility to the front of the vehicle",
+        "300-foot visibility in normal sunlight",
+        "50-foot visibility of the license plate"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 0,
+      "explanation": "Mirrors must give 200-foot visibility to the rear.",
+      "question": "What visibility must mirrors provide?"
+    },
+    {
+      "id": 65,
+      "answers": [
+        "It must be audible for 500 feet and used to greet other drivers",
+        "It must prevent excessive noise from the exhaust",
+        "It must be audible for 200 feet and used only as a warning to others",
+        "It must display a white or amber light to the front"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 2,
+      "explanation": "The horn must be audible at 200 feet and used only as a warning.",
+      "question": "What is the legal requirement and proper use for the horn?"
+    },
+    {
+      "id": 66,
+      "answers": [
+        "A white or amber light to the front and a red light to the rear, visible for 500 feet",
+        "A red or amber light to the front and a white light to the rear, visible for 300 feet",
+        "Two red reflectors only, visible between 600 and 1,000 feet",
+        "Flashing, rotating, or pulsating decorative lights"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 0,
+      "explanation": "A parked vehicle at night must show white/amber front and red rear, visible 500 feet.",
+      "question": "When headlamps are required, what lights must a parked vehicle display?"
+    },
+    {
+      "id": 67,
+      "answers": [
+        "Only the driver must wear a belt, with a $100 fine for violations",
+        "No person may drive unless each occupant wears a properly adjusted and fastened belt, and a violating driver is fined $20",
+        "Belts are required only on highways posted 50 MPH or more",
+        "Belts must be worn only if the vehicle has air bags"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 1,
+      "explanation": "Every occupant must wear a fastened belt; the driver is fined $20 for violations.",
+      "question": "What does Montana law require regarding safety belts?"
+    },
+    {
+      "id": 68,
+      "answers": [
+        "Children up to age 6 and 60 pounds must be in a child safety seat; booster seats are recommended until the belt fits, usually about 4'9\" tall",
+        "Children up to age 13 must ride in the front seat without a restraint",
+        "Only children under age 2 must be restrained, with no booster recommendation",
+        "Children under 60 pounds may ride unrestrained on the rear shelf"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 0,
+      "explanation": "Child seats are required to age 6 and 60 pounds; boosters until the belt fits, around 4'9\".",
+      "question": "What are Montana's child restraint requirements?"
+    },
+    {
+      "id": 69,
+      "answers": [
+        "During headlamp hours a red light visible for 500 feet on the extreme rear; otherwise a red flag at least 12 inches square",
+        "At all times a white flag 24 inches square on the front bumper",
+        "During daylight only, two red cloth flags 100 feet ahead",
+        "A yellow-orange triangle mounted 3 to 5 feet high"
+      ],
+      "category": "Equipment & safety checks",
+      "correct": 0,
+      "explanation": "A load extending four feet or more needs a 500-foot red light at night and a 12-inch red flag by day.",
+      "question": "What warning is required when a load extends four feet or more beyond the vehicle?"
+    },
+    {
+      "id": 70,
+      "answers": [
+        "Shift immediately to neutral and turn off the engine without touching the brakes",
+        "Pump the brake pedal several times to build up enough pressure to stop",
+        "Pull the parking brake handle up as hard and fast as possible",
+        "Stop on the road and sit in the car with the motor running"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "Pump the brake pedal first; that often builds enough pressure to stop.",
+      "question": "What should you do first if your brakes stop working?"
+    },
+    {
+      "id": 71,
+      "answers": [
+        "Pull on the parking brake handle slowly to avoid locking the rear wheels, and be ready to release it if a skid starts",
+        "Yank the parking brake hard to lock the rear wheels immediately",
+        "Pump the parking brake rapidly while steering with one hand",
+        "Do not use the parking brake; shift to a higher gear instead"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 0,
+      "explanation": "Apply the parking brake slowly so the rear wheels don't lock and skid.",
+      "question": "If pumping the brakes does not work, how should you use the parking brake?"
+    },
+    {
+      "id": 72,
+      "answers": [
+        "Brake hard immediately and stop in the traffic lane",
+        "Hold the steering wheel tightly, keep going straight, ease off the gas with light braking, and pull off safely",
+        "Turn sharply off the road and brake hard on the shoulder",
+        "Shift to neutral, turn off the engine, and coast to a stop in the lane"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "In a blowout, hold straight, slow gradually, and pull off the road.",
+      "question": "What should you do if a tire suddenly blows out?"
+    },
+    {
+      "id": 73,
+      "answers": [
+        "Keep a strong grip on the wheel, pull off the roadway, and push very hard on the brake pedal",
+        "Immediately try to restart the engine while still in the traffic lane",
+        "Hold the wheel loosely and stop in the center of the lane",
+        "Turn on the high beams and speed up to reach the shoulder"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 0,
+      "explanation": "With a dead engine, steering is heavy but possible; pull off and brake hard.",
+      "question": "What should you do if the engine dies while you are driving?"
+    },
+    {
+      "id": 74,
+      "answers": [
+        "Visualize the road, ease off the gas and brake, retry the headlight switch and high beams, then use flashers or fog lights and pull off safely",
+        "Turn off all lights and continue at the same speed",
+        "Stop in the traffic lane until help arrives",
+        "Shift to neutral and pump the brake pedal several times"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 0,
+      "explanation": "For headlight failure: slow, retry the switch and brights, use flashers or fog lights, pull off.",
+      "question": "What should you do if your headlights suddenly go out?"
+    },
+    {
+      "id": 75,
+      "answers": [
+        "Honk, flash lights, and speed through the intersection",
+        "Stop, turn, and speed up",
+        "Brake, shift to neutral, and turn off the engine",
+        "Pull off the road, stop in the lane, and abandon the vehicle"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "To avoid a collision you have three options: stop, turn, or speed up.",
+      "question": "What three options do drivers have to avoid a collision?"
+    },
+    {
+      "id": 76,
+      "answers": [
+        "Apply the brakes as hard as you can without locking them, letting up if a skid starts",
+        "Press the brake pedal as hard as you can and keep pressing, even if the pedal pushes back",
+        "Pump the brake pedal several times and then pull the parking brake slowly",
+        "Step on the brake, let up, then turn the steering wheel sharply"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "With ABS, press hard and hold; don't let up when the pedal pushes back.",
+      "question": "How should you stop quickly in a vehicle with ABS?"
+    },
+    {
+      "id": 77,
+      "answers": [
+        "Keep pressing harder and lock the brakes until stopped",
+        "Quickly let up on the brake pedal, then push down again once skidding stops, repeating until stopped",
+        "Pull the parking brake hard and steer across the road",
+        "Shift to neutral and turn off the ignition immediately"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "Without ABS, ease off when a skid starts, reapply when it stops, and repeat.",
+      "question": "Without ABS, how should you handle a quick stop if the vehicle starts to skid?"
+    },
+    {
+      "id": 78,
+      "answers": [
+        "Grip the wheel with one hand at noon and steer away from the desired path",
+        "Keep both hands at about 9 and 3 o'clock (8 and 4 with airbags), and steer where you want to go",
+        "Lock the front wheels while braking and turn as sharply as possible",
+        "Let go of the wheel and speed up through the danger"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "Hands at 9 and 3 (8 and 4 with airbags), steering toward your intended path.",
+      "question": "What steering technique helps you turn quickly to avoid a collision?"
+    },
+    {
+      "id": 79,
+      "answers": [
+        "Lean forward away from the seat and release the brakes",
+        "Press yourself against the seat, put your head against the head restraint, and be ready to brake",
+        "Press yourself toward the side that is hit and turn off the engine",
+        "Unfasten your lap and shoulder belts to move freely"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "For a rear impact, brace against the seat, head on the restraint, ready to brake.",
+      "question": "How should you protect yourself if your vehicle is hit from the rear?"
+    },
+    {
+      "id": 80,
+      "answers": [
+        "Speed up to pass quickly and stay in the same lane",
+        "Slow to at least 20 miles below the posted limit and, when possible, move to a farther lane",
+        "Stop in the traffic lane and turn on high beams",
+        "Pull onto the center median and wait"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "Beside a stopped emergency vehicle on a 50+ MPH highway, slow 20 below the limit and move over.",
+      "question": "On a highway posted at 50 MPH or more, what must you do beside a stationary emergency vehicle with signals flashing?"
+    },
+    {
+      "id": 81,
+      "answers": [
+        "Stop in the center median, stay on your cell phone, and step out immediately",
+        "Signal right, pull fully onto the right shoulder, end calls, stay inside unless directed out, and keep hands visible",
+        "Drive to the opposite side of a two-lane road and keep your hands hidden",
+        "Flash rotating lights and sound a siren to acknowledge the officer"
+      ],
+      "category": "Crashes & emergencies",
+      "correct": 1,
+      "explanation": "For an enforcement stop: signal right, pull well off, end distractions, stay inside, hands visible.",
+      "question": "What should you do when a law enforcement officer pulls you over?"
+    },
+    {
+      "id": 82,
+      "answers": [
+        "It is the only eight-sided sign; come to a complete stop and yield to traffic that is an immediate hazard",
+        "It is a round sign; slow down for a railroad crossing ahead",
+        "It is a diamond-shaped sign; proceed with caution without stopping",
+        "It is a rectangular sign; stop only if other traffic is present"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 0,
+      "explanation": "STOP is the only eight-sided sign: stop completely, then yield to immediate hazards.",
+      "question": "What is the shape of the STOP sign and what must you do when you see one?"
+    },
+    {
+      "id": 83,
+      "answers": [
+        "Come to a complete stop at all times and wait for a green light",
+        "Speed up to merge before traffic on the roadway arrives",
+        "Stop only at night when visibility is limited",
+        "Slow down to a reasonable speed and yield to all vehicles on the roadway being entered"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 3,
+      "explanation": "YIELD means slow to a reasonable speed and yield to all vehicles on the road entered.",
+      "question": "What does a YIELD sign require you to do?"
+    },
+    {
+      "id": 84,
+      "answers": [
+        "The road ahead is under repair; proceed with caution",
+        "The road ahead is one-way or all vehicular traffic is prohibited",
+        "Passing is prohibited in this area",
+        "Traffic must keep to the right of an obstruction"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 1,
+      "explanation": "DO NOT ENTER marks a one-way road or a road closed to all vehicles.",
+      "question": "What does a DO NOT ENTER sign mean?"
+    },
+    {
+      "id": 85,
+      "answers": [
+        "You must follow the direction shown by the arrow",
+        "The lane is reserved for special vehicles",
+        "Do not do whatever is shown by the arrow or symbol",
+        "A reduced speed limit has been established ahead"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 2,
+      "explanation": "A red circle-and-slash over an arrow or symbol prohibits whatever is shown.",
+      "question": "What does a sign with a red circle and slash across a black arrow or symbol mean?"
+    },
+    {
+      "id": 86,
+      "answers": [
+        "They are rectangular with black words or symbols on white, and you must obey all of them",
+        "They are black and yellow and usually diamond shaped, and they only suggest caution",
+        "They are orange and diamond shaped, and they warn of work areas only",
+        "They are round with black symbols, and they mark railroad crossings only"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 0,
+      "explanation": "Regulatory signs are rectangular, black on white, and every one must be obeyed.",
+      "question": "How can you recognize a regulatory sign and what must you do about it?"
+    },
+    {
+      "id": 87,
+      "answers": [
+        "Rectangular with black words on a white background",
+        "Orange with flashing lights",
+        "Black and yellow, usually diamond shaped, warning of dangerous conditions ahead",
+        "Green with white letters giving direction information"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 2,
+      "explanation": "Warning signs are black and yellow, usually diamond shaped.",
+      "question": "How can you recognize a warning sign?"
+    },
+    {
+      "id": 88,
+      "answers": [
+        "The stop-ahead sign",
+        "The school-ahead sign",
+        "The railroad crossing ahead sign",
+        "The speed-zone-ahead sign"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 2,
+      "explanation": "The advance railroad crossing sign is round — the only round warning sign.",
+      "question": "Which warning sign is the only round traffic sign?"
+    },
+    {
+      "id": 89,
+      "answers": [
+        "Stop, yield, and go signs",
+        "Regulatory, warning, and information guide signs",
+        "Construction, school, and railroad signs",
+        "Red, yellow, and green signs"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 1,
+      "explanation": "Signs are classified by function as regulatory, warning, or information guide signs.",
+      "question": "How are traffic signs classified according to function?"
+    },
+    {
+      "id": 90,
+      "answers": [
+        "You are approaching an area where a reduced speed limit has been established",
+        "This is the maximum speed you may travel until a different sign is posted",
+        "Fines are doubled in this zone",
+        "You must not pass any vehicles in this area"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 0,
+      "explanation": "SPEED ZONE AHEAD warns that a reduced limit is coming up.",
+      "question": "What does a SPEED ZONE AHEAD regulatory sign tell you?"
+    },
+    {
+      "id": 91,
+      "answers": [
+        "Yellow",
+        "White",
+        "Red",
+        "Orange"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 3,
+      "explanation": "Orange is the basic color for construction and maintenance traffic control.",
+      "question": "What color is the basic color for construction and maintenance traffic control devices?"
+    },
+    {
+      "id": 92,
+      "answers": [
+        "Exceeding the posted speed is a violation and fines are doubled",
+        "You receive only a written warning for a first offense",
+        "Fines are reduced if workers are not present",
+        "Your license is automatically suspended for one day"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 0,
+      "explanation": "Speeding in a work zone is a violation with double the normal fine.",
+      "question": "What is the penalty for speeding in a Montana construction or work zone?"
+    },
+    {
+      "id": 93,
+      "answers": [
+        "Fines are doubled in all school zones throughout Montana",
+        "Fines are the same as on any other street",
+        "Fines are waived during pick-up and drop-off times",
+        "Fines are doubled only at night"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 0,
+      "explanation": "Montana doubles fines for speed violations in all school zones.",
+      "question": "What are the fines for speed violations in school zones in Montana?"
+    },
+    {
+      "id": 94,
+      "answers": [
+        "As low as 15 mph",
+        "As low as 25 mph",
+        "As low as 35 mph",
+        "As low as 5 mph"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 0,
+      "explanation": "School zone limits may drop as low as 15 mph.",
+      "question": "How low may a school zone speed limit be in Montana?"
+    },
+    {
+      "id": 95,
+      "answers": [
+        "Stop, then proceed immediately without yielding",
+        "Slow down and proceed with caution",
+        "Stop before the stop line or crosswalk, then you may cautiously turn right after stopping unless prohibited",
+        "Go, but look both ways for oncoming traffic"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 2,
+      "explanation": "Steady red means stop, then a cautious right turn is allowed unless prohibited.",
+      "question": "What does a steady red traffic signal mean for a driver?"
+    },
+    {
+      "id": 96,
+      "answers": [
+        "Proceed with caution without stopping",
+        "The same as a stop sign: stop completely, yield, and proceed when safe",
+        "Stop and remain stopped until green, with no turns allowed",
+        "Speed up to clear the intersection quickly"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 1,
+      "explanation": "Flashing red works exactly like a stop sign.",
+      "question": "What does a flashing red traffic signal mean?"
+    },
+    {
+      "id": 97,
+      "answers": [
+        "Stop, then go when clear",
+        "Proceed with caution; it usually means you need to slow down",
+        "Do not enter the intersection for any reason",
+        "The signal is about to turn green"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 1,
+      "explanation": "Flashing yellow means proceed with caution, usually slowing down.",
+      "question": "What does a flashing yellow traffic signal mean?"
+    },
+    {
+      "id": 98,
+      "answers": [
+        "You have a protected turn and oncoming traffic must stop",
+        "Stop and remain stopped except for right turns on red",
+        "Left turns are allowed but you must first yield to oncoming traffic and pedestrians",
+        "The protected turn period is ending; clear the intersection immediately"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 2,
+      "explanation": "A flashing yellow arrow permits the left turn after yielding to oncoming traffic and pedestrians.",
+      "question": "What does a flashing yellow arrow signal mean?"
+    },
+    {
+      "id": 99,
+      "answers": [
+        "An upheld orange hand means WALK and a white figure means DON'T WALK",
+        "WALK means you may start crossing; DON'T WALK showing or flashing means wait",
+        "Pedestrians must obey vehicle signals instead of pedestrian signals",
+        "Pedestrians may start crossing whenever DON'T WALK begins flashing"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 1,
+      "explanation": "Start crossing only on WALK; a showing or flashing DON'T WALK means wait.",
+      "question": "What do pedestrian WALK and DON'T WALK signals mean?"
+    },
+    {
+      "id": 100,
+      "answers": [
+        "Drive at least 25 mph, look right, and stop in the circle if others approach",
+        "Slow to 15 mph or less, yield to vehicles already in the roundabout, and travel counterclockwise",
+        "Enter to the left of the center island and pass inside the circle",
+        "Stop at the entrance every time, even if the way is clear"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 1,
+      "explanation": "Roundabouts: 15 mph or less, yield to traffic inside, counterclockwise flow.",
+      "question": "What must you do when entering a Montana roundabout?"
+    },
+    {
+      "id": 101,
+      "answers": [
+        "Only when a flagger waves a red flag",
+        "When signals, gates, stop signs, or watchmen indicate a train, or the train is within 1500 feet or a visible hazard — stopping no less than 15 feet from the nearest rail",
+        "At least 50 feet from the nearest rail only during daylight hours",
+        "Only if there are two or more tracks to cross"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 1,
+      "explanation": "Stop at least 15 feet from the rail when warned of a train or one is within 1500 feet.",
+      "question": "When are you required to STOP at a railroad crossing?"
+    },
+    {
+      "id": 102,
+      "answers": [
+        "Solid lines mark the road edge; white separates same-direction lanes and yellow separates opposite-direction traffic",
+        "All lane lines are yellow regardless of direction",
+        "All lane lines are white regardless of direction",
+        "Red lines separate same-direction lanes and blue lines opposite-direction lanes"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 0,
+      "explanation": "White divides same-direction lanes, yellow divides opposite directions, solids mark edges.",
+      "question": "What do the colors of edge and lane lines tell you?"
+    },
+    {
+      "id": 103,
+      "answers": [
+        "By double-dashed yellow lines only",
+        "By a solid white line on each side",
+        "By a solid yellow and a dashed yellow line on each side",
+        "By a single broken white line down the center"
+      ],
+      "category": "Signs, signals & markings",
+      "correct": 2,
+      "explanation": "Shared center lanes are marked each side by a solid-plus-dashed yellow pair.",
+      "question": "How is a shared center lane marked on the pavement?"
+    },
+    {
+      "id": 104,
+      "answers": [
+        "75 miles per hour",
+        "65 miles per hour",
+        "80 miles per hour",
+        "70 miles per hour"
+      ],
+      "category": "Speed & passing",
+      "correct": 1,
+      "explanation": "Heavy trucks are limited to 65 day and night on interstates.",
+      "question": "What is the speed limit for heavy trucks on interstate highways in Montana?"
+    },
+    {
+      "id": 105,
+      "answers": [
+        "70 miles per hour",
+        "60 miles per hour",
+        "65 miles per hour",
+        "55 miles per hour"
+      ],
+      "category": "Speed & passing",
+      "correct": 2,
+      "explanation": "Cars and light trucks: 70 by day, 65 at night on two-lane highways.",
+      "question": "What is the nighttime speed limit for cars and light trucks on two-lane highways?"
+    },
+    {
+      "id": 106,
+      "answers": [
+        "60 miles per hour",
+        "65 miles per hour",
+        "55 miles per hour",
+        "70 miles per hour"
+      ],
+      "category": "Speed & passing",
+      "correct": 0,
+      "explanation": "Heavy trucks: 60 by day, 55 at night on two-lane highways.",
+      "question": "What is the daytime speed limit for heavy trucks on two-lane highways?"
+    },
+    {
+      "id": 107,
+      "answers": [
+        "5 miles an hour",
+        "10 miles an hour",
+        "15 miles an hour",
+        "20 miles an hour"
+      ],
+      "category": "Speed & passing",
+      "correct": 1,
+      "explanation": "On a two-lane road you may exceed the limit by 10 MPH to pass and return safely.",
+      "question": "By how much may you exceed the speed limit on a two-lane road to overtake, pass, and return to the right lane?"
+    },
+    {
+      "id": 108,
+      "answers": [
+        "To allow entering traffic to merge from the right",
+        "To travel when the center lane has heavy entering traffic",
+        "To make a right turn from a higher-speed lane",
+        "To pass slower vehicles"
+      ],
+      "category": "Speed & passing",
+      "correct": 3,
+      "explanation": "On multi-lane roads the leftmost lane is for passing slower vehicles.",
+      "question": "On multi-lane roads, what is the intended use of the leftmost lane?"
+    },
+    {
+      "id": 109,
+      "answers": [
+        "When the vehicle you are passing is making or about to make a left turn",
+        "When the vehicle you are passing is slowing or coming to a stop",
+        "When the vehicle you are passing is in the leftmost passing lane",
+        "When the vehicle you are passing is displaying a yellow flashing light"
+      ],
+      "category": "Speed & passing",
+      "correct": 0,
+      "explanation": "Passing on the right is legal only past a left-turning vehicle or on a wide same-direction road.",
+      "question": "When is passing on the right legal based on the movement of the vehicle you are passing?"
+    },
+    {
+      "id": 110,
+      "answers": [
+        "On any road with a paved or unpaved shoulder",
+        "On a road where you must leave the main-traveled portion",
+        "On a road with unobstructed pavement wide enough for two or more same-direction lanes",
+        "On a two-lane road by crossing the centerline"
+      ],
+      "category": "Speed & passing",
+      "correct": 2,
+      "explanation": "Passing on the right needs pavement wide enough for two or more same-direction lanes.",
+      "question": "On what type of road is passing on the right legal?"
+    },
+    {
+      "id": 111,
+      "answers": [
+        "100 feet",
+        "500 feet",
+        "18 inches",
+        "300 feet"
+      ],
+      "category": "Speed & passing",
+      "correct": 3,
+      "explanation": "Signal 100 feet ahead in town and 300 feet ahead on rural roads.",
+      "question": "How far before turning on rural roads must you signal?"
+    },
+    {
+      "id": 112,
+      "answers": [
+        "Drivers turning left must yield to oncoming cars going straight ahead",
+        "Drivers going straight ahead must yield to drivers turning left",
+        "Drivers entering the circle must yield to turning drivers",
+        "Drivers on the main roadway must yield to turning drivers"
+      ],
+      "category": "Right of way",
+      "correct": 0,
+      "explanation": "Left-turning drivers yield to oncoming straight-ahead traffic.",
+      "question": "Who must yield when a driver is turning left with oncoming traffic going straight?"
+    },
+    {
+      "id": 113,
+      "answers": [
+        "Drivers already in the circle must yield to entering drivers",
+        "Drivers entering a traffic circle or rotary must yield to drivers already in the circle",
+        "Drivers turning left must yield to entering drivers",
+        "Drivers approaching from the right must yield to entering drivers"
+      ],
+      "category": "Right of way",
+      "correct": 1,
+      "explanation": "Entering drivers yield to traffic already in the circle.",
+      "question": "Who must yield when entering a traffic circle or rotary?"
+    },
+    {
+      "id": 114,
+      "answers": [
+        "The driver on the main roadway",
+        "The driver turning left",
+        "The driver reaching the intersection first, after coming to a complete stop",
+        "The driver coming from the right without stopping"
+      ],
+      "category": "Right of way",
+      "correct": 2,
+      "explanation": "At a four-way stop, first to arrive (after stopping) goes first.",
+      "question": "Who gets to go first at a four-way stop?"
+    },
+    {
+      "id": 115,
+      "answers": [
+        "After slowing to a reasonable speed for a yield sign",
+        "After stopping and yielding to vehicles on the main roadway",
+        "After the lead funeral vehicle proceeds through red",
+        "Only when the driver can get through it without having to stop"
+      ],
+      "category": "Right of way",
+      "correct": 3,
+      "explanation": "Don't enter an intersection you can't clear; wait so you don't block it.",
+      "question": "When may a driver enter an intersection where traffic ahead may require stopping?"
+    },
+    {
+      "id": 116,
+      "answers": [
+        "Slow down and proceed carefully because the bus is about to stop and children may be in the road",
+        "Stop at least 30 feet from the bus until red lights are turned off",
+        "Stop and remain stopped until the bus has passed",
+        "Pull over to the right edge and stop until the intersection is clear"
+      ],
+      "category": "Right of way",
+      "correct": 0,
+      "explanation": "A bus slowing or flashing yellow means children may be near: slow and proceed carefully.",
+      "question": "What must you do when approaching from either direction a school bus with yellow lights flashing?"
+    },
+    {
+      "id": 117,
+      "answers": [
+        "Overtake and pass only in a no-passing zone",
+        "Yield the right-of-way to the person riding a bicycle within the lane",
+        "Intentionally interfere to warn the bicyclist when turning right",
+        "Require the bicyclist to ride two abreast in the lane"
+      ],
+      "category": "Right of way",
+      "correct": 1,
+      "explanation": "Motorists must yield to a bicyclist riding within a designated bike lane.",
+      "question": "What must motorists do for a person riding a bicycle within a designated bicycle lane?"
+    },
+    {
+      "id": 118,
+      "answers": [
+        "On the right side with traffic",
+        "On the shoulder facing parked vehicles",
+        "On the left side facing oncoming traffic",
+        "On the roadway only where sidewalks are provided"
+      ],
+      "category": "Right of way",
+      "correct": 2,
+      "explanation": "Walk on the left, facing oncoming traffic.",
+      "question": "Where must people walk when they are walking on the roadway?"
+    },
+    {
+      "id": 119,
+      "answers": [
+        "Turn your wheels sharply toward the curb",
+        "Align your front door with the parallel car at 45 degrees",
+        "Stop within 15 feet of the fire hydrant",
+        "Stay at least two feet out and align your rear bumper with the rear bumper ahead"
+      ],
+      "category": "Parking & insurance",
+      "correct": 3,
+      "explanation": "Parallel parking starts two feet out with bumpers aligned.",
+      "question": "How do you position your vehicle to begin parallel parking?"
+    },
+    {
+      "id": 120,
+      "answers": [
+        "Toward the curb",
+        "Away from the curb",
+        "Away from the street",
+        "Straight ahead parallel to the curb"
+      ],
+      "category": "Parking & insurance",
+      "correct": 0,
+      "explanation": "Facing downhill with a curb, wheels go toward the curb so a roll stays out of traffic.",
+      "question": "Which way must you turn your wheels when parking facing downhill with a curb?"
+    },
+    {
+      "id": 121,
+      "answers": [
+        "Toward the side of the road",
+        "Away from the street",
+        "Toward the curb",
+        "Toward the nearest travel lane"
+      ],
+      "category": "Parking & insurance",
+      "correct": 1,
+      "explanation": "With no curb, turn wheels away from the street so a roll leaves the road.",
+      "question": "Which way must you turn your wheels when parking on a hill with no curb?"
+    },
+    {
+      "id": 122,
+      "answers": [
+        "Within 20 feet of a crosswalk is allowed but not a hydrant",
+        "Within 30 feet of a traffic signal",
+        "You may not park within 15 feet of a fire hydrant",
+        "You may not park within 50 feet of a fire hydrant"
+      ],
+      "category": "Parking & insurance",
+      "correct": 2,
+      "explanation": "No parking within 15 feet of a fire hydrant.",
+      "question": "How close may you park to a fire hydrant?"
+    },
+    {
+      "id": 123,
+      "answers": [
+        "Within 15 feet of the crossing",
+        "Within 20 feet of the crossing",
+        "Within 30 feet of the crossing",
+        "You may not park within 50 feet of a railroad crossing"
+      ],
+      "category": "Parking & insurance",
+      "correct": 3,
+      "explanation": "No parking within 50 feet of a railroad crossing.",
+      "question": "How close may you park to a railroad crossing?"
+    },
+    {
+      "id": 124,
+      "answers": [
+        "Do not stop, stand, or park",
+        "Stopping only to pick up or unload passengers",
+        "Stopping only long enough to load or unload while staying with the car",
+        "Parking within 18 inches of the curb is allowed"
+      ],
+      "category": "Parking & insurance",
+      "correct": 0,
+      "explanation": "A red curb means no stopping, standing, or parking.",
+      "question": "What does a red-colored curb marking mean?"
+    },
+    {
+      "id": 125,
+      "answers": [
+        "$10,000",
+        "$25,000",
+        "$50,000",
+        "$350"
+      ],
+      "category": "Parking & insurance",
+      "correct": 1,
+      "explanation": "Minimum coverage: $25,000 for one person, $50,000 for two, $10,000 property.",
+      "question": "What minimum liability insurance for one person's injury or death must Montana owners maintain?"
+    },
+    {
+      "id": 126,
+      "answers": [
+        "It involves simultaneous manual, visual, and cognitive distraction",
+        "It only involves taking your hands off the wheel",
+        "It only involves taking your eyes off the road",
+        "It only involves loud talking with passengers"
+      ],
+      "category": "Distracted & defensive driving",
+      "correct": 0,
+      "explanation": "Texting is worst because it distracts your hands, eyes, and mind at once.",
+      "question": "Why is texting described as the most alarming distraction?"
+    },
+    {
+      "id": 127,
+      "answers": [
+        "2 seconds, like driving half a city block blindfolded",
+        "10 seconds, like driving a quarter of a mile blindfolded",
+        "4 seconds, like driving across an intersection blindfolded",
+        "5 seconds, like driving the length of an entire football field while blindfolded"
+      ],
+      "category": "Distracted & defensive driving",
+      "correct": 3,
+      "explanation": "A text takes your eyes away for 5 seconds — a football field at 55 MPH.",
+      "question": "Sending or reading a text takes your eyes off the road for how long, and what is that like at 55 mph?"
+    },
+    {
+      "id": 128,
+      "answers": [
+        "Your brain handles all tasks at the same time safely",
+        "Your brain deals with one task at a time but shifts between tasks very quickly",
+        "Your brain stops paying attention only to passengers",
+        "Your brain can safely text and steer at the same time"
+      ],
+      "category": "Distracted & defensive driving",
+      "correct": 1,
+      "explanation": "Multi-tasking is a myth: the brain does one task at a time, switching fast.",
+      "question": "What does the manual say about what is commonly called multi-tasking while driving?"
+    },
+    {
+      "id": 129,
+      "answers": [
+        "Read it quickly while keeping one hand on the wheel",
+        "Pull safely off the road before you try to look at it",
+        "Ask a passenger to hold the wheel while you read",
+        "Slow to 25 mph and read it at the next intersection"
+      ],
+      "category": "Distracted & defensive driving",
+      "correct": 1,
+      "explanation": "Never read a map while driving; pull safely off the road first.",
+      "question": "What should you do if you need to look at a map while driving?"
+    },
+    {
+      "id": 130,
+      "answers": [
+        "Slow down to stare so you can report details later",
+        "Keep your eyes on the road and get past them as safely and as soon as you can",
+        "Stop just over a hill to watch safely",
+        "Turn on parking lights and rubberneck briefly"
+      ],
+      "category": "Distracted & defensive driving",
+      "correct": 1,
+      "explanation": "Don't rubberneck crashes; keep your eyes on the road and pass safely.",
+      "question": "What should you do when passing a crash with emergency responders on scene?"
+    },
+    {
+      "id": 131,
+      "answers": [
+        "They make it too hard to hear emergency horns and sirens",
+        "They reduce your night vision by 30%",
+        "They cause your tires to lose traction",
+        "They prevent you from using hand signals"
+      ],
+      "category": "Distracted & defensive driving",
+      "correct": 0,
+      "explanation": "Headphones and earbuds block emergency horns and sirens.",
+      "question": "Why should you not drive with headphones or earbuds?"
+    },
+    {
+      "id": 132,
+      "answers": [
+        "Within 500 feet when meeting and 300 feet when following",
+        "Within 350 feet when meeting and 100 feet when following",
+        "Within 1000 feet of meeting a vehicle and within 500 feet when following one",
+        "Within 1600 feet of meeting a vehicle and 800 feet when following"
+      ],
+      "category": "Seeing & communicating",
+      "correct": 2,
+      "explanation": "Dim within 1000 feet of oncoming traffic and 500 feet behind another vehicle.",
+      "question": "Within what distances must you dim your headlights for meeting and following vehicles?"
+    },
+    {
+      "id": 133,
+      "answers": [
+        "Because parking lights use too much fuel",
+        "Because oncoming traffic may think you are stopped",
+        "Because parking lights blind oncoming drivers",
+        "Because parking lights turn off your brake lights"
+      ],
+      "category": "Seeing & communicating",
+      "correct": 1,
+      "explanation": "Never drive on parking lights alone: others may think you are stopped.",
+      "question": "Why does the manual say to NEVER drive with only your parking lights?"
+    },
+    {
+      "id": 134,
+      "answers": [
+        "At the left edge of the roadway",
+        "At the right edge of the roadway",
+        "Directly at the oncoming headlights",
+        "At your rearview mirror"
+      ],
+      "category": "Seeing & communicating",
+      "correct": 1,
+      "explanation": "Look toward the right edge, not into oncoming headlights.",
+      "question": "When meeting traffic at night, where should you look?"
+    },
+    {
+      "id": 135,
+      "answers": [
+        "To check blind spots near the rear corners that mirrors cannot see",
+        "To check a hill one-third of a mile away",
+        "To signal with hand signals to the far lane",
+        "To warm up your neck muscles for steering"
+      ],
+      "category": "Seeing & communicating",
+      "correct": 0,
+      "explanation": "Mirrors miss the rear-corner blind spots, so look over your shoulder.",
+      "question": "Why must you look over your shoulder before changing lanes?"
+    },
+    {
+      "id": 136,
+      "answers": [
+        "Depend only on rearview and side mirrors",
+        "Place your right arm on the back of the seat and look directly through the rear window",
+        "Look only over your left shoulder while speeding up",
+        "Close one eye to judge distance through mirrors"
+      ],
+      "category": "Seeing & communicating",
+      "correct": 1,
+      "explanation": "When backing, look directly through the rear window, not just the mirrors.",
+      "question": "What is the correct way to look when you back up?"
+    },
+    {
+      "id": 137,
+      "answers": [
+        "50 feet city or 100 feet rural, wheels turned left",
+        "100 feet city or 300 feet rural, wheels pointed straight ahead",
+        "300 feet city or 100 feet rural, wheels turned right",
+        "1000 feet city or 500 feet rural, wheels off the road"
+      ],
+      "category": "Seeing & communicating",
+      "correct": 1,
+      "explanation": "Signal 100 feet in the city or 300 feet rurally, and wait with wheels straight.",
+      "question": "How far must you signal a turn, and how should wheels be positioned waiting to turn left?"
+    },
+    {
+      "id": 138,
+      "answers": [
+        "Stopping at 60 mph takes over three times the distance as at 30 mph",
+        "Stopping at 60 mph takes exactly half the distance as at 30 mph",
+        "Stopping at 60 mph takes the same distance as at 30 mph",
+        "Stopping at 60 mph takes exactly twice the distance as at 30 mph"
+      ],
+      "category": "Speed & space management",
+      "correct": 0,
+      "explanation": "Braking distance grows fast: over three times farther at 60 than at 30.",
+      "question": "What does the manual say about stopping distance at 60 mph compared to 30 mph?"
+    },
+    {
+      "id": 139,
+      "answers": [
+        "A series of potholes that can affect steering and vehicle control",
+        "A layer of oil that rises on hot rainy days",
+        "A film of water that lifts tires at 50 mph",
+        "A narrow bridge with no shoulder"
+      ],
+      "category": "Speed & space management",
+      "correct": 0,
+      "explanation": "Washboard is a series of gravel potholes that upsets steering and control.",
+      "question": "What is the washboard effect on gravel roads?"
+    },
+    {
+      "id": 140,
+      "answers": [
+        "Brake hard in the middle of the curve",
+        "Always slow down before you enter the curve",
+        "Speed up before the curve and steer with one palm",
+        "Shift to park while turning the wheel"
+      ],
+      "category": "Speed & space management",
+      "correct": 1,
+      "explanation": "Slow before the curve; braking in it can cause a skid.",
+      "question": "What should you do before entering a curve to avoid skidding?"
+    },
+    {
+      "id": 141,
+      "answers": [
+        "Because bridges do not have earth underneath them to insulate against the cold",
+        "Because bridges are always salted with oil",
+        "Because bridges trap heat from the sun",
+        "Because bridges are made only of gravel"
+      ],
+      "category": "Speed & space management",
+      "correct": 0,
+      "explanation": "Bridges freeze first because no earth insulates them from below.",
+      "question": "Why can bridges have icy spots even when other pavement is not icy?"
+    },
+    {
+      "id": 142,
+      "answers": [
+        "Because heat causes oil in the asphalt to come to the surface until washed off",
+        "Because cold shady spots freeze first",
+        "Because tires float on snow at 35 mph",
+        "Because dust makes headlights brighter"
+      ],
+      "category": "Speed & space management",
+      "correct": 0,
+      "explanation": "Hot-day rain draws oil to the surface, making roads slick until it washes off.",
+      "question": "Why can pavement be very slippery for the first few minutes of rain on a hot day?"
+    },
+    {
+      "id": 143,
+      "answers": [
+        "Use the ramp to reach the speed of other vehicles",
+        "Signal intent and look over your shoulder",
+        "Drive to the end of the ramp and stop",
+        "Slow on the ramp if you must wait for space"
+      ],
+      "category": "Speed & space management",
+      "correct": 2,
+      "explanation": "Never stop at the end of an entrance ramp; you need the room to reach traffic speed.",
+      "question": "What should you NOT do when using a high-speed entrance ramp to merge?"
+    },
+    {
+      "id": 144,
+      "answers": [
+        "When you can see both headlights of the vehicle you passed in your rearview mirror",
+        "When you count one-one-thousand in the far lane",
+        "When the passed vehicle honks its horn",
+        "When you reach one-third of a mile past the hill"
+      ],
+      "category": "Speed & space management",
+      "correct": 0,
+      "explanation": "Both headlights in your mirror means you have room to return.",
+      "question": "When is it safe to return to the driving lane after passing?"
+    },
+    {
+      "id": 145,
+      "answers": [
+        "Swerve sharply into oncoming traffic",
+        "Do not swerve sharply; hitting the animal is less dangerous than swerving into traffic or rolling over",
+        "Sound a sharp blast and speed up",
+        "Stop in the divider with part of the vehicle sticking out"
+      ],
+      "category": "Speed & space management",
+      "correct": 1,
+      "explanation": "If you cannot stop for an animal, hold course; swerving risks worse outcomes.",
+      "question": "What should you do about an animal on the road if there is no time to stop?"
+    },
+    {
+      "id": 146,
+      "answers": [
+        "Approximately 10% of fatal crashes",
+        "Approximately 40% of fatal crashes",
+        "Approximately 71% of fatal crashes",
+        "Approximately 90% of fatal crashes"
+      ],
+      "category": "Alcohol, drugs & DUI",
+      "correct": 1,
+      "explanation": "Alcohol is involved in about 40% of fatal crashes.",
+      "question": "In approximately what share of fatal crashes is alcohol involved?"
+    },
+    {
+      "id": 147,
+      "answers": [
+        "3 ounces of 80-proof liquor, 24 ounces of beer, or 10 ounces of wine",
+        "1-1/2 ounces of 80-proof liquor, 12 ounces of beer, or a 5-ounce glass of wine",
+        "1 ounce of 80-proof liquor, 5 ounces of beer, or 1 ounce of wine",
+        "6 ounces of 80-proof liquor, 36 ounces of beer, or 15 ounces of wine"
+      ],
+      "category": "Alcohol, drugs & DUI",
+      "correct": 1,
+      "explanation": "One drink means 1-1/2 ounces of liquor, 12 ounces of beer, or 5 ounces of wine.",
+      "question": "What counts as one alcoholic drink in the manual?"
+    },
+    {
+      "id": 148,
+      "answers": [
+        "0.08% or more for regular drivers, and 0.02 for a driver under 21",
+        "0.40% for regular drivers, and 0.10 for a driver under 21",
+        "0.02% for regular drivers, and 0.00 for a driver under 21",
+        "0.50% for regular drivers, and 0.30 for a driver under 21"
+      ],
+      "category": "Alcohol, drugs & DUI",
+      "correct": 0,
+      "explanation": "The limits are 0.08% for most drivers and 0.02 for drivers under 21.",
+      "question": "What are the BAC limits for regular drivers and drivers under 21?"
+    },
+    {
+      "id": 149,
+      "answers": [
+        "Fine $300 to $1000, 1 to 60 days in jail, and license suspended for six months",
+        "Fine $100 to $200, 1 day class, and license suspended for one week",
+        "Fine $5000 to $10000, 1 to 5 years in jail, and lifetime suspension",
+        "Warning only with no fine or suspension"
+      ],
+      "category": "Alcohol, drugs & DUI",
+      "correct": 0,
+      "explanation": "A first alcohol conviction brings a $300–$1000 fine, 1–60 days in jail, and a six-month suspension.",
+      "question": "What are the first-conviction penalties for an alcohol violation?"
+    },
+    {
+      "id": 150,
+      "answers": [
+        "On the passenger seat within reach",
+        "In a locked glove or storage compartment, trunk or cargo area, or behind the last upright seat",
+        "In the driver's cup holder with the seal broken",
+        "On the dashboard for inspection"
+      ],
+      "category": "Alcohol, drugs & DUI",
+      "correct": 1,
+      "explanation": "Open containers belong in a locked compartment, trunk/cargo area, or behind the last seat.",
+      "question": "Where must open alcoholic beverage containers be kept in a motor vehicle?"
+    },
+    {
+      "id": 151,
+      "answers": [
+        "Check the label: machinery warnings mean DO NOT DRIVE, and marijuana brings more mistakes and slower reflexes",
+        "All prescription drugs make you drive better and faster",
+        "Marijuana improves glare adjustment and prevents violations",
+        "Pep pills never cause nervousness or vision problems"
+      ],
+      "category": "Alcohol, drugs & DUI",
+      "correct": 0,
+      "explanation": "Heed drug labels, and know marijuana degrades reflexes and judgment.",
+      "question": "What does the manual say about prescription drugs, marijuana, and driving?"
+    },
+    {
+      "id": 152,
+      "answers": [
+        "At least 20/40 vision in at least one eye, with or without corrective lenses",
+        "At least 20/200 vision in both eyes without glasses",
+        "Perfect 20/20 vision in both eyes without correction",
+        "At least 20/100 vision only with dark glasses"
+      ],
+      "category": "Fatigue, health & vision",
+      "correct": 0,
+      "explanation": "Montana requires at least 20/40 in at least one eye, glasses allowed.",
+      "question": "What vision standard must you meet to get a Montana driver license?"
+    },
+    {
+      "id": 153,
+      "answers": [
+        "Every year or two by an eye specialist",
+        "Only once when you turn 65",
+        "Every ten years after age 24",
+        "Never unless you crash"
+      ],
+      "category": "Fatigue, health & vision",
+      "correct": 0,
+      "explanation": "Have your eyes checked every year or two.",
+      "question": "How often should you have your eyes checked?"
+    },
+    {
+      "id": 154,
+      "answers": [
+        "Eat a large meal and drive late at night when normally asleep",
+        "Eat lightly and avoid driving late at night when normally asleep",
+        "Skip sleep for two nights and drink liquor",
+        "Eat heavily and stare at headlights"
+      ],
+      "category": "Fatigue, health & vision",
+      "correct": 1,
+      "explanation": "Eat lightly and avoid your normal sleep hours behind the wheel.",
+      "question": "What should you do about meals and nighttime driving on a long trip?"
+    },
+    {
+      "id": 155,
+      "answers": [
+        "Drive faster to cool off on the highway",
+        "Give yourself time to cool off and, if necessary, take a short walk off the road",
+        "Text friends while driving to vent",
+        "Follow closely to release impatience"
+      ],
+      "category": "Fatigue, health & vision",
+      "correct": 1,
+      "explanation": "If angry or excited, cool off before driving — walk if needed, off the road.",
+      "question": "If you are angry or excited before driving, what does the manual advise?"
+    },
+    {
+      "id": 156,
+      "answers": [
+        "It is exceeded only by the rate of drivers under 24 years old",
+        "It is the lowest of all age groups",
+        "It is exceeded by every other age group",
+        "It is zero because seniors never crash"
+      ],
+      "category": "Fatigue, health & vision",
+      "correct": 0,
+      "explanation": "Per mile, only drivers under 24 crash more often than drivers 65 and over.",
+      "question": "What does the manual say about the crash rate of drivers 65 and over?"
+    }
+  ]
+}

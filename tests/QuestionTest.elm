@@ -120,6 +120,37 @@ suite =
                         |> Result.map (\qs -> List.head qs |> Maybe.map .explanation)
                         |> Expect.equal (Ok (Just "An instruction permit may be obtained at 15."))
             ]
+        , describe "decoding a bank"
+            [ test "reads the id" <|
+                \_ ->
+                    Decode.decodeString Question.bank bankJson
+                        |> Result.map .id
+                        |> Expect.equal (Ok "wy")
+            , test "reads the title" <|
+                \_ ->
+                    Decode.decodeString Question.bank bankJson
+                        |> Result.map .title
+                        |> Expect.equal (Ok "Wyoming")
+            , test "reads the short name" <|
+                \_ ->
+                    Decode.decodeString Question.bank bankJson
+                        |> Result.map .name
+                        |> Expect.equal (Ok "Wyoming")
+            , test "reads the subtitle" <|
+                \_ ->
+                    Decode.decodeString Question.bank bankJson
+                        |> Result.map .subtitle
+                        |> Expect.equal (Ok "Rules")
+            , test "reads the questions" <|
+                \_ ->
+                    Decode.decodeString Question.bank bankJson
+                        |> Result.map (.questions >> List.map .id)
+                        |> Expect.equal (Ok [ 2 ])
+            , test "a bank with no id is an error" <|
+                \_ ->
+                    Decode.decodeString Question.bank oneQuestionJson
+                        |> expectErr
+            ]
         , describe "decoding rejects bad input"
             [ test "a document with no questions field is an error" <|
                 \_ ->
@@ -175,6 +206,11 @@ oneQuestion =
 oneQuestionJson : String
 oneQuestionJson =
     "{\"title\":\"Wyoming Driver License Practice Test\",\"questions\":[" ++ oneQuestion ++ "]}"
+
+
+bankJson : String
+bankJson =
+    "{\"id\":\"wy\",\"name\":\"Wyoming\",\"title\":\"Wyoming\",\"subtitle\":\"Rules\",\"questions\":[" ++ oneQuestion ++ "]}"
 
 
 documentJson : String

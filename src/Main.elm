@@ -1,22 +1,26 @@
-module Main exposing (Model, Msg(..), Status(..), main, update)
+module Main exposing (Model, Msg(..), Status(..), init, main, selectedBank, update)
 
 {-| A single-session practice or test run.
 
-The whole app is one loop: load the questions, pick a mode, answer one at a
-time, then show the score. The rules of a run live in `Session`; this module
-only wires loading, randomness, and rendering around them.
+The whole app is one loop: load the question banks found under `banks/`,
+pick a bank and a mode, answer one at a time, then show the score. The rules
+of a run live in `Session`; this module only wires loading, randomness, and
+rendering around them.
 
+Which banks exist is discovered at build time (`scripts/gen-banks.js`
+writes `src/Banks.elm`), so adding a state is just adding a bank file.
 Answers accumulate newest-first. The question on screen is the one at index
 "number of answers so far", so there is no separate counter to keep in sync.
 
 -}
 
+import Banks
 import Browser
 import Html exposing (..)
-import Html.Attributes exposing (attribute, class, disabled, type_, value)
-import Html.Events exposing (onClick)
+import Html.Attributes exposing (attribute, class, disabled, selected, type_, value)
+import Html.Events exposing (onClick, onInput)
 import Http
-import Question exposing (Question)
+import Question exposing (Bank, Question)
 import Random
 import Session
     exposing
@@ -52,8 +56,9 @@ practiceDefaultLength =
 
 type alias Model =
     { status : Status
+    , selected : String
     , mode : Mode
-    , allQuestions : List Question
+    , banks : List Bank
     , questions : List Question
     , answers : List Answer
     , chosen : Maybe Int
@@ -65,19 +70,25 @@ type alias Model =
 init : () -> ( Model, Cmd Msg )
 init _ =
     ( { status = Loading
+      , selected = Banks.default
       , mode = Practice
-      , allQuestions = []
+      , banks = []
       , questions = []
       , answers = []
       , chosen = Nothing
       , practiceLength = practiceDefaultLength
       , exitArmed = False
       }
-    , Http.get
-        { url = "questions.json"
-        , expect = Http.expectJson GotQuestions Question.document
-        }
+    , Cmd.batch (List.map fetchBank Banks.ids)
     )
+
+
+fetchBank : String -> Cmd Msg
+fetchBank id =
+    Http.get
+        { url = "banks/" ++ id ++ ".json"
+        , expect = Http.expectJson GotBank Question.bank
+        }
 
 
 
@@ -85,8 +96,9 @@ init _ =
 
 
 type Msg
-    = GotQuestions (Result Http.Error (List Question))
+    = GotBank (Result Http.Error Bank)
     | GotShuffled (List Question)
+    | SelectBank String
     | SetMode Mode
     | SetLength Int
     | Start
@@ -100,11 +112,18 @@ type Msg
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        GotQuestions (Ok questions) ->
-            ( { model | status = Ready, allQuestions = questions }, Cmd.none )
+        GotBank (Ok bank) ->
+            let
+                banks =
+                    bank :: List.filter (\b -> b.id /= bank.id) model.banks
+            in
+            ( { model | banks = banks, status = bankStatus banks }, Cmd.none )
 
-        GotQuestions (Err problem) ->
+        GotBank (Err problem) ->
             ( { model | status = Failed (describeError problem) }, Cmd.none )
+
+        SelectBank id ->
+            ( { model | selected = id }, Cmd.none )
 
         SetMode mode ->
             ( { model | mode = mode }, Cmd.none )
@@ -113,12 +132,17 @@ update msg model =
             ( { model | practiceLength = n }, Cmd.none )
 
         Start ->
-            ( { model | answers = [], chosen = Nothing, questions = [] }
-            , Random.generate GotShuffled
-                (Question.shuffle model.allQuestions
-                    |> Random.map (List.take (sessionLength model))
-                )
-            )
+            case selectedBank model of
+                Nothing ->
+                    ( model, Cmd.none )
+
+                Just bank ->
+                    ( { model | answers = [], chosen = Nothing, questions = [] }
+                    , Random.generate GotShuffled
+                        (Question.shuffle bank.questions
+                            |> Random.map (List.take (sessionLength model))
+                        )
+                    )
 
         GotShuffled questions ->
             ( { model | questions = questions }, Cmd.none )
@@ -176,7 +200,7 @@ view model =
             div [ class "card" ]
                 [ h1 [] [ text "Could not load questions" ]
                 , p []
-                    [ text "The file questions.json could not be read. It must sit in the same folder as index.html." ]
+                    [ text "The file banks/wy.json could not be read. It must sit in the same folder as index.html." ]
                 , pre [ class "error" ] [ text problem ]
                 , p [ class "hint" ]
                     [ text "This app has to be served over HTTP, not opened straight from disk. Serving the folder is enough — no backend is needed." ]
@@ -197,13 +221,28 @@ view model =
 
 viewStart : Model -> Html Msg
 viewStart model =
+    case selectedBank model of
+        Nothing ->
+            p [ class "hint" ] [ text "Loading questions…" ]
+
+        Just bank ->
+            viewReadyStart model bank
+
+
+viewReadyStart : Model -> Bank -> Html Msg
+viewReadyStart model bank =
     let
         total =
-            List.length model.allQuestions
+            List.length bank.questions
     in
     div [ class "card" ]
-        [ h1 [] [ text "Wyoming Driver Test" ]
-        , p [ class "sub" ] [ text "Class C · Rules of the Road, 2021" ]
+        [ h1 [] [ text bank.title ]
+        , p [ class "sub" ] [ text bank.subtitle ]
+        , fieldset [ class "lengths" ]
+            [ legend [] [ text "State" ]
+            , select [ class "state-select", onInput SelectBank ]
+                (List.map (viewBankOption model.selected) (List.sortBy .name model.banks))
+            ]
         , fieldset [ class "lengths" ]
             [ legend [] [ text "Mode" ]
             , div [ class "length-row" ]
@@ -246,6 +285,11 @@ viewStart model =
 viewMode : Mode -> Mode -> String -> Html Msg
 viewMode selected mode label =
     viewToggle label (mode == selected) (SetMode mode)
+
+
+viewBankOption : String -> Bank -> Html Msg
+viewBankOption current bank =
+    option [ value bank.id, selected (bank.id == current) ] [ text bank.name ]
 
 
 viewLength : Int -> Int -> Int -> Html Msg
@@ -571,6 +615,24 @@ currentQuestion model =
     nth (List.length model.answers) model.questions
 
 
+{-| The selected bank, once it has loaded.
+-}
+selectedBank : Model -> Maybe Bank
+selectedBank model =
+    List.head (List.filter (\b -> b.id == model.selected) model.banks)
+
+
+{-| Ready once every bank in `Banks.ids` has loaded.
+-}
+bankStatus : List Bank -> Status
+bankStatus banks =
+    if List.length banks == List.length Banks.ids then
+        Ready
+
+    else
+        Loading
+
+
 describeError : Http.Error -> String
 describeError problem =
     case problem of
@@ -581,13 +643,13 @@ describeError problem =
             "The request timed out."
 
         Http.NetworkError ->
-            "The network failed. questions.json has to be served over HTTP, not opened from disk."
+            "The network failed. The bank file has to be served over HTTP, not opened from disk."
 
         Http.BadStatus code ->
             "The server answered " ++ String.fromInt code ++ "."
 
         Http.BadBody reason ->
-            "questions.json is not in the shape the app expects: " ++ reason
+            "The bank file is not in the shape the app expects: " ++ reason
 
 
 nth : Int -> List a -> Maybe a

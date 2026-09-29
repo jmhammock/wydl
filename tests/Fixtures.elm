@@ -1,4 +1,4 @@
-module Fixtures exposing (asPractice, asTest, expectErr, model, questions, thenMisses, withChosen, withOutcomes, withQuestions)
+module Fixtures exposing (asPractice, asTest, bankFor, expectErr, model, mtBank, questions, thenMisses, withBanks, withChosen, withOutcomes, withQuestions, wyBank)
 
 {-| Shared builders for the test suites.
 
@@ -19,7 +19,7 @@ Two rules keep this module honest:
 
 import Expect exposing (Expectation)
 import Main exposing (Model, Status(..))
-import Question exposing (Question)
+import Question exposing (Bank, Question)
 import Session exposing (Answer, Mode(..))
 
 
@@ -52,13 +52,51 @@ questions n =
     List.map question (List.range 1 n)
 
 
+{-| Loaded bank files, as if fetched. Synthetic test questions under real ids,
+so bank selection behaves as in the app.
+-}
+wyBank : Bank
+wyBank =
+    { id = "wy"
+    , name = "Wyoming"
+    , title = "Wyoming Test Bank"
+    , subtitle = "Test Subtitle"
+    , questions = questions 144
+    }
+
+
+mtBank : Bank
+mtBank =
+    { id = "mt"
+    , name = "Montana"
+    , title = "Montana Test Bank"
+    , subtitle = "Test Subtitle"
+    , questions = questions 60
+    }
+
+
+{-| A minimal bank for any discovered id. Used to drive the loading flow for
+whatever `Banks.ids` contains, so the suite needs no updates when a bank
+file is added.
+-}
+bankFor : String -> Bank
+bankFor id =
+    { id = id
+    , name = id
+    , title = id ++ " Test Bank"
+    , subtitle = "Test Subtitle"
+    , questions = questions 5
+    }
+
+
 {-| A session of `n` questions with nothing answered and nothing chosen yet.
 -}
 model : Mode -> Int -> Model
 model mode n =
     { status = Ready
+    , selected = "wy"
     , mode = mode
-    , allQuestions = questions 144
+    , banks = [ wyBank ]
     , questions = questions n
     , answers = []
     , chosen = Nothing
@@ -107,6 +145,11 @@ withChosen chosen m =
 withQuestions : List Question -> Model -> Model
 withQuestions qs m =
     { m | questions = qs }
+
+
+withBanks : List Bank -> Model -> Model
+withBanks banks m =
+    { m | banks = banks }
 
 
 asTest : Model -> Model

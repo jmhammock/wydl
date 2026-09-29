@@ -7,6 +7,9 @@ node_modules/
 # Compiled app. Regenerate with `npm run build`.
 public/elm.js
 
+# Generated bank index. Regenerate with `npm run build` (or any npm script).
+src/Banks.elm
+
 # No PDFs, ever (source material is large and never served)
 *.pdf
 

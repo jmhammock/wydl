@@ -4,9 +4,11 @@ module ExitTest exposing (suite)
 model. Mirrors exit.js, but checked on the model instead of the DOM.
 -}
 
+import Banks
 import Expect
-import Fixtures exposing (asPractice, model, thenMisses, withChosen, withOutcomes, withQuestions)
-import Main exposing (Model, Msg(..), update)
+import Fixtures exposing (asPractice, bankFor, model, mtBank, thenMisses, withBanks, withChosen, withOutcomes, withQuestions, wyBank)
+import Http
+import Main exposing (Model, Msg(..), Status(..), init, selectedBank, update)
 import Session exposing (Mode(..), isFinished)
 import Test exposing (Test, describe, test)
 
@@ -14,6 +16,11 @@ import Test exposing (Test, describe, test)
 apply : Msg -> Model -> Model
 apply msg m =
     Tuple.first (update msg m)
+
+
+loadBank : String -> Model -> Model
+loadBank id m =
+    apply (GotBank (Ok (bankFor id))) m
 
 
 {-| Three questions into a 25 question test, nothing chosen yet.
@@ -220,12 +227,69 @@ suite =
                 \_ -> midRun |> withQuestions [] |> isFinished |> Expect.equal False
             , test "restarting an unfinished run does not mark it finished" <|
                 \_ -> midRun |> apply ExitToStart |> isFinished |> Expect.equal False
-            , test "restarting keeps the question bank" <|
+            , test "restarting keeps the loaded banks" <|
                 \_ ->
                     midRun
                         |> apply ExitToStart
-                        |> .allQuestions
+                        |> .banks
+                        |> List.concatMap .questions
                         |> List.length
                         |> Expect.equal 144
+            ]
+        , describe "choosing a state"
+            [ test "Wyoming is the default" <|
+                \_ -> init () |> Tuple.first |> .selected |> Expect.equal "wy"
+            , test "Montana can be selected" <|
+                \_ ->
+                    model Test 25
+                        |> withBanks [ wyBank, mtBank ]
+                        |> apply (SelectBank "mt")
+                        |> .selected
+                        |> Expect.equal "mt"
+            , test "switching state keeps the mode" <|
+                \_ ->
+                    model Test 25
+                        |> withBanks [ wyBank, mtBank ]
+                        |> apply (SelectBank "mt")
+                        |> .mode
+                        |> Expect.equal Test
+            , test "Wyoming's bank is selected by default" <|
+                \_ ->
+                    model Test 25
+                        |> withBanks [ wyBank, mtBank ]
+                        |> selectedBank
+                        |> Maybe.map .id
+                        |> Expect.equal (Just "wy")
+            , test "Montana's bank is selected after switching" <|
+                \_ ->
+                    model Test 25
+                        |> withBanks [ wyBank, mtBank ]
+                        |> apply (SelectBank "mt")
+                        |> selectedBank
+                        |> Maybe.map .id
+                        |> Expect.equal (Just "mt")
+            , test "all but one bank is not enough to start" <|
+                \_ ->
+                    List.foldl loadBank (Tuple.first (init ())) (List.take (List.length Banks.ids - 1) Banks.ids)
+                        |> .status
+                        |> Expect.equal Loading
+            , test "every discovered bank means ready" <|
+                \_ ->
+                    List.foldl loadBank (Tuple.first (init ())) Banks.ids
+                        |> .status
+                        |> Expect.equal Ready
+            , test "a failed bank load fails the app" <|
+                \_ ->
+                    case
+                        init ()
+                            |> Tuple.first
+                            |> apply (GotBank (Err Http.Timeout))
+                            |> .status
+                    of
+                        Failed _ ->
+                            Expect.pass
+
+                        _ ->
+                            Expect.fail "expected a Failed status"
             ]
         ]
