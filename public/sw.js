@@ -6,7 +6,7 @@
 // of staying on a stale build forever. Bumping CACHE is still how you retire
 // old files, but forgetting to bump no longer strands anyone on old content.
 
-const CACHE = 'driver-test-v2';
+const CACHE = 'driver-test-v3';
 
 const SHELL = [
   './',
@@ -28,7 +28,7 @@ const SHELL = [
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE).then((cache) => cache.addAll(SHELL))
+    caches.open(CACHE).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting())
   );
 });
 
