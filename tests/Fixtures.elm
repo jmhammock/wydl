@@ -102,6 +102,7 @@ model mode n =
     , chosen = Nothing
     , practiceLength = n
     , exitArmed = False
+    , shareState = ""
     }
 
 

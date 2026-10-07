@@ -28,15 +28,7 @@
 </noscript>
 
 <script src="elm.js"></script>
-<script>
-  Elm.Main.init({ node: document.getElementById('root') });
-
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('sw.js').catch(function () {});
-    });
-  }
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>

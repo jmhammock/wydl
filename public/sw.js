@@ -13,6 +13,7 @@ const SHELL = [
   'index.html',
   'styles.css',
   'elm.js',
+  'app.js',
   // BANKS-START
   'banks/mt.json',
   'banks/wy.json',

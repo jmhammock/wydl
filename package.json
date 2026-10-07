@@ -8,6 +8,7 @@
     "build": "elm make src/Main.elm --optimize --output=public/elm.js",
     "pretest": "node scripts/gen-banks.js",
     "test": "elm-test",
+    "dev": "npm run build && npx --yes serve public",
     "format": "elm-format src tests --yes",
     "validate": "elm-format src tests --validate"
   },

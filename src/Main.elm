@@ -1,4 +1,4 @@
-module Main exposing (Model, Msg(..), Status(..), init, main, selectedBank, update)
+port module Main exposing (Model, Msg(..), Status(..), init, main, selectedBank, update)
 
 {-| A single-session practice or test run.
 
@@ -17,7 +17,7 @@ Answers accumulate newest-first. The question on screen is the one at index
 import Banks
 import Browser
 import Html exposing (..)
-import Html.Attributes exposing (attribute, class, disabled, selected, type_, value)
+import Html.Attributes exposing (attribute, class, disabled, href, rel, selected, target, type_, value)
 import Html.Events exposing (onClick, onInput)
 import Http
 import Question exposing (Bank, Question)
@@ -64,7 +64,24 @@ type alias Model =
     , chosen : Maybe Int
     , practiceLength : Int
     , exitArmed : Bool
+    , shareState : String
     }
+
+
+{-| Payload for the `requestShare` port. Kept as plain strings so Elm can
+encode it as JSON with no extra packages; `app.js` draws the share image.
+-}
+type alias SharePayload =
+    { title : String
+    , score : String
+    , sub : String
+    }
+
+
+port requestShare : SharePayload -> Cmd msg
+
+
+port shareStatus : (String -> msg) -> Sub msg
 
 
 init : () -> ( Model, Cmd Msg )
@@ -78,6 +95,7 @@ init _ =
       , chosen = Nothing
       , practiceLength = practiceDefaultLength
       , exitArmed = False
+      , shareState = ""
       }
     , Cmd.batch (List.map fetchBank Banks.ids)
     )
@@ -107,6 +125,8 @@ type Msg
     | ArmExit
     | CancelExit
     | ExitToStart
+    | ShareResults
+    | GotShareStatus String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -137,7 +157,7 @@ update msg model =
                     ( model, Cmd.none )
 
                 Just bank ->
-                    ( { model | answers = [], chosen = Nothing, questions = [] }
+                    ( { model | answers = [], chosen = Nothing, questions = [], shareState = "" }
                     , Random.generate GotShuffled
                         (Question.shuffle bank.questions
                             |> Random.map (List.take (sessionLength model))
@@ -171,9 +191,17 @@ update msg model =
             ( { model | exitArmed = False }, Cmd.none )
 
         ExitToStart ->
-            ( { model | questions = [], answers = [], chosen = Nothing, exitArmed = False }
+            ( { model | questions = [], answers = [], chosen = Nothing, exitArmed = False, shareState = "" }
             , Cmd.none
             )
+
+        ShareResults ->
+            ( { model | shareState = "Preparing…" }
+            , requestShare (sharePayload model)
+            )
+
+        GotShareStatus state ->
+            ( { model | shareState = state }, Cmd.none )
 
 
 
@@ -186,7 +214,7 @@ main =
         { init = init
         , update = update
         , view = view
-        , subscriptions = \_ -> Sub.none
+        , subscriptions = \_ -> shareStatus GotShareStatus
         }
 
 
@@ -229,56 +257,78 @@ viewStart model =
             viewReadyStart model bank
 
 
+viewFooter : Html Msg
+viewFooter =
+    footer [ class "site-footer" ]
+        [ p [ class "footer-text" ]
+            [ text "Study aid — not affiliated with any DMV. Questions drawn from official state driver manuals." ]
+        , p [ class "free-note" ]
+            [ text "This tool is free to use. If it helped you, consider buying me a coffee." ]
+        , div [ class "coffee-wrap", attribute "data-bmc-slot" "jhammock" ]
+            [ a
+                [ class "coffee-btn"
+                , href "https://www.buymeacoffee.com/jhammock"
+                , target "_blank"
+                , rel "noopener"
+                ]
+                [ text "Buy me a coffee" ]
+            ]
+        ]
+
+
 viewReadyStart : Model -> Bank -> Html Msg
 viewReadyStart model bank =
     let
         total =
             List.length bank.questions
     in
-    div [ class "card" ]
-        [ h1 [] [ text bank.title ]
-        , p [ class "sub" ] [ text bank.subtitle ]
-        , fieldset [ class "lengths" ]
-            [ legend [] [ text "State" ]
-            , select [ class "state-select", onInput SelectBank ]
-                (List.map (viewBankOption model.selected) (List.sortBy .name model.banks))
-            ]
-        , fieldset [ class "lengths" ]
-            [ legend [] [ text "Mode" ]
-            , div [ class "length-row" ]
-                [ viewMode model.mode Practice "Practice"
-                , viewMode model.mode Test "Test"
+    div []
+        [ div [ class "card" ]
+            [ h1 [] [ text bank.title ]
+            , p [ class "sub" ] [ text bank.subtitle ]
+            , fieldset [ class "lengths" ]
+                [ legend [] [ text "State" ]
+                , select [ class "state-select", onInput SelectBank ]
+                    (List.map (viewBankOption model.selected) (List.sortBy .name model.banks))
+                ]
+            , fieldset [ class "lengths" ]
+                [ legend [] [ text "Mode" ]
+                , div [ class "length-row" ]
+                    [ viewMode model.mode Practice "Practice"
+                    , viewMode model.mode Test "Test"
+                    ]
+                ]
+            , case model.mode of
+                Practice ->
+                    fieldset [ class "lengths" ]
+                        [ legend [] [ text "Questions per session" ]
+                        , div [ class "length-row" ]
+                            (List.map (viewLength total model.practiceLength) (lengthOptions total))
+                        ]
+
+                Test ->
+                    p [ class "test-note" ]
+                        [ text
+                            (String.fromInt testQuestionCount
+                                ++ " questions. You need "
+                                ++ String.fromInt testPassMark
+                                ++ " correct to pass, and the test ends as soon as "
+                                ++ String.fromInt (allowedMisses + 1)
+                                ++ " answers are wrong."
+                            )
+                        ]
+            , button [ class "btn", type_ "button", onClick Start ]
+                [ text
+                    (case model.mode of
+                        Practice ->
+                            "Start"
+
+                        Test ->
+                            "Begin test"
+                    )
                 ]
             ]
-        , case model.mode of
-            Practice ->
-                fieldset [ class "lengths" ]
-                    [ legend [] [ text "Questions per session" ]
-                    , div [ class "length-row" ]
-                        (List.map (viewLength total model.practiceLength) (lengthOptions total))
-                    ]
-
-            Test ->
-                p [ class "test-note" ]
-                    [ text
-                        (String.fromInt testQuestionCount
-                            ++ " questions. You need "
-                            ++ String.fromInt testPassMark
-                            ++ " correct to pass, and the test ends as soon as "
-                            ++ String.fromInt (allowedMisses + 1)
-                            ++ " answers are wrong."
-                        )
-                    ]
-        , button [ class "btn", type_ "button", onClick Start ]
-            [ text
-                (case model.mode of
-                    Practice ->
-                        "Start"
-
-                    Test ->
-                        "Begin test"
-                )
-            ]
+        , viewFooter
         ]
 
 
@@ -474,6 +524,7 @@ viewResults model =
             Test ->
                 viewTestResult model
         , viewReview model
+        , viewFooter
         ]
 
 
@@ -499,8 +550,7 @@ viewPracticeResult model =
             [ text (String.fromInt percent ++ "%") ]
         , p [ class "sub" ]
             [ text (String.fromInt correct ++ " of " ++ String.fromInt total ++ " correct") ]
-        , button [ class "btn", type_ "button", onClick ExitToStart ]
-            [ text "Start a new session" ]
+        , viewShareRow model "Start a new session"
         ]
 
 
@@ -551,9 +601,67 @@ viewTestResult model =
                         ++ "."
                     )
                 ]
-        , button [ class "btn", type_ "button", onClick ExitToStart ]
-            [ text "Take the test again" ]
+        , viewShareRow model "Take the test again"
         ]
+
+
+{-| Text for the share image, drawn by `app.js` from this payload.
+-}
+sharePayload : Model -> SharePayload
+sharePayload model =
+    case model.mode of
+        Practice ->
+            let
+                total =
+                    List.length model.answers
+
+                correct =
+                    correctCount model
+
+                percent =
+                    if total == 0 then
+                        0
+
+                    else
+                        round (toFloat correct / toFloat total * 100)
+            in
+            { title = "Driver Test"
+            , score = String.fromInt percent ++ "%"
+            , sub = String.fromInt correct ++ " of " ++ String.fromInt total ++ " correct"
+            }
+
+        Test ->
+            { title = "Driver Test"
+            , score = String.fromInt (correctCount model) ++ " / " ++ String.fromInt testQuestionCount
+            , sub =
+                if isFailed model then
+                    "Not passed"
+
+                else
+                    "Passed"
+            }
+
+
+viewShareRow : Model -> String -> Html Msg
+viewShareRow model restartLabel =
+    div []
+        [ div [ class "share-row" ]
+            [ button [ class "btn", type_ "button", onClick ExitToStart ]
+                [ text restartLabel ]
+            , button [ class "btn-secondary", type_ "button", onClick ShareResults ]
+                [ text "Share results" ]
+            ]
+        , viewShareStatus model
+        ]
+
+
+viewShareStatus : Model -> Html Msg
+viewShareStatus model =
+    if model.shareState == "" then
+        text ""
+
+    else
+        p [ class "hint" ] [ text model.shareState ]
 
 
 resultClass : Bool -> String
