@@ -4,7 +4,7 @@
   "private": true,
   "description": "State driver license practice tests (Elm)",
   "scripts": {
-    "prebuild": "node scripts/gen-banks.js",
+    "prebuild": "node scripts/gen-banks.js && node scripts/build-posthog-assets.js",
     "build": "elm make src/Main.elm --optimize --output=public/elm.js",
     "pretest": "node scripts/gen-banks.js",
     "test": "elm-test",
@@ -19,5 +19,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "posthog-js": "^1.447.6"
   }
 }
