@@ -264,14 +264,14 @@ viewFooter =
             [ text "Study aid — not affiliated with any DMV. Questions drawn from official state driver manuals." ]
         , p [ class "free-note" ]
             [ text "This tool is free to use. If it helped you, consider buying me a coffee." ]
-        , div [ class "coffee-wrap", attribute "data-bmc-slot" "jhammock" ]
+        , div [ class "coffee-wrap" ]
             [ a
                 [ class "coffee-btn"
                 , href "https://www.buymeacoffee.com/jhammock"
                 , target "_blank"
                 , rel "noopener"
                 ]
-                [ text "Buy me a coffee" ]
+                [ text "☕ Buy me a coffee" ]
             ]
         ]
 

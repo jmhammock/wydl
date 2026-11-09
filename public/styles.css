@@ -386,9 +386,8 @@ p { margin: 0 0 1rem; }
 .coffee-btn {
   display: inline-block;
   padding: .6rem 1.25rem;
-  font-family: Cookie, cursive;
-  font-size: 1.25rem;
-  font-weight: 400;
+  font: inherit;
+  font-weight: 600;
   color: #000000;
   background: #FFDD00;
   border: 2px solid #000000;

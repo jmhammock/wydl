@@ -15,61 +15,6 @@
     });
   }
 
-  // Buy Me a Coffee widget loader.
-  //
-  // Elm renders an empty slot (`[data-bmc-slot]`) plus a plain fallback
-  // link on the setup and results screens only. The official BMC script
-  // only processes script tags present at its own load time, and Elm
-  // re-creates the footer as screens change, so a fresh copy of the
-  // widget script is injected each time a slot appears. The fallback
-  // link stays visible offline or when the CDN is blocked, and hides
-  // once the widget renders.
-  function mountBmc(slot) {
-    if (slot.querySelector('script[data-name="bmc-button"]') || slot.getAttribute('data-bmc-error')) {
-      return;
-    }
-    var fallback = slot.querySelector('.coffee-btn');
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
-    s.setAttribute('data-name', 'bmc-button');
-    s.setAttribute('data-slug', slot.getAttribute('data-bmc-slot') || 'jhammock');
-    s.setAttribute('data-color', '#FFDD00');
-    s.setAttribute('data-emoji', '');
-    s.setAttribute('data-font', 'Cookie');
-    s.setAttribute('data-text', 'Buy me a coffee');
-    s.setAttribute('data-outline-color', '#000000');
-    s.setAttribute('data-font-color', '#000000');
-    s.setAttribute('data-coffee-color', '#ffffff');
-    s.onload = function () {
-      if (fallback) {
-        fallback.style.display = 'none';
-      }
-    };
-    s.onerror = function () {
-      // Mark the slot so the observer does not retry in a loop; a fresh
-      // slot (new screen) will try again. The fallback link stays visible.
-      slot.setAttribute('data-bmc-error', '1');
-      s.remove();
-    };
-    slot.appendChild(s);
-  }
-
-  function scanBmc() {
-    var slots = document.querySelectorAll('[data-bmc-slot]');
-    for (var i = 0; i < slots.length; i++) {
-      mountBmc(slots[i]);
-    }
-  }
-
-  scanBmc();
-  if ('MutationObserver' in window) {
-    var root = document.getElementById('root');
-    if (root) {
-      new MutationObserver(scanBmc).observe(root, { childList: true, subtree: true });
-    }
-  }
-
   function drawShareImage(title, score, sub) {
     var size = 1080;
     var canvas = document.createElement('canvas');
