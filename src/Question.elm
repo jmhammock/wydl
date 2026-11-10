@@ -2,9 +2,9 @@ module Question exposing (Bank, Question, bank, document, shuffle)
 
 {-| A single practice-test question, and the bank file it arrives in.
 
-A bank is one JSON document under `banks/`: an id, a short name, a display
-title, and the `questions` array. This module only knows *what* those are. It
-has no opinion on how questions are displayed, scored, or ordered by the app.
+A bank is one JSON document under `banks/`: an id, a display title, and the
+`questions` array. This module only knows _what_ those are. It has no
+opinion on how questions are displayed, scored, or ordered by the app.
 
 -}
 
@@ -49,7 +49,6 @@ is known in exactly one place.
 -}
 type alias Bank =
     { id : String
-    , name : String
     , title : String
     , subtitle : String
     , questions : List Question
@@ -58,9 +57,8 @@ type alias Bank =
 
 bank : Decode.Decoder Bank
 bank =
-    Decode.map5 Bank
+    Decode.map4 Bank
         (Decode.field "id" Decode.string)
-        (Decode.field "name" Decode.string)
         (Decode.field "title" Decode.string)
         (Decode.field "subtitle" Decode.string)
         (Decode.field "questions" (Decode.list decoder))

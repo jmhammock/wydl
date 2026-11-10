@@ -6,7 +6,7 @@
 // of staying on a stale build forever. Bumping CACHE is still how you retire
 // old files, but forgetting to bump no longer strands anyone on old content.
 
-const CACHE = 'driver-test-v6';
+const CACHE = 'driver-test-v7';
 
 const SHELL = [
   './',
@@ -15,7 +15,6 @@ const SHELL = [
   'elm.js',
   'app.js',
   // BANKS-START
-  'banks/mt.json',
   'banks/wy.json',
 // BANKS-END
   'manifest.webmanifest',

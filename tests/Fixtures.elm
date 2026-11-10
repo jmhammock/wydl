@@ -1,4 +1,4 @@
-module Fixtures exposing (asPractice, asTest, bankFor, expectErr, model, mtBank, questions, thenMisses, withBanks, withChosen, withOutcomes, withQuestions, wyBank)
+module Fixtures exposing (asPractice, asTest, expectErr, model, questions, thenMisses, withChosen, withOutcomes, withQuestions, wyBank)
 
 {-| Shared builders for the test suites.
 
@@ -52,40 +52,15 @@ questions n =
     List.map question (List.range 1 n)
 
 
-{-| Loaded bank files, as if fetched. Synthetic test questions under real ids,
-so bank selection behaves as in the app.
+{-| The loaded bank, as if fetched: synthetic questions under the real id,
+with the title and subtitle the app displays.
 -}
 wyBank : Bank
 wyBank =
     { id = "wy"
-    , name = "Wyoming"
     , title = "Wyoming Test Bank"
     , subtitle = "Test Subtitle"
     , questions = questions 144
-    }
-
-
-mtBank : Bank
-mtBank =
-    { id = "mt"
-    , name = "Montana"
-    , title = "Montana Test Bank"
-    , subtitle = "Test Subtitle"
-    , questions = questions 60
-    }
-
-
-{-| A minimal bank for any discovered id. Used to drive the loading flow for
-whatever `Banks.ids` contains, so the suite needs no updates when a bank
-file is added.
--}
-bankFor : String -> Bank
-bankFor id =
-    { id = id
-    , name = id
-    , title = id ++ " Test Bank"
-    , subtitle = "Test Subtitle"
-    , questions = questions 5
     }
 
 
@@ -94,9 +69,8 @@ bankFor id =
 model : Mode -> Int -> Model
 model mode n =
     { status = Ready
-    , selected = "wy"
+    , bank = Just wyBank
     , mode = mode
-    , banks = [ wyBank ]
     , questions = questions n
     , answers = []
     , chosen = Nothing
@@ -146,11 +120,6 @@ withChosen chosen m =
 withQuestions : List Question -> Model -> Model
 withQuestions qs m =
     { m | questions = qs }
-
-
-withBanks : List Bank -> Model -> Model
-withBanks banks m =
-    { m | banks = banks }
 
 
 asTest : Model -> Model

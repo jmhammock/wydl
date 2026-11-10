@@ -1,24 +1,24 @@
-port module Main exposing (Model, Msg(..), Status(..), init, main, selectedBank, update)
+port module Main exposing (Model, Msg(..), Status(..), init, main, update)
 
 {-| A single-session practice or test run.
 
-The whole app is one loop: load the question banks found under `banks/`,
-pick a bank and a mode, answer one at a time, then show the score. The rules
-of a run live in `Session`; this module only wires loading, randomness, and
-rendering around them.
+The whole app is one loop: load the question bank under `banks/`, pick a
+mode, answer one at a time, then show the score. The rules of a run live in
+`Session`; this module only wires loading, randomness, and rendering around
+them.
 
-Which banks exist is discovered at build time (`scripts/gen-banks.js`
-writes `src/Banks.elm`), so adding a state is just adding a bank file.
-Answers accumulate newest-first. The question on screen is the one at index
-"number of answers so far", so there is no separate counter to keep in sync.
+The bank's id is discovered at build time (`scripts/gen-banks.js` writes
+`src/Banks.elm`). Answers accumulate newest-first. The question on screen is
+the one at index "number of answers so far", so there is no separate counter
+to keep in sync.
 
 -}
 
 import Banks
 import Browser
 import Html exposing (..)
-import Html.Attributes exposing (attribute, class, disabled, href, rel, selected, target, type_, value)
-import Html.Events exposing (onClick, onInput)
+import Html.Attributes exposing (attribute, class, disabled, href, rel, target, type_, value)
+import Html.Events exposing (onClick)
 import Http
 import Json.Encode as Encode
 import Question exposing (Bank, Question)
@@ -57,9 +57,8 @@ practiceDefaultLength =
 
 type alias Model =
     { status : Status
-    , selected : String
+    , bank : Maybe Bank
     , mode : Mode
-    , banks : List Bank
     , questions : List Question
     , answers : List Answer
     , chosen : Maybe Int
@@ -91,9 +90,8 @@ port shareStatus : (String -> msg) -> Sub msg
 init : () -> ( Model, Cmd Msg )
 init _ =
     ( { status = Loading
-      , selected = Banks.default
+      , bank = Nothing
       , mode = Practice
-      , banks = []
       , questions = []
       , answers = []
       , chosen = Nothing
@@ -101,7 +99,7 @@ init _ =
       , exitArmed = False
       , shareState = ""
       }
-    , Cmd.batch (List.map fetchBank Banks.ids)
+    , fetchBank Banks.default
     )
 
 
@@ -120,7 +118,6 @@ fetchBank id =
 type Msg
     = GotBank (Result Http.Error Bank)
     | GotShuffled (List Question)
-    | SelectBank String
     | SetMode Mode
     | SetLength Int
     | Start
@@ -137,17 +134,10 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         GotBank (Ok bank) ->
-            let
-                banks =
-                    bank :: List.filter (\b -> b.id /= bank.id) model.banks
-            in
-            ( { model | banks = banks, status = bankStatus banks }, Cmd.none )
+            ( { model | bank = Just bank, status = Ready }, Cmd.none )
 
         GotBank (Err problem) ->
             ( { model | status = Failed (describeError problem) }, Cmd.none )
-
-        SelectBank id ->
-            ( { model | selected = id }, Cmd.none )
 
         SetMode mode ->
             ( { model | mode = mode }, Cmd.none )
@@ -156,7 +146,7 @@ update msg model =
             ( { model | practiceLength = n }, Cmd.none )
 
         Start ->
-            case selectedBank model of
+            case model.bank of
                 Nothing ->
                     ( model, Cmd.none )
 
@@ -194,7 +184,7 @@ update msg model =
 
                         answerCmd =
                             capture "quiz_answer_submitted"
-                                [ ( "bank_id", Encode.string model.selected )
+                                [ ( "bank_id", Encode.string (bankId model) )
                                 , ( "mode", Encode.string (modeValue model.mode) )
                                 , ( "question_category", Encode.string q.category )
                                 , ( "question_number", Encode.int (List.length model.answers + 1) )
@@ -226,7 +216,7 @@ update msg model =
 
               else
                 capture "quiz_abandoned"
-                    [ ( "bank_id", Encode.string model.selected )
+                    [ ( "bank_id", Encode.string (bankId model) )
                     , ( "mode", Encode.string (modeValue model.mode) )
                     , ( "questions_answered", Encode.int (List.length model.answers) )
                     , ( "question_count", Encode.int (List.length model.questions) )
@@ -290,7 +280,7 @@ view model =
 
 viewStart : Model -> Html Msg
 viewStart model =
-    case selectedBank model of
+    case model.bank of
         Nothing ->
             p [ class "hint" ] [ text "Loading questions…" ]
 
@@ -327,11 +317,6 @@ viewReadyStart model bank =
         [ div [ class "card" ]
             [ h1 [] [ text bank.title ]
             , p [ class "sub" ] [ text bank.subtitle ]
-            , fieldset [ class "lengths" ]
-                [ legend [] [ text "State" ]
-                , select [ class "state-select", onInput SelectBank ]
-                    (List.map (viewBankOption model.selected) (List.sortBy .name model.banks))
-                ]
             , fieldset [ class "lengths" ]
                 [ legend [] [ text "Mode" ]
                 , div [ class "length-row" ]
@@ -376,11 +361,6 @@ viewReadyStart model bank =
 viewMode : Mode -> Mode -> String -> Html Msg
 viewMode selected mode label =
     viewToggle label (mode == selected) (SetMode mode)
-
-
-viewBankOption : String -> Bank -> Html Msg
-viewBankOption current bank =
-    option [ value bank.id, selected (bank.id == current) ] [ text bank.name ]
 
 
 viewLength : Int -> Int -> Int -> Html Msg
@@ -797,7 +777,7 @@ completionProperties model =
                     else
                         "passed"
     in
-    [ ( "bank_id", Encode.string model.selected )
+    [ ( "bank_id", Encode.string (bankId model) )
     , ( "mode", Encode.string (modeValue model.mode) )
     , ( "questions_answered", Encode.int answered )
     , ( "correct_answers", Encode.int correct )
@@ -821,22 +801,13 @@ currentQuestion model =
     nth (List.length model.answers) model.questions
 
 
-{-| The selected bank, once it has loaded.
+{-| The loaded bank's id, for analytics.
 -}
-selectedBank : Model -> Maybe Bank
-selectedBank model =
-    List.head (List.filter (\b -> b.id == model.selected) model.banks)
-
-
-{-| Ready once every bank in `Banks.ids` has loaded.
--}
-bankStatus : List Bank -> Status
-bankStatus banks =
-    if List.length banks == List.length Banks.ids then
-        Ready
-
-    else
-        Loading
+bankId : Model -> String
+bankId model =
+    model.bank
+        |> Maybe.map .id
+        |> Maybe.withDefault Banks.default
 
 
 describeError : Http.Error -> String

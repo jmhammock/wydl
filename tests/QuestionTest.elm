@@ -131,11 +131,6 @@ suite =
                     Decode.decodeString Question.bank bankJson
                         |> Result.map .title
                         |> Expect.equal (Ok "Wyoming")
-            , test "reads the short name" <|
-                \_ ->
-                    Decode.decodeString Question.bank bankJson
-                        |> Result.map .name
-                        |> Expect.equal (Ok "Wyoming")
             , test "reads the subtitle" <|
                 \_ ->
                     Decode.decodeString Question.bank bankJson
@@ -210,7 +205,7 @@ oneQuestionJson =
 
 bankJson : String
 bankJson =
-    "{\"id\":\"wy\",\"name\":\"Wyoming\",\"title\":\"Wyoming\",\"subtitle\":\"Rules\",\"questions\":[" ++ oneQuestion ++ "]}"
+    "{\"id\":\"wy\",\"title\":\"Wyoming\",\"subtitle\":\"Rules\",\"questions\":[" ++ oneQuestion ++ "]}"
 
 
 documentJson : String
