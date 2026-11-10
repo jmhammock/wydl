@@ -63,6 +63,8 @@ public/
   styles.css            All styling
   sw.js                 Offline-first service worker
   manifest.webmanifest  PWA manifest + icons/
+  robots.txt             Crawl directives + sitemap pointer
+  sitemap.xml            Single-URL sitemap for search engines
 ```
 
 `public/elm.js` is build output and intentionally git-ignored; `npm run build`

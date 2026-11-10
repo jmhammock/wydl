@@ -1,7 +1,7 @@
 {
   "name": "Driver License Practice Test",
   "short_name": "Driver Test",
-  "description": "Practice questions for state driver license written tests, drawn from official driver manuals.",
+  "description": "Free practice questions for the Wyoming driver license written test, drawn from the official Rules of the Road manual.",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
