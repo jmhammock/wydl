@@ -114,10 +114,16 @@ Everything content-specific lives in a handful of places:
    The UI copy describing the rules lives in `viewStart`/`viewTestResult` in
    `src/Main.elm` and reads those same constants, so they stay in sync.
 4. **Icons** — replace `public/icons/*` and match the filenames in the
-   manifest.
-5. **Service worker** — bump `CACHE` in `public/sw.js` (`driver-test-v1` →
-   something of yours) so your fork doesn't share a cache namespace, and bump
-   it again on each content update for a clean cutover.
+   manifest. Also replace `public/og-image.png` (the 1200×630 social share
+   banner, referenced by the `og:`/`twitter:` tags in `public/index.html`).
+5. **Colors** — the palette (Wyoming brown/gold) lives in the `:root`
+   variables in `public/styles.css`, plus `theme-color` in
+   `public/index.html`, `theme_color`/`background_color` in
+   `public/manifest.webmanifest`, the canvas share card in `public/app.js`,
+   and the icons/og-image above.
+ 6. **Service worker** — bump `CACHE` in `public/sw.js` (`driver-test-v1` →
+    something of yours) so your fork doesn't share a cache namespace, and bump
+    it again on each content update for a clean cutover.
 
 `npm test` pins the decoder and run rules, so a malformed bank or an
 inconsistent pass mark will fail fast.

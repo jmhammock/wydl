@@ -109,16 +109,18 @@
     canvas.height = size;
     var g = canvas.getContext('2d');
 
-    g.fillStyle = '#1d3557';
+    g.fillStyle = '#3a2417';
     g.fillRect(0, 0, size, size);
 
-    g.fillStyle = '#ffffff';
     g.textAlign = 'center';
     g.textBaseline = 'middle';
+    g.fillStyle = '#f7f2ea';
     g.font = '600 72px system-ui, -apple-system, "Segoe UI", sans-serif';
     g.fillText(title, size / 2, 320);
+    g.fillStyle = '#ffc425';
     g.font = '700 190px system-ui, -apple-system, "Segoe UI", sans-serif';
     g.fillText(score, size / 2, 560);
+    g.fillStyle = '#f7f2ea';
     g.font = '400 64px system-ui, -apple-system, "Segoe UI", sans-serif';
     g.fillText(sub, size / 2, 750);
 

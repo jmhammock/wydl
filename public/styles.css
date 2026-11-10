@@ -1,13 +1,13 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 :root {
-  --bg: #f6f7f9;
+  --bg: #f7f2ea;
   --card: #ffffff;
-  --fg: #1b1f24;
-  --muted: #5b6472;
-  --line: #dde1e6;
-  --accent: #1d3557;
-  --accent-fg: #ffffff;
+  --fg: #2a1e15;
+  --muted: #75634f;
+  --line: #e4dac9;
+  --accent: #3a2417;
+  --accent-fg: #ffc425;
   --right-bg: #e7f6ec;
   --right-edge: #1a7f43;
   --right-fg: #10532c;
@@ -19,13 +19,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14181d;
-    --card: #1c2229;
-    --fg: #eef1f4;
-    --muted: #a2acba;
-    --line: #2e3742;
-    --accent: #6ea8fe;
-    --accent-fg: #10202f;
+    --bg: #17110d;
+    --card: #211711;
+    --fg: #f2e9da;
+    --muted: #ab977b;
+    --line: #3b2d22;
+    --accent: #c9971c;
+    --accent-fg: #241609;
     --right-bg: #14301f;
     --right-edge: #3fb56b;
     --right-fg: #b7e9c8;
@@ -388,9 +388,9 @@ p { margin: 0 0 1rem; }
   padding: .6rem 1.25rem;
   font: inherit;
   font-weight: 600;
-  color: #000000;
-  background: #FFDD00;
-  border: 2px solid #000000;
+  color: #3a2417;
+  background: #ffc425;
+  border: 2px solid #3a2417;
   border-radius: .6rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
   text-decoration: none;
