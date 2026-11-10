@@ -15,12 +15,10 @@
   "devDependencies": {
     "elm": "0.19.2-0",
     "elm-format": "0.8.8",
-    "elm-test": "0.19.2-1"
+    "elm-test": "0.19.2-1",
+    "posthog-js": "^1.447.6"
   },
   "engines": {
     "node": ">=18"
-  },
-  "dependencies": {
-    "posthog-js": "^1.447.6"
   }
 }

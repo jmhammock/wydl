@@ -179,20 +179,11 @@ update msg model =
             ( { model | questions = questions }, Cmd.none )
 
         Choose i ->
-            case ( model.chosen, currentQuestion model ) of
-                ( Nothing, Just q ) ->
-                    ( { model | chosen = Just i }
-                    , capture "quiz_answer_submitted"
-                        [ ( "bank_id", Encode.string model.selected )
-                        , ( "mode", Encode.string (modeValue model.mode) )
-                        , ( "question_category", Encode.string q.category )
-                        , ( "question_number", Encode.int (List.length model.answers + 1) )
-                        , ( "is_correct", Encode.bool (i == q.correct) )
-                        ]
-                    )
+            if model.chosen == Nothing then
+                ( { model | chosen = Just i }, Cmd.none )
 
-                _ ->
-                    ( model, Cmd.none )
+            else
+                ( model, Cmd.none )
 
         Next ->
             case ( model.chosen, currentQuestion model ) of
@@ -200,14 +191,24 @@ update msg model =
                     let
                         updatedModel =
                             { model | answers = Answer q i :: model.answers, chosen = Nothing, exitArmed = False }
-                    in
-                    ( updatedModel
-                    , if isFinished updatedModel then
-                        capture "quiz_completed" (completionProperties updatedModel)
 
-                      else
-                        Cmd.none
-                    )
+                        answerCmd =
+                            capture "quiz_answer_submitted"
+                                [ ( "bank_id", Encode.string model.selected )
+                                , ( "mode", Encode.string (modeValue model.mode) )
+                                , ( "question_category", Encode.string q.category )
+                                , ( "question_number", Encode.int (List.length model.answers + 1) )
+                                , ( "is_correct", Encode.bool (i == q.correct) )
+                                ]
+
+                        completionCmd =
+                            if isFinished updatedModel then
+                                capture "quiz_completed" (completionProperties updatedModel)
+
+                            else
+                                Cmd.none
+                    in
+                    ( updatedModel, Cmd.batch [ answerCmd, completionCmd ] )
 
                 _ ->
                     ( model, Cmd.none )
@@ -236,7 +237,7 @@ update msg model =
             ( { model | shareState = "Preparing…" }
             , Cmd.batch
                 [ requestShare (sharePayload model)
-                , capture "quiz_results_shared" (completionProperties model)
+                , capture "quiz_share_requested" (completionProperties model)
                 ]
             )
 

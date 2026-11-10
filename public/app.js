@@ -74,7 +74,7 @@
         questions_answered: properties.questions_answered,
         question_count: properties.question_count
       });
-    } else if (payload.event === 'quiz_results_shared') {
+    } else if (payload.event === 'quiz_share_requested') {
       posthogLogger.info('quiz results sharing requested', {
         event: 'quiz_results_share_requested',
         bank_id: properties.bank_id,

@@ -28,8 +28,8 @@ const host = env.POSTHOG_HOST;
 
 if (key && host) {
   fs.writeFileSync(configPath, `window.POSTHOG_CONFIG = ${JSON.stringify({ key, host })};\n`);
-} else if (fs.existsSync(configPath)) {
-  fs.unlinkSync(configPath);
+  fs.copyFileSync(require.resolve("posthog-js/dist/array.js"), sdkPath);
+} else {
+  fs.writeFileSync(configPath, "window.POSTHOG_CONFIG = null;\n");
+  fs.writeFileSync(sdkPath, "// PostHog disabled: no browser configuration present.\n");
 }
-
-fs.copyFileSync(require.resolve("posthog-js/dist/array.js"), sdkPath);
