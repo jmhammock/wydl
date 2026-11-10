@@ -7,7 +7,94 @@
 (function () {
   'use strict';
 
+  var posthogConfig = window.POSTHOG_CONFIG;
+  var posthogLogger;
+  if (posthogConfig && posthogConfig.key && posthogConfig.host && window.posthog) {
+    window.posthog.init(posthogConfig.key, {
+      api_host: posthogConfig.host,
+      defaults: '2026-08-30',
+      capture_exceptions: {
+        capture_unhandled_errors: true,
+        capture_unhandled_rejections: true,
+        capture_console_errors: false
+      },
+      logs: {
+        serviceName: 'wydlm-web',
+        environment: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'development' : 'production'
+      }
+    });
+    posthogLogger = window.posthog.logger;
+  } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    if (!posthogConfig || !posthogConfig.key) {
+      console.error('POSTHOG_KEY variable required by PostHog is missing or un-configured, this causes events to be silently missed. This error stops appearing once POSTHOG_KEY is configured');
+    } else if (!posthogConfig.host) {
+      console.error('POSTHOG_HOST variable required by PostHog is missing or un-configured, this causes events to be silently missed. This error stops appearing once POSTHOG_HOST is configured');
+    } else {
+      console.error('PostHog SDK failed to load, this causes events to be silently missed.');
+    }
+  }
+
   var app = Elm.Main.init({ node: document.getElementById('root') });
+
+  if (posthogLogger) {
+    posthogLogger.info('practice quiz application initialized', {
+      event: 'application_initialized',
+      service_worker_supported: 'serviceWorker' in navigator
+    });
+  }
+
+  function logQuizLifecycle(payload) {
+    if (!posthogLogger || !payload || !payload.properties) {
+      return;
+    }
+
+    var properties = payload.properties;
+    if (payload.event === 'quiz_started') {
+      posthogLogger.info('quiz session started', {
+        event: 'quiz_session_started',
+        bank_id: properties.bank_id,
+        mode: properties.mode,
+        question_count: properties.question_count
+      });
+    } else if (payload.event === 'quiz_completed') {
+      posthogLogger.info('quiz session completed', {
+        event: 'quiz_session_completed',
+        bank_id: properties.bank_id,
+        mode: properties.mode,
+        questions_answered: properties.questions_answered,
+        correct_answers: properties.correct_answers,
+        score_percent: properties.score_percent,
+        outcome: properties.outcome
+      });
+    } else if (payload.event === 'quiz_abandoned') {
+      posthogLogger.warn('quiz session abandoned', {
+        event: 'quiz_session_abandoned',
+        bank_id: properties.bank_id,
+        mode: properties.mode,
+        questions_answered: properties.questions_answered,
+        question_count: properties.question_count
+      });
+    } else if (payload.event === 'quiz_share_requested') {
+      posthogLogger.info('quiz results sharing requested', {
+        event: 'quiz_results_share_requested',
+        bank_id: properties.bank_id,
+        mode: properties.mode,
+        questions_answered: properties.questions_answered,
+        correct_answers: properties.correct_answers,
+        score_percent: properties.score_percent,
+        outcome: properties.outcome
+      });
+    }
+  }
+
+  if (app.ports && app.ports.captureEvent) {
+    app.ports.captureEvent.subscribe(function (payload) {
+      if (posthogConfig && posthogConfig.key && posthogConfig.host && window.posthog && payload && payload.event) {
+        window.posthog.capture(payload.event, payload.properties || {});
+        logQuizLifecycle(payload);
+      }
+    });
+  }
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {

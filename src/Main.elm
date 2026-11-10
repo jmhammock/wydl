@@ -20,6 +20,7 @@ import Html exposing (..)
 import Html.Attributes exposing (attribute, class, disabled, href, rel, selected, target, type_, value)
 import Html.Events exposing (onClick, onInput)
 import Http
+import Json.Encode as Encode
 import Question exposing (Bank, Question)
 import Random
 import Session
@@ -79,6 +80,9 @@ type alias SharePayload =
 
 
 port requestShare : SharePayload -> Cmd msg
+
+
+port captureEvent : Encode.Value -> Cmd msg
 
 
 port shareStatus : (String -> msg) -> Sub msg
@@ -158,10 +162,17 @@ update msg model =
 
                 Just bank ->
                     ( { model | answers = [], chosen = Nothing, questions = [], shareState = "" }
-                    , Random.generate GotShuffled
-                        (Question.shuffle bank.questions
-                            |> Random.map (List.take (sessionLength model))
-                        )
+                    , Cmd.batch
+                        [ capture "quiz_started"
+                            [ ( "bank_id", Encode.string bank.id )
+                            , ( "mode", Encode.string (modeValue model.mode) )
+                            , ( "question_count", Encode.int (sessionLength model) )
+                            ]
+                        , Random.generate GotShuffled
+                            (Question.shuffle bank.questions
+                                |> Random.map (List.take (sessionLength model))
+                            )
+                        ]
                     )
 
         GotShuffled questions ->
@@ -177,9 +188,27 @@ update msg model =
         Next ->
             case ( model.chosen, currentQuestion model ) of
                 ( Just i, Just q ) ->
-                    ( { model | answers = Answer q i :: model.answers, chosen = Nothing, exitArmed = False }
-                    , Cmd.none
-                    )
+                    let
+                        updatedModel =
+                            { model | answers = Answer q i :: model.answers, chosen = Nothing, exitArmed = False }
+
+                        answerCmd =
+                            capture "quiz_answer_submitted"
+                                [ ( "bank_id", Encode.string model.selected )
+                                , ( "mode", Encode.string (modeValue model.mode) )
+                                , ( "question_category", Encode.string q.category )
+                                , ( "question_number", Encode.int (List.length model.answers + 1) )
+                                , ( "is_correct", Encode.bool (i == q.correct) )
+                                ]
+
+                        completionCmd =
+                            if isFinished updatedModel then
+                                capture "quiz_completed" (completionProperties updatedModel)
+
+                            else
+                                Cmd.none
+                    in
+                    ( updatedModel, Cmd.batch [ answerCmd, completionCmd ] )
 
                 _ ->
                     ( model, Cmd.none )
@@ -192,12 +221,24 @@ update msg model =
 
         ExitToStart ->
             ( { model | questions = [], answers = [], chosen = Nothing, exitArmed = False, shareState = "" }
-            , Cmd.none
+            , if List.isEmpty model.questions || isFinished model then
+                Cmd.none
+
+              else
+                capture "quiz_abandoned"
+                    [ ( "bank_id", Encode.string model.selected )
+                    , ( "mode", Encode.string (modeValue model.mode) )
+                    , ( "questions_answered", Encode.int (List.length model.answers) )
+                    , ( "question_count", Encode.int (List.length model.questions) )
+                    ]
             )
 
         ShareResults ->
             ( { model | shareState = "Preparing…" }
-            , requestShare (sharePayload model)
+            , Cmd.batch
+                [ requestShare (sharePayload model)
+                , capture "quiz_share_requested" (completionProperties model)
+                ]
             )
 
         GotShareStatus state ->
@@ -716,6 +757,63 @@ viewMissed answer =
 
 
 -- HELPERS
+
+
+capture : String -> List ( String, Encode.Value ) -> Cmd msg
+capture event properties =
+    captureEvent
+        (Encode.object
+            [ ( "event", Encode.string event )
+            , ( "properties", Encode.object properties )
+            ]
+        )
+
+
+completionProperties : Model -> List ( String, Encode.Value )
+completionProperties model =
+    let
+        answered =
+            List.length model.answers
+
+        correct =
+            correctCount model
+
+        scorePercent =
+            if answered == 0 then
+                0
+
+            else
+                round (toFloat correct / toFloat answered * 100)
+
+        outcome =
+            case model.mode of
+                Practice ->
+                    "completed"
+
+                Test ->
+                    if isFailed model then
+                        "failed"
+
+                    else
+                        "passed"
+    in
+    [ ( "bank_id", Encode.string model.selected )
+    , ( "mode", Encode.string (modeValue model.mode) )
+    , ( "questions_answered", Encode.int answered )
+    , ( "correct_answers", Encode.int correct )
+    , ( "score_percent", Encode.int scorePercent )
+    , ( "outcome", Encode.string outcome )
+    ]
+
+
+modeValue : Mode -> String
+modeValue mode =
+    case mode of
+        Practice ->
+            "practice"
+
+        Test ->
+            "test"
 
 
 currentQuestion : Model -> Maybe Question

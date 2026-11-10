@@ -26,6 +26,10 @@ npm test        # 107 tests (regenerates src/Banks.elm first)
 npm run build   # regenerate banks + compile src/Main.elm --optimize --> public/elm.js
 ```
 
+`npm run build` also generates `public/posthog.js` and `public/posthog-config.js`.
+Copy `.env.example` to `.env` and set `POSTHOG_KEY` / `POSTHOG_HOST` to enable
+browser analytics; leave them unset to build without it.
+
 Then serve `public/` **over HTTP** (not `file://` — the app fetches its bank
 file and registers a service worker, both of which need HTTP):
 
@@ -46,7 +50,8 @@ src/
   Question.elm  Bank + Question types, JSON decoders, shuffle generator
   Banks.elm     Generated bank index (do not edit — see below)
 scripts/
-  gen-banks.js  Discovers public/banks/*.json, regenerates Banks.elm + sw precache
+  gen-banks.js              Discovers public/banks/*.json, regenerates Banks.elm + sw precache
+  build-posthog-assets.js   Generates PostHog browser config + SDK assets (see Deploy)
 tests/
   SessionTest.elm  Run rules, without a browser
   ExitTest.elm     Leaving mid-run and other model transitions
@@ -55,6 +60,8 @@ tests/
 public/
   index.html            App shell (loads elm.js, registers sw.js)
   elm.js                Compiled app (generated — see below, not committed)
+  posthog.js            PostHog SDK (generated — see Deploy, not committed)
+  posthog-config.js     PostHog browser config (generated — see Deploy, not committed)
   banks/wy.json       The Wyoming question bank
   banks/mt.json       The Montana question bank
   styles.css            All styling
@@ -117,6 +124,12 @@ inconsistent pass mark will fail fast.
 
 ## Deploy
 
-Any static host works. For Cloudflare Pages: build command `npm run build`,
-output directory `public`. Each deploy compiles from source, so the ignored
-`elm.js` is never an issue.
+Any static host works. For Cloudflare: build command `npm run build`, output
+directory `public`. Each deploy compiles from source, so the ignored `elm.js`
+is never an issue.
+
+Browser analytics is optional. Set `POSTHOG_KEY` and `POSTHOG_HOST` (for
+PostHog Cloud US, `https://us.i.posthog.com`) in the build environment to
+enable it; the build then writes `public/posthog-config.js` and copies the
+SDK to `public/posthog.js`. If either variable is missing, the build writes
+inert stubs and the app runs without analytics. See `.env.example`.

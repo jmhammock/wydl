@@ -7,6 +7,11 @@ node_modules/
 # Compiled app. Regenerate with `npm run build`.
 public/elm.js
 
+# Local PostHog configuration and generated browser assets.
+.env
+public/posthog-config.js
+public/posthog.js
+
 # Generated bank index. Regenerate with `npm run build` (or any npm script).
 src/Banks.elm
 
