@@ -317,7 +317,7 @@ defmodule WydlmWeb.QuizLive do
       <div class="card card-border bg-base-100">
         <div class="card-body">
           <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-neutral">
-            {@question.question.category}
+            {@question.question.section.title}
           </p>
           <h1 class="mb-4 text-xl leading-snug">{@question.question.prompt}</h1>
 
@@ -468,7 +468,7 @@ defmodule WydlmWeb.QuizLive do
       </summary>
       <div class="card-body pt-0">
         <p class="text-xs font-semibold uppercase tracking-wider text-neutral">
-          {@question.question.category}
+          {@question.question.section.title}
         </p>
         <p>
           <strong>Correct answer: </strong>
@@ -595,7 +595,8 @@ defmodule WydlmWeb.QuizLive do
     %{
       bank_id: assigns.bank.slug,
       mode: mode_string(assigns.mode),
-      question_category: attempt_question.question.category,
+      question_section: attempt_question.question.section.slug,
+      question_section_title: attempt_question.question.section.title,
       question_number: length(answers),
       is_correct: answer.correct
     }

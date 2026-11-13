@@ -12,6 +12,7 @@ defmodule Wydlm.Quiz.Bank do
     field :source, :string
     field :notes, :string
 
+    has_many :sections, Wydlm.Quiz.Section
     has_many :questions, Wydlm.Quiz.Question
     has_many :attempts, Wydlm.Quiz.Attempt
 

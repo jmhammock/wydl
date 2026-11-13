@@ -39,8 +39,9 @@ A taxonomy is not ready until **all** of these hold:
 1. Every question is assigned to **exactly one leaf**, never a domain.
 2. Leaves are **mutually exclusive and collectively exhaustive** for the bank.
 3. Every node is **traceable to the source document** — no invented categories.
-4. Slugs and titles are **stable**: never renumber, rename, or reuse one.
-   Correcting a label means deprecating the old node and adding a new one.
+4. Slugs are **stable**: never renumber or reuse one. Titles may be corrected
+   for accuracy; attempts snapshot the section title at start, so historical
+   report labels do not change.
 5. Leaves are **balanced reporting buckets**. In a ~150-question bank, aim for
    roughly 6–20 questions per leaf. Merge a leaf that would hold fewer than
    ~4; split one that exceeds ~25 or that mixes two independently testable
@@ -73,6 +74,13 @@ If any of these fails, fix the taxonomy before assigning questions.
 - Prefer **one leaf per tested rule**, not one leaf per manual heading. The
   manual may use several headings for what learners experience as one topic.
 
+### Retirement
+
+Never delete a node. To retire a leaf, stop assigning new questions to it and
+leave the row and its title intact so historical attempts keep resolving to it.
+If the source changes, add a new leaf with a new slug instead of repointing the
+old one.
+
 ## Assignment rules
 
 Assign by the **rule the key tests**, not by the question's wording or the
@@ -95,8 +103,11 @@ language of its explanation.
   leaf, which is not meaningful on its own.
 - Flag buckets with fewer than 3 attempts and suppress the percentage there.
 - For trends, use **cumulative accuracy per leaf** across attempts.
-- If historical reports must not change when a question is later reassigned,
-  **snapshot the leaf on the attempt** (see the schema notes).
+- Attempts snapshot the leaf **and its title** at start, so reports remain
+  stable when a question is reassigned or a title is corrected.
+- History is only as stable as the bank. Deleting a question cascades its
+  attempt rows, and deleting an answer option cascades committed answers; keep
+  edits non-destructive.
 - Never mix taxonomy versions in a single report.
 
 ## Source rules (Wyoming 2021 manual)
@@ -126,16 +137,19 @@ enforced in tests or the importer where practical:
 - A question's `page` falls inside its leaf's `start_page`/`end_page` (warn).
 - Every leaf has at least the minimum question count (warn).
 - No question points at a domain node.
-- Sibling page ranges do not overlap (warn).
+- Sibling page ranges do not overlap (warn), except where the manual nests one
+  topic inside another or splits a topic across a shared page (e.g. right of way
+  within speed); document each approved exception.
 
 ## Workflow
 
 1. **Draft the tree** from the source document's headings.
 2. **Validate** MECE coverage and estimated question counts.
 3. **Assign** every question to a leaf and a page.
-4. **Review** against the rubric below.
-5. **Seed and test** (`mix wydlm.seed_questions && mix precommit`).
-6. **Version** the tree if it changes; do not edit slugs in place.
+4. **Audit** with `mix wydlm.audit_questions`; it must report no blockers.
+5. **Review** against the rubric below.
+6. **Seed and test** (`mix wydlm.seed_questions && mix precommit`).
+7. **Version** the tree if it changes; do not edit slugs in place.
 
 ## Review rubric
 
@@ -164,7 +178,7 @@ with "interstate driving" (p. 58).
 `interstate-driving` folded into `lanes-turns-passing` if it lacks enough
 questions to stand alone.
 
-### 3. Overlapping category → rule-based assignment
+### 3. Overlapping topic → rule-based assignment
 
 **Bad:** a DUI-penalty question (suspension for a 0.08 BAC) filed under
 `alcohol-drugs` because it mentions alcohol.
@@ -184,6 +198,37 @@ suspension penalty, while `alcohol-drugs` owns impairment and BAC effects.
   for domains).
 - `questions.section_id` points to a **leaf**; `questions.page` holds the exact
   citation.
-- The legacy `category` field is superseded by the taxonomy and is retired once
-  the taxonomy is populated, so the app does not maintain two competing topic
-  systems.
+- `attempt_questions.section_id` and `attempt_questions.section_title` snapshot
+  the leaf and its label at attempt start.
+- The legacy `category` field has been removed. Questions display and report by
+  their taxonomy leaf, so the app does not maintain two competing topic systems.
+
+## Schema hardening
+
+The backfill is complete. The hardening migration has:
+
+- made `questions.section_id`, `questions.page`,
+  `attempt_questions.section_id`, and `attempt_questions.section_title`
+  `NOT NULL`,
+- removed the legacy `category` column,
+- kept the positive-page and ascending-section-range checks.
+
+Integrity queries that must continue to return `0`:
+
+```sql
+SELECT count(*) FROM questions WHERE section_id IS NULL OR page IS NULL;
+SELECT count(*) FROM attempt_questions
+  WHERE section_id IS NULL OR section_title IS NULL;
+```
+
+Remaining optional hardening:
+
+1. **Turn on the remaining validations.** Enforce or warn on: a question's
+   `page` falls inside its leaf's range, each leaf has a minimum number of
+   questions, and sibling page ranges do not overlap.
+2. **Consider composite foreign keys** so a question's section must belong to
+   the same bank, and a section's parent must belong to the same bank.
+3. **Keep delete semantics strict.** Section references use `RESTRICT`; keep it
+   that way so retiring a node cannot orphan history.
+
+6. **Re-run** the audit queries and `mix precommit`.

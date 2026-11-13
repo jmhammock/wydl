@@ -41,10 +41,29 @@ Questions live in `priv/repo/seeds/wy.json` and are imported by
   "subtitle": "Rules of the Road, 2021",
   "source": "Wyoming Rules of the Road Driver License Manual, 2021 …",
   "notes": "…",
+  "sections": [
+    {
+      "slug": "licensing",
+      "title": "Licensing",
+      "parent": null,
+      "position": 0,
+      "start_page": 5,
+      "end_page": 18
+    },
+    {
+      "slug": "licensing-permits-services",
+      "title": "Licensing, permits & services",
+      "parent": "licensing",
+      "position": 1,
+      "start_page": 5,
+      "end_page": 18
+    }
+  ],
   "questions": [
     {
       "id": 1,
-      "category": "Licensing & permits",
+      "section": "licensing-permits-services",
+      "page": 9,
       "question": "…",
       "answers": ["A", "B", "C", "D"],
       "correct": 3,
@@ -59,30 +78,22 @@ Field rules:
 | Field | Rule |
 | --- | --- |
 | `id` | Integer, unique within the bank. Reuse an existing id only when *editing* that question. |
-| `category` | One of the existing 14 categories (see below). Do not invent new categories casually. |
+| `section` | Required. The taxonomy **leaf** slug this question belongs to. Must exist in `sections`. See [`taxonomy-authoring.md`](taxonomy-authoring.md). |
+| `page` | Required. The PDF page where the tested rule appears. Must be a positive integer. |
 | `question` | The stem. One clear problem (see "Stem" rules). |
 | `answers` | An array of strings. Use **4 options** to match the existing bank. No blank or duplicate entries. |
 | `correct` | **Zero-based** index into `answers`. Must be in range. |
 | `explanation` | Required, non-blank. Must justify the key (see "Explanation" rules). |
 
-Existing categories:
+Section nodes (`sections`) and the reporting taxonomy are documented in
+[`taxonomy-authoring.md`](taxonomy-authoring.md). Each section is keyed by
+`slug` within the bank; `parent` refers to another section's slug and may be
+`null` for a domain. `start_page`/`end_page` are optional but should be set
+when known.
 
-```
-Licensing & permits
-Tests & vision
-Alcohol, drugs & DUI
-Speed & road conditions
-Right of way
-Required stops
-Lanes, turning & passing
-Signs & pavement markings
-Following distance & space
-Sharing the road
-Weather & special conditions
-Crashes & emergencies
-Safety belts & child restraints
-Equipment & Interstate
-```
+`section` and `page` are required on every question. On an edit, an absent
+`section`/`page` pair leaves the existing assignment untouched; providing
+either as `null` is rejected.
 
 ### Importer behavior
 
@@ -92,6 +103,21 @@ The importer is **idempotent and non-destructive**:
 - Re-running updates text in place and **preserves option ids and answer
   history**, so it is safe to edit and reseed.
 - An out-of-range `correct` index raises and aborts the import.
+- A `section` slug that is not present in `sections` raises and aborts the
+  import, as does a non-positive or non-integer `page`.
+- Sections are keyed by `slug`; re-running updates their title, position, and
+  page range in place. Parent links are resolved by slug after all sections
+  are inserted, so section order does not matter.
+- Duplicate section slugs, unknown parents, parent cycles, and questions
+  assigned to a section that has children (a domain) all raise and abort the
+  import.
+- `section` and `page` must be provided together and be non-null. Omitting the
+  pair on an edit leaves the existing assignment untouched. A section's
+  `start_page` and `end_page` must likewise be provided together and form a
+  valid ascending range.
+- The database enforces non-null taxonomy, positive page values, non-negative
+  section positions, ascending section page ranges, and a snapshot title
+  whenever an attempt question has a section.
 - Because options are identified by `position`, **do not reorder existing
   options**. If you must change an option's wording, edit the text in place.
   If you must add/remove options, do so deliberately and re-run the seed.
@@ -99,11 +125,14 @@ The importer is **idempotent and non-destructive**:
 ### Commands
 
 ```sh
+mix wydlm.audit_questions  # mechanical + taxonomy audit of the seed JSON
+mix wydlm.audit_questions --all  # list every finding, including grouped minors
 mix wydlm.seed_questions   # import the bank into SQLite
 mix test                    # run unit + LiveView tests
 mix precommit               # compile (warnings-as-errors), format, test
 ```
 
+Run `mix wydlm.audit_questions` before seeding; it exits non-zero on blockers.
 Run `mix precommit` after any change.
 
 ## Authoring rules
@@ -258,7 +287,7 @@ Use this when evaluating a question. Categorize each finding by severity.
 | --- | --- | --- |
 | **Blocker** | Ship-stopping; must fix before use | Wrong or ambiguous key, factual error, out-of-range `correct`, missing explanation, duplicate/blank options |
 | **Major** | Undermines validity; fix before use | Implausible or clue-giving distractor, "all/none of the above", hidden negative, length/grammar cue, unsupported claim |
-| **Minor** | Polish; fix when touching the item | Awkward wording, slight length imbalance, missing category fit |
+| **Minor** | Polish; fix when touching the item | Awkward wording, slight length imbalance, missing taxonomy fit |
 
 ### Mechanical checks (automatable)
 
@@ -276,7 +305,7 @@ Use this when evaluating a question. Categorize each finding by severity.
 - Does each distractor correspond to a real, nameable misconception?
 - Would a learner who knows the manual but not the test answer correctly?
 - Is the language plain enough that reading skill is not being measured?
-- Does the category match the topic?
+- Does the section match the topic?
 
 ### Review output format
 
@@ -293,5 +322,6 @@ Use this when evaluating a question. Categorize each finding by severity.
 2. **Self-check** against the non-negotiables and the stem/option rules.
 3. **Verify against the manual** — confirm the facts and terminology.
 4. **Edit the JSON** following the data contract (do not reorder options).
-5. **Seed and test**: `mix wydlm.seed_questions && mix precommit`.
-6. **Review** with the rubric; record any findings using the review format.
+5. **Audit**: `mix wydlm.audit_questions` must report no blockers.
+6. **Seed and test**: `mix wydlm.seed_questions && mix precommit`.
+7. **Review** with the rubric; record any findings using the review format.

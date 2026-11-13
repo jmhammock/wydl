@@ -23,8 +23,13 @@ defmodule Wydlm.Quiz do
   Returns the attempt with its questions preloaded in position order.
   """
   def start_attempt(bank, visitor_id, mode, length) do
-    question_ids =
-      Repo.all(from q in Question, where: q.bank_id == ^bank.id, select: q.id)
+    questions =
+      Repo.all(
+        from q in Question,
+          left_join: s in assoc(q, :section),
+          where: q.bank_id == ^bank.id,
+          select: %{id: q.id, section_id: q.section_id, section_title: s.title}
+      )
       |> Enum.take_random(length)
 
     now = DateTime.utc_now()
@@ -36,17 +41,23 @@ defmodule Wydlm.Quiz do
             visitor_id: visitor_id,
             bank_id: bank.id,
             mode: Atom.to_string(mode),
-            question_count: length(question_ids),
+            question_count: length(questions),
             started_at: now
           })
 
         entries =
-          question_ids
+          questions
           |> Enum.with_index()
-          |> Enum.map(fn {question_id, position} ->
+          |> Enum.map(fn {%{
+                            id: question_id,
+                            section_id: section_id,
+                            section_title: section_title
+                          }, position} ->
             %{
               attempt_id: attempt.id,
               question_id: question_id,
+              section_id: section_id,
+              section_title: section_title,
               position: position,
               inserted_at: now,
               updated_at: now
@@ -109,7 +120,7 @@ defmodule Wydlm.Quiz do
       from aq in AttemptQuestion,
         where: aq.attempt_id == ^attempt.id,
         order_by: aq.position,
-        preload: [question: :answer_options]
+        preload: [question: [:answer_options, :section]]
     )
     |> Enum.map(fn aq -> %{aq | question: sort_options(aq.question)} end)
   end

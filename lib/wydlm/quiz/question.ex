@@ -7,11 +7,12 @@ defmodule Wydlm.Quiz.Question do
 
   schema "questions" do
     field :source_id, :integer
-    field :category, :string
     field :prompt, :string
     field :explanation, :string
+    field :page, :integer
 
     belongs_to :bank, Wydlm.Quiz.Bank
+    belongs_to :section, Wydlm.Quiz.Section
     has_many :answer_options, Wydlm.Quiz.AnswerOption
     has_many :attempt_questions, Wydlm.Quiz.AttemptQuestion
 

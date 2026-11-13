@@ -8,9 +8,11 @@ defmodule Wydlm.Quiz.AttemptQuestion do
 
   schema "attempt_questions" do
     field :position, :integer
+    field :section_title, :string
 
     belongs_to :attempt, Wydlm.Quiz.Attempt
     belongs_to :question, Wydlm.Quiz.Question
+    belongs_to :section, Wydlm.Quiz.Section
     has_many :attempt_answers, Wydlm.Quiz.AttemptAnswer
 
     timestamps(type: :utc_datetime_usec)
