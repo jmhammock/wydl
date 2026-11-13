@@ -1,0 +1,26 @@
+#!/bin/sh
+set -eu
+
+cd -P -- "$(dirname -- "$0")"
+
+DATABASE_PATH="${DATABASE_PATH:-/data/wydlm.db}"
+mkdir -p "$(dirname "$DATABASE_PATH")"
+
+# Restore from Litestream when the database is missing (fresh volume or DR).
+if [ ! -f "$DATABASE_PATH" ] && [ -n "${LITESTREAM_REPLICA_URL:-}" ]; then
+  if litestream restore -if-replica-exists -o "$DATABASE_PATH" "$LITESTREAM_REPLICA_URL"; then
+    echo "Restored database from Litestream replica."
+  else
+    echo "No Litestream replica available; starting with an empty database."
+  fi
+fi
+
+# Apply migrations and (re)seed the question bank before serving.
+./migrate
+./seed
+
+if [ -n "${LITESTREAM_REPLICA_URL:-}" ]; then
+  exec litestream replicate -exec ./server "$DATABASE_PATH" "$LITESTREAM_REPLICA_URL"
+else
+  exec ./server
+fi

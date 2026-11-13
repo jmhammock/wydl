@@ -1,0 +1,150 @@
+/* See the Tailwind configuration guide for advanced usage
+   https://tailwindcss.com/docs/configuration */
+
+@import "tailwindcss" source(none);
+@import "phoenix-colocated/wydlm/colocated.css";
+@source "../css";
+@source "../js";
+@source "../../lib/wydlm_web";
+/* Required for Tailwind to automatically pick up changes in colocated CSS files in dev */
+@source "../../_build/dev/phoenix-colocated/wydlm/*/";
+
+/* A Tailwind plugin that makes "hero-#{ICON}" classes available.
+   The heroicons installation itself is managed by your mix.exs */
+@plugin "../vendor/heroicons";
+
+/* daisyUI Tailwind Plugin. */
+@plugin "daisyui/packages/bundle/daisyui" {
+  themes: wyoming --default, wyoming-dark --prefersdark;
+}
+
+/* daisyUI themes. The Wyoming brown/gold palette is preserved exactly. */
+@plugin "daisyui/packages/bundle/daisyui-theme" {
+  name: "wyoming";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: #ffffff;
+  --color-base-200: #f7f2ea;
+  --color-base-300: #e4dac9;
+  --color-base-content: #2a1e15;
+  --color-primary: #3a2417;
+  --color-primary-content: #ffc425;
+  --color-secondary: #75634f;
+  --color-secondary-content: #ffffff;
+  --color-accent: #c9971c;
+  --color-accent-content: #3a2417;
+  --color-neutral: #75634f;
+  --color-neutral-content: #ffffff;
+  --color-info: #3a2417;
+  --color-info-content: #ffffff;
+  --color-success: #1a7f43;
+  --color-success-content: #ffffff;
+  --color-warning: #c9971c;
+  --color-warning-content: #3a2417;
+  --color-error: #c0392b;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.6rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.21875rem;
+  --size-field: 0.21875rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui/packages/bundle/daisyui-theme" {
+  name: "wyoming-dark";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: #211711;
+  --color-base-200: #17110d;
+  --color-base-300: #3b2d22;
+  --color-base-content: #f2e9da;
+  --color-primary: #c9971c;
+  --color-primary-content: #241609;
+  --color-secondary: #ab977b;
+  --color-secondary-content: #17110d;
+  --color-accent: #c9971c;
+  --color-accent-content: #241609;
+  --color-neutral: #ab977b;
+  --color-neutral-content: #17110d;
+  --color-info: #c9971c;
+  --color-info-content: #241609;
+  --color-success: #3fb56b;
+  --color-success-content: #14301f;
+  --color-warning: #c9971c;
+  --color-warning-content: #241609;
+  --color-error: #e06b5c;
+  --color-error-content: #331b1b;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.6rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.21875rem;
+  --size-field: 0.21875rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* Add variants based on LiveView classes */
+@custom-variant phx-click-loading (.phx-click-loading&, .phx-click-loading &);
+@custom-variant phx-submit-loading (.phx-submit-loading&, .phx-submit-loading &);
+@custom-variant phx-change-loading (.phx-change-loading&, .phx-change-loading &);
+
+/* Make LiveView wrapper divs transparent for layout */
+[data-phx-session], [data-phx-teleported-src] { display: contents }
+
+@layer base {
+  :root {
+    --right-bg: #e7f6ec;
+    --right-edge: #1a7f43;
+    --right-fg: #10532c;
+    --wrong-bg: #fdecec;
+    --wrong-edge: #c0392b;
+    --wrong-fg: #8f2318;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --right-bg: #14301f;
+      --right-edge: #3fb56b;
+      --right-fg: #b7e9c8;
+      --wrong-bg: #331b1b;
+      --wrong-edge: #e06b5c;
+      --wrong-fg: #f6c6bf;
+    }
+  }
+}
+
+@layer components {
+  .option-right {
+    background: var(--right-bg);
+    border-color: var(--right-edge);
+    color: var(--right-fg);
+  }
+
+  .option-wrong {
+    background: var(--wrong-bg);
+    border-color: var(--wrong-edge);
+    color: var(--wrong-fg);
+  }
+
+  .coffee-btn {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    font-weight: 600;
+    color: #3a2417;
+    background: #c9971c;
+    border: 2px solid #3a2417;
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+
+  .coffee-btn:hover {
+    filter: brightness(0.96);
+  }
+}

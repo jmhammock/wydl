@@ -1,0 +1,38 @@
+# fly.toml app configuration for wyodriverlicense.app
+#
+# See https://fly.io/docs/reference/configuration/ for more information.
+
+app = "wydlm"
+primary_region = "ord"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PHX_HOST = "wyodriverlicense.app"
+  PORT = "8080"
+  DATABASE_PATH = "/data/wydlm.db"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "10s"
+    method = "GET"
+    path = "/health"
+
+# SQLite lives on a single persistent volume. Litestream (see the Dockerfile)
+# streams a backup to object storage, set via LITESTREAM_REPLICA_URL.
+#
+# IMPORTANT: SQLite is a single-writer store — run exactly one machine
+# (`fly scale count 1`) or the two instances will corrupt the database.
+[[mounts]]
+  source = "wydlm_data"
+  destination = "/data"
+  initial_size = "1gb"
