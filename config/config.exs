@@ -7,6 +7,24 @@
 # General application configuration
 import Config
 
+# Swoosh has no HTTP API client by default in this app: we only use the
+# Local, Test, and SMTP adapters. HTTP-based providers (SendGrid, Mailgun,
+# etc.) will need an api_client configured (e.g. Swoosh.ApiClient.Req).
+config :swoosh, api_client: false
+
+config :wydlm, :scopes,
+  user: [
+    default: true,
+    module: Wydlm.Accounts.Scope,
+    assign_key: :current_scope,
+    access_path: [:user, :id],
+    schema_key: :user_id,
+    schema_type: :id,
+    schema_table: :users,
+    test_data_fixture: Wydlm.AccountsFixtures,
+    test_setup_helper: :register_and_log_in_user
+  ]
+
 config :wydlm,
   ecto_repos: [Wydlm.Repo],
   generators: [timestamp_type: :utc_datetime_usec]

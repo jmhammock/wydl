@@ -1,5 +1,8 @@
 import Config
 
+# Emails are shown in the browser at /dev/mailbox instead of being sent.
+config :wydlm, Wydlm.Mailer, adapter: Swoosh.Adapters.Local
+
 # Configure your database
 config :wydlm, Wydlm.Repo,
   database: Path.expand("../wydlm_dev.db", __DIR__),
