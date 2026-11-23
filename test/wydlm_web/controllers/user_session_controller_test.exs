@@ -2,9 +2,11 @@ defmodule WydlmWeb.UserSessionControllerTest do
   use WydlmWeb.ConnCase
 
   import Wydlm.AccountsFixtures
+  import Wydlm.Fixtures
   alias Wydlm.Accounts
 
   setup do
+    bank_fixture()
     %{unconfirmed_user: unconfirmed_user_fixture(), user: user_fixture()}
   end
 

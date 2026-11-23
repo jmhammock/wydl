@@ -3,6 +3,12 @@ defmodule WydlmWeb.UserLive.RegistrationTest do
 
   import Phoenix.LiveViewTest
   import Wydlm.AccountsFixtures
+  import Wydlm.Fixtures
+
+  setup do
+    bank_fixture()
+    :ok
+  end
 
   describe "Registration page" do
     test "renders registration page", %{conn: conn} do
