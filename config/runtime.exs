@@ -70,6 +70,18 @@ if config_env() == :prod do
 
   config :wydlm, :dns_cluster_query, System.get_env("DNS_CLUSTER_QUERY")
 
+  # Email delivery via Resend. Requires a RESEND_API_KEY and a MAILER_FROM
+  # address verified in the Resend dashboard.
+  config :swoosh, api_client: Swoosh.ApiClient.Req
+
+  config :wydlm, Wydlm.Mailer,
+    adapter: Swoosh.Adapters.Resend,
+    api_key:
+      System.get_env("RESEND_API_KEY") ||
+        raise("environment variable RESEND_API_KEY is missing")
+
+  config :wydlm, :mailer_from, System.get_env("MAILER_FROM", "no-reply@wyodriverlicense.app")
+
   config :wydlm, WydlmWeb.Endpoint,
     url: [host: host, port: 443, scheme: "https"],
     http: [
