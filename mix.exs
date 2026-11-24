@@ -42,6 +42,7 @@ defmodule Wydlm.MixProject do
     [
       {:bcrypt_elixir, "~> 3.0"},
       {:swoosh, "~> 1.4"},
+      {:req, "~> 0.5"},
       {:phoenix, "~> 1.8.16"},
       {:phoenix_ecto, "~> 4.5"},
       {:ecto_sql, "~> 3.13"},

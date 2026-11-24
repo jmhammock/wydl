@@ -4,12 +4,17 @@ defmodule Wydlm.Accounts.UserNotifier do
   alias Wydlm.Mailer
   alias Wydlm.Accounts.User
 
+  # The verified sender address, configurable via the :mailer_from env.
+  defp mailer_from do
+    {"Wydlm", Application.get_env(:wydlm, :mailer_from, "contact@example.com")}
+  end
+
   # Delivers the email using the application mailer.
   defp deliver(recipient, subject, body) do
     email =
       new()
       |> to(recipient)
-      |> from({"Wydlm", "contact@example.com"})
+      |> from(mailer_from())
       |> subject(subject)
       |> text_body(body)
 
